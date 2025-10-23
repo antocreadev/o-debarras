@@ -17,7 +17,7 @@ interface StatsCounterProps {
 
 export function StatsCounter({
   end,
-  duration = 2,
+  duration = 1,
   suffix = "",
   prefix = "",
   label,
