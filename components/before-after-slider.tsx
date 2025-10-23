@@ -14,8 +14,8 @@ interface BeforeAfterSliderProps {
 export function BeforeAfterSlider({
   beforeImage,
   afterImage,
-  beforeLabel = "Avant",
-  afterLabel = "Après",
+  beforeLabel = "Avant un débarras professionnel en Corse par l'équipe O Débarras",
+  afterLabel = "Après un débarras professionnel en Corse par l'équipe O Débarras",
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50)
   const [isDragging, setIsDragging] = useState(false)

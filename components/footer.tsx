@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <img
                 src="/logo.svg"
-                alt="Ò Debarras"
+                alt="logo Ò Debarras - debarras en Corse- o debarras"
                 className="h-20 w-20 object-contain"
                 style={{ filter: "invert(1) brightness(2)" }}
               />

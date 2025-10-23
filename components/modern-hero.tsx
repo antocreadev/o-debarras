@@ -242,7 +242,7 @@ export function ModernHero() {
             >
               <img
                 src="/image-1.png"
-                alt="Ò Débarras"
+                alt="O Ò Débarras - débarras en Corse"
                 className="w-full max-w-2xl mx-auto drop-shadow-2xl relative z-20"
               />
             </motion.div>

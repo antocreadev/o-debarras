@@ -8,7 +8,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img
           src="/modern-minimalist-corsican-landscape-mountains-sea.jpg"
-          alt="Corse"
+          alt="Corse exemple de débarras professionnel en Corse - o debarras"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />

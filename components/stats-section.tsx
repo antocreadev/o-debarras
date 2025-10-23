@@ -29,7 +29,7 @@ export function StatsSection() {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 text-white gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 text-white gap-8">
           <StatsCounter
             end={5}
             suffix="+"
@@ -40,7 +40,6 @@ export function StatsSection() {
           <StatsCounter
             end={100}
             suffix="+"
-           
             label="Interventions réalisées"
             icon={<Truck />}
           />

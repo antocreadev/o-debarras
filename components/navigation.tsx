@@ -96,7 +96,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center group">
             <img
               src="logo.svg"
-              alt="Ò Debarras"
+              alt="O Ò Debarras - debarras en Corse"
               className="h-28 w-28 object-contain transition-transform group-hover:scale-110"
             />
             <div className="text-2xl font-bold text-foreground tracking-tight relative right-7 top-3">
@@ -269,7 +269,9 @@ export function Navigation() {
 
               <div>
                 <button
-                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                  onClick={() =>
+                    setIsServicesDropdownOpen(!isServicesDropdownOpen)
+                  }
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   Services
