@@ -22,6 +22,7 @@ const services = [
     color: "from-blue-500/10 to-blue-600/10",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-600",
+    link: "/services/particuliers",
   },
   {
     icon: Heart,
@@ -37,6 +38,7 @@ const services = [
     color: "from-rose-500/10 to-rose-600/10",
     iconBg: "bg-rose-500/10",
     iconColor: "text-rose-600",
+    link: "/services/diogene",
   },
   {
     icon: Building2,
@@ -47,6 +49,7 @@ const services = [
     color: "from-primary/10 to-primary/20",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
+    link: "/services/professionnels",
   },
 ];
 
@@ -115,11 +118,14 @@ export function ServicesSection() {
                     </ul>
 
                     <Button
+                      asChild
                       variant="ghost"
                       className="w-full group/btn hover:bg-primary/10 transition-colors duration-200"
                     >
-                      En savoir plus
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                      <Link href={service.link}>
+                        En savoir plus
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                      </Link>
                     </Button>
                   </div>
                 </Card>
