@@ -51,7 +51,7 @@ export function BeforeAfterSlider({
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0">
-        <img src={afterImage || "/placeholder.svg"} alt={afterLabel} className="w-full h-full object-cover" />
+        <img src={afterImage || "/placeholder.svg"} alt="après du chantier fait par l'equipe o debarras en corse" className="w-full h-full object-cover" />
         <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
           {afterLabel}
         </div>
@@ -59,7 +59,7 @@ export function BeforeAfterSlider({
 
       {/* Before Image (Foreground with clip) */}
       <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
-        <img src={beforeImage || "/placeholder.svg"} alt={beforeLabel} className="w-full h-full object-cover" />
+        <img src={beforeImage || "/placeholder.svg"} alt="avant d'un chantier de debarras en corse" className="w-full h-full object-cover" />
         <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-semibold">
           {beforeLabel}
         </div>
