@@ -1,0 +1,21 @@
+{
+  "name": "Ò Débarras - Service de Débarras Professionnel en Corse",
+  "short_name": "Ò Débarras",
+  "description": "Expert en débarras en Corse depuis +5 ans. Intervention rapide et discrète pour particuliers et professionnels.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#064e3b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["business", "services"]
+}
