@@ -1,50 +1,31 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
-import { motion } from "framer-motion";
-
-const testimonials = [
-  {
-    name: "Marie L.",
-    location: "Ajaccio",
-    rating: 5,
-    text: "Service impeccable ! L'équipe a été très professionnelle et discrète pour le débarras de la maison de ma mère. Je recommande vivement.",
-  },
-  {
-    name: "Jean-Pierre M.",
-    location: "Bastia",
-    rating: 5,
-    text: "Intervention rapide et efficace pour notre local commercial. Tarifs transparents et équipe sympathique. Merci !",
-  },
-  {
-    name: "Sophie D.",
-    location: "Porto-Vecchio",
-    rating: 5,
-    text: "Très satisfaite du service. Ponctualité, professionnalisme et respect. Tout était parfait du début à la fin.",
-  },
-  {
-    name: "Antoine R.",
-    location: "Corte",
-    rating: 5,
-    text: "Excellent travail pour le débarras de notre cave. L'équipe a tout géré de A à Z. Je recommande sans hésitation.",
-  },
-  {
-    name: "Isabelle F.",
-    location: "Calvi",
-    rating: 5,
-    text: "Merci pour votre accompagnement dans cette situation difficile. Votre discrétion et votre professionnalisme nous ont beaucoup aidés.",
-  },
-  {
-    name: "Marc B.",
-    location: "Propriano",
-    rating: 5,
-    text: "Service de qualité, devis clair et intervention dans les temps. Parfait pour notre débarras de succession.",
-  },
-];
+import { Star } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export function TestimonialsSection() {
+  const scriptLoaded = useRef(false);
+
+  useEffect(() => {
+    // Charger le script uniquement côté client pour éviter les problèmes d'hydratation
+    if (!scriptLoaded.current) {
+      const script = document.createElement("script");
+      script.src = "https://widget.taggbox.com/embed.min.js";
+      script.type = "text/javascript";
+      script.async = true;
+      document.body.appendChild(script);
+      scriptLoaded.current = true;
+
+      return () => {
+        // Nettoyage si nécessaire
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+      };
+    }
+  }, []);
+
   return (
     <section
       id="testimonials"
@@ -58,63 +39,61 @@ export function TestimonialsSection() {
           <div className="inline-block bg-accent/20 text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Témoignages
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 text-balance">
-            Ils nous font confiance
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 text-balance flex items-center justify-center gap-3">
+            <svg
+              className="w-12 h-12"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                fill="#4285F4"
+              />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                fill="#34A853"
+              />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                fill="#EA4335"
+              />
+            </svg>
+            Avis Google
           </h2>
           <p className="text-xl text-muted-foreground text-pretty">
-            La satisfaction de nos clients est notre plus belle récompense
+            Découvrez les retours de nos clients sur Google
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <AnimatedSection key={index} delay={index * 0.06}>
-              <motion.div
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
-                className="h-full"
-              >
-                <Card className="p-6 border-2 border-border h-full hover:shadow-xl transition-all duration-300 bg-card relative overflow-hidden group">
-                  {/* Quote icon decoration */}
-                  <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-                    <Quote className="w-10 h-10 text-primary/30" />
-                  </div>
+        <AnimatedSection delay={0.2}>
+          <div className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-border bg-card">
+            {/* Widget Taggbox pour les avis Google */}
+            <div
+              className="taggbox"
+              style={{ width: "100%", overflow: "auto" }}
+              data-widget-id="305648"
+              data-website="1"
+            />
+          </div>
 
-                  <div className="relative z-10">
-                    {/* Stars */}
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <div key={i}>
-                          <Star className="w-5 h-5 fill-accent text-accent" />
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Testimonial text */}
-                    <p className="text-foreground mb-6 leading-relaxed italic">
-                      "{testimonial.text}"
-                    </p>
-
-                    {/* Author info */}
-                    <div className="border-t-2 border-border pt-4 flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-lg">
-                        {testimonial.name.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="font-bold text-foreground">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {testimonial.location}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            </AnimatedSection>
-          ))}
-        </div>
+          {/* Bouton pour voir tous les avis */}
+          <div className="text-center mt-8">
+            <a
+              href="https://share.google/9YV6aX2d34jUUCAcZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg"
+            >
+              Voir tous nos avis sur Google
+              <Star className="w-5 h-5 fill-current" />
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

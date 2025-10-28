@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Ò Débarras - Service de Débarras Professionnel en Corse | Particuliers & Professionnels",
   description:
-    "Expert en débarras en Corse depuis +5 ans. Intervention rapide pour maisons, appartements, caves, syndrome de Diogène, locaux professionnels. Devis gratuit. Discrétion garantie.",
+    "Expert en débarras en Corse depuis 2020. Intervention rapide pour maisons, appartements, caves, syndrome de Diogène, locaux professionnels. Devis gratuit. Discrétion garantie.",
   keywords: [
     "débarras Corse",
     "débarras maison Corse",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ò Débarras - Service de Débarras Professionnel en Corse",
     description:
-      "Expert en débarras en Corse depuis +5 ans. Intervention rapide et discrète pour particuliers et professionnels. Devis gratuit.",
+      "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Devis gratuit.",
     url: "https://o-debarras-4b2f.vercel.app",
     siteName: "Ò Débarras",
     locale: "fr_FR",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ò Débarras - Service de Débarras Professionnel en Corse",
     description:
-      "Expert en débarras en Corse depuis +5 ans. Intervention rapide et discrète. Devis gratuit.",
+      "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète. Devis gratuit.",
     images: ["/logo.svg"],
   },
   robots: {

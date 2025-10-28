@@ -21,7 +21,7 @@ export function HeroSection() {
               Débarras Professionnel en Corse
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Plus de 5 ans d'expertise au service des particuliers et
+              Une expertise au service des particuliers et
               professionnels. De la simple machine à laver au syndrome de
               Diogène.
             </p>

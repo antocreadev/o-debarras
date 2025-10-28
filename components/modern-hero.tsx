@@ -49,21 +49,6 @@ export function ModernHero() {
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
             className="space-y-8"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.1,
-                duration: 0.5,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="inline-block pt-4 md:pt-0"
-            >
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold ">
-                Plus de 5 ans d'expérience en Corse
-              </div>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -72,11 +57,10 @@ export function ModernHero() {
                 duration: 0.5,
                 ease: [0.25, 0.1, 0.25, 1.0],
               }}
-              className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight text-balance"
+              className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight text-balance hidden lg:block"
             >
-              Débarras{" "}
               <span className="text-primary relative">
-                Professionnel
+                Ò Débarras
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
@@ -99,9 +83,9 @@ export function ModernHero() {
                 duration: 0.5,
                 ease: [0.25, 0.1, 0.25, 1.0],
               }}
-              className="text-xl md:text-2xl text-muted-foreground max-w-xl text-pretty leading-relaxed"
+              className="text-xl md:text-2xl text-muted-foreground max-w-xl text-pretty leading-relaxed mt-5 text-center lg:text-left"
             >
-              De la simple machine à laver au syndrome de Diogène. Intervention
+              <span className="inline lg:hidden">Ò Débarras </span>Intervention
               rapide, discrète et respectueuse dans toute la{" "}
               <span className="font-bold">Corse</span>.
             </motion.p>
@@ -114,7 +98,7 @@ export function ModernHero() {
                 duration: 0.5,
                 ease: [0.25, 0.1, 0.25, 1.0],
               }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start lg:items-stretch"
             >
               <Button
                 asChild

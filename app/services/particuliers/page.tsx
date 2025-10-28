@@ -166,12 +166,6 @@ export default function ParticuliersPage() {
                       <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                         <div className="w-2 h-2 rounded-full bg-primary" />
                       </div>
-                      <span>Plus de 5 ans d'expérience en Corse</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
                       <span>Devis gratuit et sans engagement</span>
                     </li>
                     <li className="flex items-start gap-3">

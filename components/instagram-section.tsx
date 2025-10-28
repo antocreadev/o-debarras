@@ -36,7 +36,7 @@ export function InstagramSection() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <Instagram className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance">
-              Nos Dernières Activités
+              Nos Dernières Activités sur Instagram
             </h2>
           </div>
           <p className="text-lg text-muted-foreground text-pretty">

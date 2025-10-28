@@ -21,7 +21,7 @@ export function Footer() {
             </div>
             <p className="text-background/80 text-sm leading-relaxed">
               Votre partenaire de confiance pour tous vos besoins de débarras en
-              Corse depuis plus de 5 ans.
+              Corse depuis plus depuis 2020.
             </p>
           </div>
 
@@ -116,10 +116,10 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:capurankevin@gmail.com"
+                  href="mailto:odebarras2b@gmail.com"
                   className="hover:text-background transition-colors"
                 >
-                  capurankevin@gmail.com
+                  odebarras2b@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">

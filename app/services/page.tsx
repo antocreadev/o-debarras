@@ -51,11 +51,7 @@ export default function ServicesPage() {
 
   const itemsWeHandle = [
     { icon: Sofa, name: "Mobiliers et bibelots", description: "Tous types de meubles et objets décoratifs" },
-    {
-      icon: Car,
-      name: "Épaves de véhicules",
-      description: "Voitures, camions, bateaux, engins de chantier",
-    },
+
     { icon: Laptop, name: "Électroménager & Informatique", description: "Appareils électriques et électroniques" },
     { icon: BookOpen, name: "Livres & Archives", description: "Documentation, livres, archives professionnelles" },
     { icon: ShirtIcon, name: "Linge & Textiles", description: "Vêtements, rideaux, tissus d'ameublement" },

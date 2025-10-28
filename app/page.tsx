@@ -5,6 +5,7 @@ import { ProcessSection } from "@/components/process-section";
 import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { InstagramSection } from "@/components/instagram-section";
+import { FacebookSection } from "@/components/facebook-section";
 import { TargetAudienceSection } from "@/components/target-audience-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
@@ -17,12 +18,13 @@ export default function Home() {
       <StructuredData />
       <Navigation />
       <ModernHero />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <BeforeAfterShowcase />
       <ProcessSection />
       <ServicesSection />
       <TargetAudienceSection />
       <TestimonialsSection />
+      <FacebookSection />
       <InstagramSection />
       <CTASection />
       <Footer />

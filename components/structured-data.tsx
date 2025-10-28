@@ -49,7 +49,7 @@ export function StructuredData() {
           geoRadius: "100000",
         },
         description:
-          "Expert en débarras en Corse depuis +5 ans. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels et cas de syndrome de Diogène.",
+          "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels et cas de syndrome de Diogène.",
         founder: {
           "@type": "Person",
           name: "Ò Débarras",
@@ -106,7 +106,7 @@ export function StructuredData() {
         url: "https://o-debarras-4b2f.vercel.app",
         name: "Ò Débarras - Service de Débarras Professionnel en Corse",
         description:
-          "Expert en débarras en Corse depuis +5 ans. Intervention rapide et discrète pour particuliers et professionnels.",
+          "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels.",
         publisher: {
           "@id": "https://o-debarras-4b2f.vercel.app/#organization",
         },

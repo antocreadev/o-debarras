@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card"
 
 const itemsWeHandle = [
   "Mobiliers et bibelots",
-  "Épaves de voitures, camions, bateaux, engins…",
   "Électroménager",
   "Matériel informatique",
   "Livres",
