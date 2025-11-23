@@ -235,49 +235,7 @@ export default function AdministrateursImmeubles() {
         </div>
       </section>
 
-      {/* Partnership */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">
-                Contrat de Partenariat
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-                Vous gérez plusieurs copropriétés en Corse ? Nous proposons des
-                contrats annuels avec tarifs préférentiels et interventions
-                prioritaires.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    -25%
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Tarif préférentiel contrat annuel
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    24h
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Intervention d'urgence sous 24h
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">1</div>
-                  <p className="text-sm text-muted-foreground">
-                    Interlocuteur dédié à votre portefeuille
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+
 
       <CTASection />
       <Footer />

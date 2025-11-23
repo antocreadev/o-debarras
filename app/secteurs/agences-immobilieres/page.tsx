@@ -199,37 +199,6 @@ export default function AgencesImmobilieresPage() {
         </div>
       </section>
 
-      {/* Partnership */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">Devenez Partenaire</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-                Vous êtes une agence immobilière en Corse et souhaitez bénéficier d'un service de débarras fiable et
-                réactif ? Contactez-nous pour discuter d'un partenariat.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">-20%</div>
-                  <p className="text-sm text-muted-foreground">Tarif préférentiel partenaire</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">48h</div>
-                  <p className="text-sm text-muted-foreground">Délai d'intervention garanti</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">1</div>
-                  <p className="text-sm text-muted-foreground">Interlocuteur dédié</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       <CTASection />
       <Footer />
     </main>

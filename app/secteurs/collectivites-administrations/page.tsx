@@ -231,44 +231,6 @@ export default function CollectivitesAdministrationsPage() {
         </div>
       </section>
 
-      {/* References */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">
-                Ils Nous Font Confiance
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <CheckCircle2 className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-medium">Mairies</p>
-                  <p className="text-sm text-muted-foreground">
-                    Ajaccio, Bastia, Porto-Vecchio
-                  </p>
-                </div>
-                <div>
-                  <CheckCircle2 className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-medium">Établissements Scolaires</p>
-                  <p className="text-sm text-muted-foreground">
-                    Collèges et lycées de Corse
-                  </p>
-                </div>
-                <div>
-                  <CheckCircle2 className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-medium">Services Publics</p>
-                  <p className="text-sm text-muted-foreground">
-                    Centres sociaux, bibliothèques
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       <CTASection />
       <Footer />
     </main>

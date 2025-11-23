@@ -95,11 +95,11 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center group">
             <img
-              src="logo.svg"
+              src="/logo.svg"
               alt="O Ò Debarras - debarras en Corse"
               className="h-28 w-28 object-contain transition-transform group-hover:scale-110"
             />
-            <div className="text-2xl font-bold text-foreground tracking-tight relative right-7 top-3">
+            <div className="text-2xl font-bold text-foreground tracking-tight relative right-6">
               Ò DÉBARRAS
             </div>
           </Link>

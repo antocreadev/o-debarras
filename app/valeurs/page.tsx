@@ -207,44 +207,6 @@ export default function ValeursPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-3xl text-center mb-4">
-                Pourquoi Choisir Ò Debarras ?
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">5+</div>
-                  <p className="text-sm text-muted-foreground">
-                    Années d'expérience en Corse
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">
-                    98%
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Taux de satisfaction client
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">
-                    75%
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Taux de recyclage moyen
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       <CTASection />
       <Footer />

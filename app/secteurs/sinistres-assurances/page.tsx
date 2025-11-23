@@ -238,37 +238,6 @@ export default function SinistresAssurancesPage() {
         </div>
       </section>
 
-      {/* Insurance Partners */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">
-                Partenaires Assurances
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-center text-muted-foreground mb-6">
-                Nous travaillons régulièrement avec les principales compagnies
-                d'assurance présentes en Corse
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                {["AXA", "MAIF", "MACIF", "Groupama", "Allianz", "MMA"].map(
-                  (company) => (
-                    <Badge
-                      key={company}
-                      variant="outline"
-                      className="text-base px-4 py-2"
-                    >
-                      {company}
-                    </Badge>
-                  )
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       <CTASection />
       <Footer />

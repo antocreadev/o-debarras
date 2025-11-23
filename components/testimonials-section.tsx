@@ -2,30 +2,18 @@
 
 import { AnimatedSection } from "./animated-section";
 import { Star } from "lucide-react";
-import { useEffect, useRef } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { googleReviews } from "@/data/reviews";
 
 export function TestimonialsSection() {
-  const scriptLoaded = useRef(false);
-
-  useEffect(() => {
-    // Charger le script uniquement côté client pour éviter les problèmes d'hydratation
-    if (!scriptLoaded.current) {
-      const script = document.createElement("script");
-      script.src = "https://widget.taggbox.com/embed.min.js";
-      script.type = "text/javascript";
-      script.async = true;
-      document.body.appendChild(script);
-      scriptLoaded.current = true;
-
-      return () => {
-        // Nettoyage si nécessaire
-        if (script.parentNode) {
-          script.parentNode.removeChild(script);
-        }
-      };
-    }
-  }, []);
-
   return (
     <section
       id="testimonials"
@@ -71,18 +59,76 @@ export function TestimonialsSection() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <div className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-border bg-card">
-            {/* Widget Taggbox pour les avis Google */}
-            <div
-              className="taggbox"
-              style={{ width: "100%", overflow: "auto" }}
-              data-widget-id="305648"
-              data-website="1"
-            />
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {googleReviews.map((review, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="pl-4 md:basis-1/2 lg:basis-1/3"
+                  >
+                    <div className="h-full p-1">
+                      <Card className="h-full border-none shadow-lg bg-card/50 backdrop-blur-sm hover:bg-card transition-colors duration-300">
+                        <CardContent className="flex flex-col gap-4 p-6 h-full">
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex items-center gap-3">
+                              <Avatar className="h-10 w-10 border border-border">
+                                <AvatarImage
+                                  src={review.photo}
+                                  alt={review.name}
+                                />
+                                <AvatarFallback>
+                                  {review.name.charAt(0)}
+                                </AvatarFallback>
+                              </Avatar>
+                              <div className="flex flex-col">
+                                <span className="font-semibold text-sm line-clamp-1">
+                                  {review.name}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {review.date}
+                                </span>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-0.5">
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-4 h-4 ${
+                                    i < review.rating
+                                      ? "fill-[#FBBC05] text-[#FBBC05]"
+                                      : "fill-muted text-muted"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                          <div className="relative">
+                            <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                              {review.description}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="hidden md:block">
+                <CarouselPrevious className="-left-12" />
+                <CarouselNext className="-right-12" />
+              </div>
+            </Carousel>
           </div>
 
           {/* Bouton pour voir tous les avis */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-12">
             <a
               href="https://share.google/9YV6aX2d34jUUCAcZ"
               target="_blank"
@@ -98,3 +144,4 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
