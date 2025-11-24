@@ -6,11 +6,12 @@ import { AnimatedSection } from "./animated-section";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { BeforeAfterImage } from "./before-after-image";
 
 const services = [
   {
-    image: "/particulier-1-1.png",
+    beforeImage: "/particulier-1.png",
+    afterImage: "/particulier-1-1.png",
     title: "Particuliers",
     description:
       "Débarras de maisons, appartements, caves, greniers. Nous prenons en charge tous vos encombrants avec professionnalisme.",
@@ -24,7 +25,8 @@ const services = [
     link: "/services/particuliers",
   },
   {
-    image: "/diogene-1-1.png",
+    beforeImage: "/diogene-1-1.png",
+    afterImage: "/diogene-1.png",
     title: "Syndrome de Diogène",
     description:
       "Intervention spécialisée avec discrétion et respect pour les cas de syndrome de Diogène et syllogomanie.",
@@ -38,7 +40,8 @@ const services = [
     link: "/services/diogene",
   },
   {
-    image: "/pro-1-1.png",
+    beforeImage: "/pro-1-1.png",
+    afterImage: "/pro-1.png",
     title: "Professionnels",
     description:
       "Débarras de locaux commerciaux, bureaux, entrepôts. Solutions adaptées aux entreprises et collectivités.",
@@ -81,14 +84,11 @@ export function ServicesSection() {
 
                   <div className="relative z-10">
                     {/* Image Section */}
-                    <div className="relative h-48 w-full overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                    <BeforeAfterImage
+                      beforeImage={service.beforeImage}
+                      afterImage={service.afterImage}
+                      alt={service.title}
+                    />
 
                     {/* Content Section */}
                     <div className="p-8">

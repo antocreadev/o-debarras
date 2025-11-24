@@ -252,8 +252,8 @@ export default function DiogenePage() {
                     Intervention spécialisée
                   </h3>
                   <BeforeAfterSlider
-                    beforeImage="/diogene-1.png"
-                    afterImage="/diogene-1-1.png"
+                    beforeImage="/diogene-1-1.png"
+                    afterImage="/diogene-1.png"
                   />
                 </div>
               </AnimatedSection>

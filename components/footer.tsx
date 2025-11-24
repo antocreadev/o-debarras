@@ -12,14 +12,16 @@ export function Footer() {
               <img
                 src="/logo.svg"
                 alt="logo Ò Debarras - debarras en Corse- o debarras"
-                className="h-20 w-20 object-contain relative right-6"
+                className="h-20 w-20 object-contain"
                 style={{ filter: "invert(1) brightness(2)" }}
               />
-              <h3 className="text-2xl font-bold ">Ò DÉBARRAS</h3>
+              <h3 className="text-2xl font-bold  relative right-6">
+                Ò DÉBARRAS
+              </h3>
             </div>
-            <p className="text-background/80 text-sm leading-relaxed">
+            <p className="text-background/80 text-sm leading-relaxed ">
               Votre partenaire de confiance pour tous vos besoins de débarras en
-              Corse depuis plus depuis 2020.
+              Corse depuis 2020.
             </p>
           </div>
 

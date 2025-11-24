@@ -220,8 +220,8 @@ export default function ParticuliersPage() {
                     Cave transformée
                   </h3>
                   <BeforeAfterSlider
-                    beforeImage="/cave-1.png"
-                    afterImage="/cave-1-1.png"
+                    beforeImage="/cave-1-1.png"
+                    afterImage="/cave-1.png"
                   />
                 </div>
               </AnimatedSection>

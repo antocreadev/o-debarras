@@ -259,8 +259,8 @@ export default function ProfessionnelsPage() {
                     Local professionnel
                   </h3>
                   <BeforeAfterSlider
-                    beforeImage="/pro-1.png"
-                    afterImage="/pro-1-1.png"
+                    beforeImage="/pro-1-1.png"
+                    afterImage="/pro-1.png"
                   />
                 </div>
               </AnimatedSection>

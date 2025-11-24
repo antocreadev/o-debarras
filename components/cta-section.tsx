@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Phone, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Phone, Mail } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -10,25 +10,35 @@ export function CTASection() {
             Besoin d'un débarras ?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-pretty">
-            Contactez-nous dès maintenant pour un devis gratuit et sans engagement. Intervention rapide dans toute la
-            Corse.
+            Contactez-nous dès maintenant pour un devis gratuit et sans
+            engagement. Intervention rapide dans toute la Corse.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-              <Phone className="w-5 h-5 mr-2" />
-              Appelez-nous
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8 py-6"
+              asChild
+            >
+              <a href="tel:+33784717301">
+                <Phone className="w-5 h-5 mr-2" />
+                Appelez-nous
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              asChild
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Envoyez un email
+              <a href="mailto:odebarras2b@gmail.com">
+                <Mail className="w-5 h-5 mr-2" />
+                Envoyez un email
+              </a>
             </Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
