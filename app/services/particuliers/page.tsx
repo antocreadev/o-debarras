@@ -83,11 +83,7 @@ export default function ParticuliersPage() {
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Services Particuliers
                 </div>
-                <div className="flex items-center justify-center gap-6 mb-6">
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
-                    Débarras pour{" "}
-                    <span className="text-primary">Particuliers</span>
-                  </h1>
+                <div className="flex items-center justify-center gap-6 mb-6 flex-col md:flex-row">
                   <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
                       src="/logo-2.svg"
@@ -96,6 +92,10 @@ export default function ParticuliersPage() {
                       className="object-contain"
                     />
                   </div>
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
+                    Débarras pour{" "}
+                    <span className="text-primary">Particuliers</span>
+                  </h1>
                 </div>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                   Nous prenons en charge tous vos encombrants avec

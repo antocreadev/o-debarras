@@ -248,6 +248,21 @@ export function Footer() {
 
         <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
           <p>© {new Date().getFullYear()} Ò Debarras. Tous droits réservés.</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <Link
+              href="/mentions-legales"
+              className="hover:text-background transition-colors"
+            >
+              Mentions Légales
+            </Link>
+            <span>•</span>
+            <Link
+              href="/cgu"
+              className="hover:text-background transition-colors"
+            >
+              CGU
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

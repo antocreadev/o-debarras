@@ -84,12 +84,8 @@ export default function ProfessionnelsPage() {
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Services Professionnels
                 </div>
-                <div className="flex items-center justify-center gap-6 mb-6">
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
-                    Débarras{" "}
-                    <span className="text-primary">Professionnels</span>
-                  </h1>
-                  <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
+                <div className="flex items-center justify-center gap-6 mb-6 flex-col md:flex-row">
+                          <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
                       src="/logo-2.svg"
                       alt="Ò Débarras"
@@ -97,6 +93,11 @@ export default function ProfessionnelsPage() {
                       className="object-contain"
                     />
                   </div>
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
+                    Débarras{" "}
+                    <span className="text-primary">Professionnels</span>
+                  </h1>
+          
                 </div>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                   Solutions adaptées aux entreprises et collectivités. Débarras

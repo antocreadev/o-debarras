@@ -277,9 +277,10 @@ export function Navigation() {
 
               <div>
                 <button
-                  onClick={() =>
-                    setIsServicesDropdownOpen(!isServicesDropdownOpen)
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                  }}
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   Services
@@ -307,7 +308,10 @@ export function Navigation() {
 
               <div>
                 <button
-                  onClick={() => setIsSectorsOpen(!isSectorsOpen)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsSectorsOpen(!isSectorsOpen);
+                  }}
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   Secteurs
