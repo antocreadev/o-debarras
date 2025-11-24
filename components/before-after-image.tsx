@@ -14,7 +14,7 @@ export function BeforeAfterImage({
   alt,
 }: BeforeAfterImageProps) {
   return (
-    <div className="relative h-48 w-full overflow-hidden">
+    <div className="relative h-56 w-full">
       {/* Container avec grille pour les deux images */}
       <div className="absolute inset-0 flex">
         {/* Image AVANT - Côté gauche avec clip diagonal */}

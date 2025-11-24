@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { corsicaRegions, allCities } from "@/lib/corsica-data";
 
 export function Footer() {
   return (
@@ -191,6 +192,41 @@ export function Footer() {
             >
               Syndics
             </Link>
+          </div>
+        </div>
+
+        <div className="border-t border-background/20 pt-8 pb-8">
+          <h4 className="font-bold mb-6 text-center">
+            Nos Zones d'Intervention en Corse
+          </h4>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-background/80 max-w-4xl mx-auto mb-8">
+            {corsicaRegions.map((region) => (
+              <Link
+                key={region.slug}
+                href={`/zones/${region.slug}`}
+                className="hover:text-background transition-colors text-center p-2 rounded hover:bg-background/10"
+              >
+                <div className="font-medium">{region.name}</div>
+                <div className="text-xs text-background/60 italic">
+                  {region.corseName}
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <h4 className="font-bold mb-4 text-center mt-8">
+            Nos Villes d'Intervention
+          </h4>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 text-xs text-background/70 max-w-6xl mx-auto">
+            {allCities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/zones/villes/${city.slug}`}
+                className="hover:text-background transition-colors text-center p-1.5 rounded hover:bg-background/5"
+              >
+                {city.name}
+              </Link>
+            ))}
           </div>
         </div>
 

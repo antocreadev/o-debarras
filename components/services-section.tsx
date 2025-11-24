@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BeforeAfterImage } from "./before-after-image";
+import Image from "next/image";
 
 const services = [
   {
@@ -59,9 +60,19 @@ export function ServicesSection() {
           <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Nos Services
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 text-balance">
-            Des solutions pour tous
-          </h2>
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
+              <Image
+                src="/logo-2.svg"
+                alt="Ò Débarras"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-foreground text-balance">
+              Des solutions pour tous
+            </h2>
+          </div>
           <p className="text-xl text-muted-foreground text-pretty">
             Que vous soyez particulier ou professionnel, nous avons la solution
             adaptée à votre besoin
@@ -77,21 +88,23 @@ export function ServicesSection() {
                 className="h-full"
               >
                 <Card
-                  className={`overflow-hidden h-full hover:shadow-2xl transition-all duration-300 border-2 border-border bg-gradient-to-br ${service.color} relative group`}
+                  className={`overflow-hidden h-full hover:shadow-2xl transition-all duration-300 border-2 border-border bg-gradient-to-br ${service.color} relative group rounded-2xl p-0`}
                 >
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  <div className="relative z-10">
-                    {/* Image Section */}
+                  {/* Image Section - Full width at top */}
+                  <div className="overflow-hidden rounded-t-2xl">
                     <BeforeAfterImage
                       beforeImage={service.beforeImage}
                       afterImage={service.afterImage}
                       alt={service.title}
                     />
+                  </div>
 
+                  {/* Hover effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  <div className="relative z-10">
                     {/* Content Section */}
-                    <div className="p-8">
+                    <div className="px-8 py-8 pt-0">
                       <h3 className="text-2xl font-black text-foreground mb-4">
                         {service.title}
                       </h3>
@@ -114,7 +127,7 @@ export function ServicesSection() {
                       <Button
                         asChild
                         variant="ghost"
-                        className="w-full group/btn hover:bg-primary/10 transition-colors duration-200"
+                        className="w-full group/btn hover:bg-primary/20 transition-colors duration-200 bg-primary/10"
                       >
                         <Link href={service.link}>
                           En savoir plus

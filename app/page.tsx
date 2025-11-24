@@ -10,6 +10,8 @@ import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { StructuredData } from "@/components/structured-data";
+import { CorsicaCoverageSection } from "@/components/corsica-coverage-section";
+import { RealisationsPreviewSection } from "@/components/realisations-preview-section";
 
 export default function Home() {
   return (
@@ -20,8 +22,10 @@ export default function Home() {
       {/* <StatsSection /> */}
       <ProcessSection />
       <ServicesSection />
+      <RealisationsPreviewSection />
       <TargetAudienceSection />
       <TestimonialsSection />
+      <CorsicaCoverageSection />
       <FacebookSection />
       <InstagramSection />
       <CTASection />

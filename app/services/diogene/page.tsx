@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
@@ -58,9 +59,19 @@ export default function DiogenePage() {
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Intervention Spécialisée
                 </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-6">
-                  Syndrome de <span className="text-primary">Diogène</span>
-                </h1>
+                <div className="flex items-center justify-center gap-6 mb-6">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
+                    Syndrome de <span className="text-primary">Diogène</span>
+                  </h1>
+                  <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
+                    <Image
+                      src="/logo-2.svg"
+                      alt="Ò Débarras"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                   Intervention spécialisée avec discrétion et respect pour les
                   cas de syndrome de Diogène et syllogomanie.
