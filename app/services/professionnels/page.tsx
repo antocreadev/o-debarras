@@ -15,6 +15,7 @@ import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { BeforeAfterSlider } from "@/components/before-after-slider";
 
 const services = [
   {
@@ -235,6 +236,44 @@ export default function ProfessionnelsPage() {
                 </div>
               </AnimatedSection>
             </div>
+          </div>
+        </section>
+
+        {/* Before/After Gallery */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <AnimatedSection className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
+                Nos Réalisations Professionnelles
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Découvrez quelques exemples de nos interventions en milieu
+                professionnel
+              </p>
+            </AnimatedSection>
+
+            <div className="grid gap-12 max-w-5xl mx-auto">
+              <AnimatedSection delay={0.1}>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-center text-foreground">
+                    Local professionnel
+                  </h3>
+                  <BeforeAfterSlider
+                    beforeImage="/pro-1.png"
+                    afterImage="/pro-1-1.png"
+                  />
+                </div>
+              </AnimatedSection>
+            </div>
+
+            <AnimatedSection delay={0.2} className="text-center mt-12">
+              <Button asChild variant="outline" size="lg">
+                <Link href="/realisations">
+                  Voir toutes nos réalisations
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+            </AnimatedSection>
           </div>
         </section>
 

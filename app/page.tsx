@@ -1,6 +1,5 @@
 import { ModernHero } from "@/components/modern-hero";
 import { StatsSection } from "@/components/stats-section";
-import { BeforeAfterShowcase } from "@/components/before-after-showcase";
 import { ProcessSection } from "@/components/process-section";
 import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
@@ -19,7 +18,6 @@ export default function Home() {
       <Navigation />
       <ModernHero />
       {/* <StatsSection /> */}
-      <BeforeAfterShowcase />
       <ProcessSection />
       <ServicesSection />
       <TargetAudienceSection />

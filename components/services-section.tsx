@@ -1,15 +1,16 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Home, Heart, Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const services = [
   {
-    icon: Home,
+    image: "/particulier-1-1.png",
     title: "Particuliers",
     description:
       "Débarras de maisons, appartements, caves, greniers. Nous prenons en charge tous vos encombrants avec professionnalisme.",
@@ -20,12 +21,10 @@ const services = [
       "Succession",
     ],
     color: "from-blue-500/10 to-blue-600/10",
-    iconBg: "bg-blue-500/10",
-    iconColor: "text-blue-600",
     link: "/services/particuliers",
   },
   {
-    icon: Heart,
+    image: "/diogene-1-1.png",
     title: "Syndrome de Diogène",
     description:
       "Intervention spécialisée avec discrétion et respect pour les cas de syndrome de Diogène et syllogomanie.",
@@ -36,19 +35,15 @@ const services = [
       "Mandataires judiciaires",
     ],
     color: "from-rose-500/10 to-rose-600/10",
-    iconBg: "bg-rose-500/10",
-    iconColor: "text-rose-600",
     link: "/services/diogene",
   },
   {
-    icon: Building2,
+    image: "/pro-1-1.png",
     title: "Professionnels",
     description:
       "Débarras de locaux commerciaux, bureaux, entrepôts. Solutions adaptées aux entreprises et collectivités.",
     features: ["Locaux commerciaux", "Bureaux", "Entrepôts", "Collectivités"],
     color: "from-primary/10 to-primary/20",
-    iconBg: "bg-primary/10",
-    iconColor: "text-primary",
     link: "/services/professionnels",
   },
 ];
@@ -79,54 +74,54 @@ export function ServicesSection() {
                 className="h-full"
               >
                 <Card
-                  className={`p-8 h-full hover:shadow-2xl transition-all duration-300 border-2 border-border bg-gradient-to-br ${service.color} relative overflow-hidden group`}
+                  className={`overflow-hidden h-full hover:shadow-2xl transition-all duration-300 border-2 border-border bg-gradient-to-br ${service.color} relative group`}
                 >
                   {/* Hover effect overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ rotate: 15, scale: 1.05 }}
-                      transition={{
-                        duration: 0.3,
-                        ease: [0.25, 0.1, 0.25, 1.0],
-                      }}
-                      className={`w-20 h-20 ${service.iconBg} rounded-2xl flex items-center justify-center mb-6 shadow-lg gpu-accelerated`}
-                    >
-                      <service.icon
-                        className={`w-10 h-10 ${service.iconColor}`}
+                    {/* Image Section */}
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
-                    </motion.div>
+                    </div>
 
-                    <h3 className="text-2xl font-black text-foreground mb-4">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
+                    {/* Content Section */}
+                    <div className="p-8">
+                      <h3 className="text-2xl font-black text-foreground mb-4">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
 
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center gap-3 text-sm text-foreground font-medium"
-                        >
-                          <div className="w-2 h-2 bg-primary rounded-full" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-3 mb-6">
+                        {service.features.map((feature, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-center gap-3 text-sm text-foreground font-medium"
+                          >
+                            <div className="w-2 h-2 bg-primary rounded-full" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
 
-                    <Button
-                      asChild
-                      variant="ghost"
-                      className="w-full group/btn hover:bg-primary/10 transition-colors duration-200"
-                    >
-                      <Link href={service.link}>
-                        En savoir plus
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
-                      </Link>
-                    </Button>
+                      <Button
+                        asChild
+                        variant="ghost"
+                        className="w-full group/btn hover:bg-primary/10 transition-colors duration-200"
+                      >
+                        <Link href={service.link}>
+                          En savoir plus
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </Card>
               </motion.div>

@@ -126,15 +126,19 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex items-center gap-4 mt-6">
-              {/* <a
-                href="#"
+              <a
+                href="https://www.facebook.com/people/%C3%B2-d%C3%A9barras/61580426932164/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-background transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </a> */}
+              </a>
               <a
                 href="https://www.instagram.com/odebarras/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-background transition-colors"
                 aria-label="Instagram"
               >

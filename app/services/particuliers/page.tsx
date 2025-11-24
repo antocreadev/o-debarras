@@ -12,9 +12,11 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { BeforeAfterSlider } from "@/components/before-after-slider";
 
 const services = [
   {
@@ -184,6 +186,67 @@ export default function ParticuliersPage() {
                 </div>
               </AnimatedSection>
             </div>
+          </div>
+        </section>
+
+        {/* Before/After Gallery */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4 lg:px-8">
+            <AnimatedSection className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
+                Nos Réalisations
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Découvrez quelques exemples de nos interventions
+              </p>
+            </AnimatedSection>
+
+            <div className="grid gap-12 max-w-5xl mx-auto">
+              <AnimatedSection delay={0.1}>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-center text-foreground">
+                    Grenier encombré
+                  </h3>
+                  <BeforeAfterSlider
+                    beforeImage="/grenier-1.png"
+                    afterImage="/grenier-1-1.png"
+                  />
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-center text-foreground">
+                    Cave transformée
+                  </h3>
+                  <BeforeAfterSlider
+                    beforeImage="/cave-1.png"
+                    afterImage="/cave-1-1.png"
+                  />
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.3}>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-center text-foreground">
+                    Logement nettoyé
+                  </h3>
+                  <BeforeAfterSlider
+                    beforeImage="/particulier-1.png"
+                    afterImage="/particulier-1-1.png"
+                  />
+                </div>
+              </AnimatedSection>
+            </div>
+
+            <AnimatedSection delay={0.4} className="text-center mt-12">
+              <Button asChild variant="outline" size="lg">
+                <Link href="/realisations">
+                  Voir toutes nos réalisations
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+            </AnimatedSection>
           </div>
         </section>
 

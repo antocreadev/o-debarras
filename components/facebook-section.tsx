@@ -2,6 +2,7 @@
 
 import { AnimatedSection } from "./animated-section";
 import { Facebook } from "lucide-react";
+import Link from "next/link";
 
 export function FacebookSection() {
   return (
@@ -22,15 +23,20 @@ export function FacebookSection() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-border bg-card">
+          <Link
+            href="https://www.facebook.com/people/%C3%B2-d%C3%A9barras/61580426932164/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-border bg-card hover:shadow-3xl hover:scale-[1.02] transition-all duration-300"
+          >
             <iframe
               src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25615438"
               width="100%"
               height="1000"
-              className="w-full"
+              className="w-full pointer-events-none"
               title="Posts Facebook Ò Débarras"
             />
-          </div>
+          </Link>
         </AnimatedSection>
       </div>
     </section>

@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import {
@@ -13,35 +11,11 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import Link from "next/link";
+import { AnimatedSection } from "@/components/animated-section";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    serviceType: "",
-    propertyType: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("[v0] Form submitted:", formData);
-    // Handle form submission
-  };
-
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -52,11 +26,11 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-4">Contact</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 text-balance">
-              Demandez Votre Devis Gratuit
+              Contactez-Nous
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Contactez-nous dès aujourd'hui pour obtenir un devis gratuit et
-              sans engagement. Notre équipe vous répond sous 24h.
+              Besoin d'un devis gratuit ou d'informations ? Contactez-nous par
+              téléphone, email ou sur les réseaux sociaux.
             </p>
           </div>
         </div>
@@ -64,31 +38,32 @@ export default function ContactPage() {
 
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Contact Information */}
-            <div className="space-y-6">
-              <Card>
+            <AnimatedSection>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle>Informations de Contact</CardTitle>
                   <CardDescription>
                     Plusieurs moyens de nous joindre
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-6">
                   <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-primary mt-0.5" />
+                    <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Téléphone</p>
                       <a
-                        href="tel:+33495123456"
+                        href="tel:+33784717301"
                         className="text-sm text-muted-foreground hover:text-primary"
                       >
                         +33 7 84 71 73 01
                       </a>
                     </div>
                   </div>
+
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-primary mt-0.5" />
+                    <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
                       <a
@@ -99,8 +74,9 @@ export default function ContactPage() {
                       </a>
                     </div>
                   </div>
+
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                    <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Zone d'intervention</p>
                       <p className="text-sm text-muted-foreground">
@@ -108,8 +84,9 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
+
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-primary mt-0.5" />
+                    <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Horaires</p>
                       <p className="text-sm text-muted-foreground">
@@ -120,27 +97,114 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
+
+                  <div className="pt-6 border-t border-border">
+                    <Button asChild className="w-full mb-3" size="lg">
+                      <a href="tel:+33784717301">
+                        <Phone className="w-4 h-4 mr-2" />
+                        Appeler Maintenant
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full"
+                      size="lg"
+                    >
+                      <a href="mailto:odebarras2b@gmail.com">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Envoyer un Email
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
+            </AnimatedSection>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardHeader>
-                  <CardTitle className="text-lg">Intervention Rapide</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Besoin d'une intervention urgente ? Nous pouvons intervenir
-                    sous 48h dans toute la Corse.
-                  </p>
-                  <Button className="w-full" variant="default">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Appeler Maintenant
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Social Media Section */}
+            <AnimatedSection delay={0.1}>
+              <div className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Suivez-nous sur les Réseaux Sociaux</CardTitle>
+                    <CardDescription>
+                      Restez informé de nos actualités et réalisations
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4"
+                      size="lg"
+                    >
+                      <Link
+                        href="https://www.facebook.com/people/%C3%B2-d%C3%A9barras/61580426932164/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Facebook className="w-6 h-6 mr-3 text-[#1877F2]" />
+                        <div className="text-left">
+                          <p className="font-semibold">Facebook</p>
+                          <p className="text-xs text-muted-foreground">
+                            Suivez nos interventions et actualités
+                          </p>
+                        </div>
+                      </Link>
+                    </Button>
 
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4"
+                      size="lg"
+                    >
+                      <Link
+                        href="https://www.instagram.com/odebarras/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Instagram className="w-6 h-6 mr-3 text-[#E4405F]" />
+                        <div className="text-left">
+                          <p className="font-semibold">Instagram</p>
+                          <p className="text-xs text-muted-foreground">
+                            Découvrez nos réalisations en images
+                          </p>
+                        </div>
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
 
+                <Card className="bg-primary/5 border-primary/20">
+                  <CardHeader>
+                    <CardTitle className="text-lg">
+                      Intervention Rapide
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Besoin d'une intervention urgente ? Nous pouvons
+                      intervenir sous 48h dans toute la Corse.
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        Devis gratuit et sans engagement
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        Intervention rapide
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        Service professionnel
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
