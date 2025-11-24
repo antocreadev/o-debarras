@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Mentions Légales | Ò Debarras",
     description:
       "Informations légales du site Ò Debarras, spécialiste du débarras en Corse.",
-    url: "https://www.odebarras.fr/mentions-legales",
+    url: "https://www.odebarras.com/mentions-legales",
     siteName: "Ò Debarras",
     locale: "fr_FR",
     type: "website",
@@ -33,21 +33,34 @@ export default function MentionsLegalesPage() {
                 1. Éditeur du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> est édité par :
+                Le site <strong>www.odebarras.com</strong> est édité par :
               </p>
               <ul className="list-none text-muted-foreground leading-relaxed ml-0 space-y-2">
                 <li>
-                  <strong>Raison sociale :</strong> Ò Debarras
+                  <strong>Raison sociale :</strong> Ò Debarras (CAPURAN KEVIN)
                 </li>
                 <li>
-                  <strong>Forme juridique :</strong> Auto-entrepreneur
+                  <strong>Forme juridique :</strong> Entrepreneur individuel
                 </li>
                 <li>
-                  <strong>SIRET :</strong> 98218698700011
+                  <strong>SIREN :</strong> 892 485 087
                 </li>
                 <li>
-                  <strong>Adresse :</strong> Basée en Corse, intervention sur
-                  toute l'île
+                  <strong>SIRET (siège) :</strong> 892 485 087 00019
+                </li>
+                <li>
+                  <strong>Numéro de TVA :</strong> FR66892485087
+                </li>
+                <li>
+                  <strong>Code NAF/APE :</strong> 38.32Z (Récupération de
+                  déchets triés)
+                </li>
+                <li>
+                  <strong>RCS :</strong> 892 485 087 R.C.S. Bastia
+                </li>
+                <li>
+                  <strong>Adresse :</strong> 8 Chemin du Fiumicellu, 20200
+                  Santa-Maria-di-Lota
                 </li>
                 <li>
                   <strong>Email :</strong>{" "}
@@ -69,8 +82,12 @@ export default function MentionsLegalesPage() {
                 </li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                <strong>Directeur de la publication :</strong> Antoine Créa,
-                gérant de Ò Debarras
+                <strong>Directeur de la publication :</strong> CAPURAN Kevin,
+                dirigeant de Ò Debarras
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Activité principale :</strong> Débarras d'encombrants et
+                recyclage (vide maison, etc.)
               </p>
             </section>
 
@@ -79,7 +96,7 @@ export default function MentionsLegalesPage() {
                 2. Hébergement du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> est hébergé par :
+                Le site <strong>www.odebarras.com</strong> est hébergé par :
               </p>
               <ul className="list-none text-muted-foreground leading-relaxed ml-0 space-y-2">
                 <li>
@@ -108,7 +125,7 @@ export default function MentionsLegalesPage() {
                 3. Propriété intellectuelle
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                L'ensemble du contenu du site <strong>www.odebarras.fr</strong>{" "}
+                L'ensemble du contenu du site <strong>www.odebarras.com</strong>{" "}
                 (structure, textes, logos, images, vidéos, etc.) est la
                 propriété exclusive de Ò Debarras, sauf mentions particulières.
               </p>
@@ -174,7 +191,7 @@ export default function MentionsLegalesPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4 mt-8">5. Cookies</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> peut utiliser des
+                Le site <strong>www.odebarras.com</strong> peut utiliser des
                 cookies pour améliorer l'expérience utilisateur et réaliser des
                 statistiques de visite. Les cookies sont de petits fichiers
                 textes stockés sur votre appareil lors de votre navigation.
@@ -227,14 +244,14 @@ export default function MentionsLegalesPage() {
                 7. Liens hypertextes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> peut contenir des
+                Le site <strong>www.odebarras.com</strong> peut contenir des
                 liens vers d'autres sites internet. Ò Debarras n'exerce aucun
                 contrôle sur ces sites et décline toute responsabilité quant à
                 leur contenu ou à leur politique de confidentialité.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 La création de liens hypertextes vers le site{" "}
-                <strong>www.odebarras.fr</strong> nécessite l'autorisation
+                <strong>www.odebarras.com</strong> nécessite l'autorisation
                 préalable de Ò Debarras. Pour toute demande, veuillez nous
                 contacter à l'adresse{" "}
                 <a
@@ -264,7 +281,7 @@ export default function MentionsLegalesPage() {
                 9. Crédits et réalisation
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> a été conçu et
+                Le site <strong>www.odebarras.com</strong> a été conçu et
                 développé par{" "}
                 <a
                   href="https://antocrea.dev"

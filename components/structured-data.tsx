@@ -12,7 +12,7 @@ export function StructuredData() {
         logo: "https://o-debarras-4b2f.vercel.app/logo.svg",
         url: "https://o-debarras-4b2f.vercel.app",
         telephone: "+33495123456",
-        email: "contact@odebarras.fr",
+        email: "contact@odebarras.com",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Corse",

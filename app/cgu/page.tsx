@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Conditions Générales d'Utilisation | Ò Debarras",
     description:
       "Conditions d'utilisation du site Ò Debarras, entreprise de débarras en Corse.",
-    url: "https://www.odebarras.fr/cgu",
+    url: "https://www.odebarras.com/cgu",
     siteName: "Ò Debarras",
     locale: "fr_FR",
     type: "website",
@@ -33,7 +33,7 @@ export default function CGUPage() {
                 1. Présentation du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.fr</strong> (ci-après "le Site")
+                Le site <strong>www.odebarras.com</strong> (ci-après "le Site")
                 est édité par la société <strong>Ò Debarras</strong>,
                 spécialisée dans les services de débarras en Corse.
               </p>
@@ -45,9 +45,7 @@ export default function CGUPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4 mt-8">
-                2. Accès au site
-              </h2>
+              <h2 className="text-2xl font-bold mb-4 mt-8">2. Accès au site</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Le Site est accessible gratuitement à tout utilisateur disposant
                 d'un accès à Internet. Tous les frais supportés par
@@ -56,9 +54,9 @@ export default function CGUPage() {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Ò Debarras met en œuvre tous les moyens raisonnables à sa
-                disposition pour assurer un accès de qualité au Site, mais
-                n'est tenu à aucune obligation d'y parvenir. Ò Debarras ne peut
-                être tenu responsable de tout dysfonctionnement du réseau ou des
+                disposition pour assurer un accès de qualité au Site, mais n'est
+                tenu à aucune obligation d'y parvenir. Ò Debarras ne peut être
+                tenu responsable de tout dysfonctionnement du réseau ou des
                 serveurs ou de tout autre événement échappant au contrôle
                 raisonnable qui empêcherait ou dégraderait l'accès au Site.
               </p>
@@ -150,11 +148,11 @@ export default function CGUPage() {
                 l'information contenue dans ce site.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Ò Debarras ne pourra être tenu responsable de dommages
-                matériels liés à l'utilisation du Site. De plus, l'utilisateur
-                du Site s'engage à accéder au Site en utilisant un matériel
-                récent, ne contenant pas de virus et avec un navigateur de
-                dernière génération mis à jour.
+                Ò Debarras ne pourra être tenu responsable de dommages matériels
+                liés à l'utilisation du Site. De plus, l'utilisateur du Site
+                s'engage à accéder au Site en utilisant un matériel récent, ne
+                contenant pas de virus et avec un navigateur de dernière
+                génération mis à jour.
               </p>
             </section>
 
