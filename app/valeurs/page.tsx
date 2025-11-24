@@ -233,7 +233,6 @@ export default function ValeursPage() {
         </div>
       </section>
 
-
       <CTASection />
       <Footer />
     </main>

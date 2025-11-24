@@ -1,13 +1,21 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { CTASection } from "@/components/cta-section"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Scale, FileText, Lock, Clock, Shield, CheckCircle2 } from "lucide-react"
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { CTASection } from "@/components/cta-section";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Scale,
+  FileText,
+  Lock,
+  Clock,
+  Shield,
+  CheckCircle2,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Débarras pour Mandataires Judiciaires en Corse | Saisies & Procédures | Ò Débarras",
+  title:
+    "Débarras pour Mandataires Judiciaires en Corse | Saisies & Procédures | Ò Débarras",
   description:
     "Service de débarras pour mandataires judiciaires en Corse. Biens saisis, expulsions, inventaires détaillés, destruction sécurisée. Confidentialité et documentation rigoureuse.",
   keywords: [
@@ -53,30 +61,34 @@ export default function MandatairesJudiciairesPage() {
       description:
         "Destruction confidentielle de documents sensibles avec certificat de destruction conforme aux normes légales.",
     },
-  ]
+  ];
 
   const advantages = [
     {
       icon: Scale,
       title: "Connaissance Juridique",
-      description: "Compréhension des procédures judiciaires et respect strict des cadres légaux.",
+      description:
+        "Compréhension des procédures judiciaires et respect strict des cadres légaux.",
     },
     {
       icon: FileText,
       title: "Documentation Rigoureuse",
-      description: "Inventaires détaillés, photos horodatées, certificats pour vos dossiers judiciaires.",
+      description:
+        "Inventaires détaillés, photos horodatées, certificats pour vos dossiers judiciaires.",
     },
     {
       icon: Lock,
       title: "Confidentialité Absolue",
-      description: "Discrétion totale sur les situations et respect du secret professionnel.",
+      description:
+        "Discrétion totale sur les situations et respect du secret professionnel.",
     },
     {
       icon: Shield,
       title: "Assurances Adaptées",
-      description: "Couverture d'assurance spécifique pour les interventions dans un cadre judiciaire.",
+      description:
+        "Couverture d'assurance spécifique pour les interventions dans un cadre judiciaire.",
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen">
@@ -91,8 +103,9 @@ export default function MandatairesJudiciairesPage() {
               Débarras pour Mandataires Judiciaires
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les mandataires judiciaires dans leurs missions avec rigueur, confidentialité et
-              respect des procédures légales.
+              Ò Debarras accompagne les mandataires judiciaires dans leurs
+              missions avec rigueur, confidentialité et respect des procédures
+              légales.
             </p>
           </div>
         </div>
@@ -106,23 +119,29 @@ export default function MandatairesJudiciairesPage() {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <Scale className="w-8 h-8 text-primary" />
-                  <CardTitle className="text-2xl">Un Partenaire de Confiance pour la Justice</CardTitle>
+                  <CardTitle className="text-2xl">
+                    Un Partenaire de Confiance pour la Justice
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Les mandataires judiciaires font face à des situations complexes nécessitant des interventions de
-                  débarras dans un cadre légal strict : saisies immobilières, expulsions, liquidations judiciaires,
-                  tutelles, curatelles...
+                  Les mandataires judiciaires font face à des situations
+                  complexes nécessitant des interventions de débarras dans un
+                  cadre légal strict : saisies immobilières, expulsions,
+                  liquidations judiciaires, tutelles, curatelles...
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras comprend les enjeux et contraintes de ces missions. Nous intervenons avec la rigueur et la
-                  confidentialité requises, en respectant scrupuleusement les procédures judiciaires et en fournissant
-                  toute la documentation nécessaire.
+                  Ò Debarras comprend les enjeux et contraintes de ces missions.
+                  Nous intervenons avec la rigueur et la confidentialité
+                  requises, en respectant scrupuleusement les procédures
+                  judiciaires et en fournissant toute la documentation
+                  nécessaire.
                 </p>
                 <p className="text-muted-foreground">
-                  Notre expérience avec les mandataires judiciaires corses nous permet d'anticiper vos besoins et de
-                  vous proposer un service adapté à chaque situation.
+                  Notre expérience avec les mandataires judiciaires corses nous
+                  permet d'anticiper vos besoins et de vous proposer un service
+                  adapté à chaque situation.
                 </p>
               </CardContent>
             </Card>
@@ -134,7 +153,9 @@ export default function MandatairesJudiciairesPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Nos Services Dédiés</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+              Nos Services Dédiés
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Des prestations adaptées aux exigences du cadre judiciaire
             </p>
@@ -147,7 +168,9 @@ export default function MandatairesJudiciairesPage() {
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -159,7 +182,9 @@ export default function MandatairesJudiciairesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Nos Atouts</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+              Nos Atouts
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -172,7 +197,9 @@ export default function MandatairesJudiciairesPage() {
                   <CardTitle className="text-lg">{advantage.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {advantage.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -220,8 +247,12 @@ export default function MandatairesJudiciairesPage() {
                   <CardContent className="flex items-start gap-4 p-6">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="flex-1">
-                      <h3 className="font-semibold text-lg mb-1">{situation.title}</h3>
-                      <p className="text-sm text-muted-foreground">{situation.description}</p>
+                      <h3 className="font-semibold text-lg mb-1">
+                        {situation.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {situation.description}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -278,8 +309,12 @@ export default function MandatairesJudiciairesPage() {
                       {item.step}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-semibold text-lg mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -294,7 +329,9 @@ export default function MandatairesJudiciairesPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <Card className="bg-primary/5 border-primary/20">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Nos Garanties</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Nos Garanties
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-8">
@@ -302,7 +339,8 @@ export default function MandatairesJudiciairesPage() {
                   <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">Respect des Délais</h3>
                   <p className="text-sm text-muted-foreground">
-                    Intervention dans les délais imposés par les procédures judiciaires.
+                    Intervention dans les délais imposés par les procédures
+                    judiciaires.
                   </p>
                 </div>
                 <div className="text-center">
@@ -315,7 +353,9 @@ export default function MandatairesJudiciairesPage() {
                 <div className="text-center">
                   <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">Assurances Complètes</h3>
-                  <p className="text-sm text-muted-foreground">Couverture adaptée aux interventions judiciaires.</p>
+                  <p className="text-sm text-muted-foreground">
+                    Couverture adaptée aux interventions judiciaires.
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -326,5 +366,5 @@ export default function MandatairesJudiciairesPage() {
       <CTASection />
       <Footer />
     </main>
-  )
+  );
 }

@@ -25,7 +25,14 @@ export function generateOrganizationSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
         opens: "08:00",
         closes: "19:00",
       },
@@ -69,7 +76,9 @@ export function generateServiceSchema(
   };
 }
 
-export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
+export function generateBreadcrumbSchema(
+  items: Array<{ name: string; url: string }>
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

@@ -41,7 +41,8 @@ const features = [
 ];
 
 export const metadata: Metadata = {
-  title: "Syndrome de Diogène & Syllogomanie en Corse | Intervention Spécialisée | Ò Débarras",
+  title:
+    "Syndrome de Diogène & Syllogomanie en Corse | Intervention Spécialisée | Ò Débarras",
   description:
     "Intervention spécialisée pour syndrome de Diogène et syllogomanie en Corse. Équipe formée, discrétion absolue, accompagnement respectueux. Collaboration avec services sociaux et mandataires.",
   keywords: [
@@ -137,9 +138,7 @@ export default function DiogenePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {features.map((feature, index) => (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <div
-                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2"
-                  >
+                  <div className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <feature.icon className="w-8 h-8 text-primary" />
                     </div>

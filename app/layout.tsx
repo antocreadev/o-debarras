@@ -103,6 +103,34 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Ò Débarras" />
+        {/* Preload critical images for faster loading on Safari */}
+        <link
+          rel="preload"
+          as="image"
+          href="/particulier-1.png"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/particulier-1-1.png"
+          type="image/png"
+        />
+        <link rel="preload" as="image" href="/cave-1.png" type="image/png" />
+        <link rel="preload" as="image" href="/cave-1-1.png" type="image/png" />
+        <link rel="preload" as="image" href="/diogene-1.png" type="image/png" />
+        <link
+          rel="preload"
+          as="image"
+          href="/diogene-1-1.png"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/logo-2.svg"
+          type="image/svg+xml"
+        />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}

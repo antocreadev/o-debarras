@@ -14,7 +14,8 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Débarras pour Administrateurs d'Immeubles & Syndics en Corse | Ò Débarras",
+  title:
+    "Débarras pour Administrateurs d'Immeubles & Syndics en Corse | Ò Débarras",
   description:
     "Service de débarras pour syndics et administrateurs de biens en Corse. Gestion parties communes, caves, greniers. Interventions planifiées et tarifs dégressifs pour copropriétés.",
   keywords: [
@@ -260,8 +261,6 @@ export default function AdministrateursImmeubles() {
           </div>
         </div>
       </section>
-
-
 
       <CTASection />
       <Footer />

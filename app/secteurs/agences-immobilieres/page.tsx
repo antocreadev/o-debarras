@@ -1,13 +1,21 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { CTASection } from "@/components/cta-section"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Home, Clock, Sparkles, TrendingUp, CheckCircle2, Users } from "lucide-react"
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { CTASection } from "@/components/cta-section";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Home,
+  Clock,
+  Sparkles,
+  TrendingUp,
+  CheckCircle2,
+  Users,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Débarras pour Agences Immobilières en Corse | Avant Vente & Location | Ò Débarras",
+  title:
+    "Débarras pour Agences Immobilières en Corse | Avant Vente & Location | Ò Débarras",
   description:
     "Service de débarras rapide pour agences immobilières en Corse. Préparation biens avant vente/location. Intervention sous 48h. Valorisation et home staging. Tarifs professionnels.",
   keywords: [
@@ -40,7 +48,8 @@ export default function AgencesImmobilieresPage() {
     },
     {
       title: "Débarras Avant Location",
-      description: "Remise en état rapide des logements entre deux locataires pour minimiser la vacance locative.",
+      description:
+        "Remise en état rapide des logements entre deux locataires pour minimiser la vacance locative.",
     },
     {
       title: "Débarras d'Urgence",
@@ -52,30 +61,34 @@ export default function AgencesImmobilieresPage() {
       description:
         "Débarras sélectif et réorganisation pour mettre en valeur le bien lors des visites (en partenariat).",
     },
-  ]
+  ];
 
   const advantages = [
     {
       icon: Clock,
       title: "Réactivité",
-      description: "Intervention sous 48h pour ne pas retarder vos ventes ou locations.",
+      description:
+        "Intervention sous 48h pour ne pas retarder vos ventes ou locations.",
     },
     {
       icon: Sparkles,
       title: "Valorisation",
-      description: "Nettoyage professionnel pour présenter le bien sous son meilleur jour.",
+      description:
+        "Nettoyage professionnel pour présenter le bien sous son meilleur jour.",
     },
     {
       icon: TrendingUp,
       title: "Tarifs Professionnels",
-      description: "Tarifs préférentiels pour les agences avec volume d'interventions régulier.",
+      description:
+        "Tarifs préférentiels pour les agences avec volume d'interventions régulier.",
     },
     {
       icon: Users,
       title: "Partenariat Durable",
-      description: "Relation de confiance sur le long terme avec un interlocuteur dédié.",
+      description:
+        "Relation de confiance sur le long terme avec un interlocuteur dédié.",
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen">
@@ -90,8 +103,9 @@ export default function AgencesImmobilieresPage() {
               Débarras pour Agences Immobilières
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras est le partenaire des agences immobilières corses pour préparer rapidement et efficacement les
-              biens à la vente ou à la location.
+              Ò Debarras est le partenaire des agences immobilières corses pour
+              préparer rapidement et efficacement les biens à la vente ou à la
+              location.
             </p>
           </div>
         </div>
@@ -105,21 +119,28 @@ export default function AgencesImmobilieresPage() {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <Home className="w-8 h-8 text-primary" />
-                  <CardTitle className="text-2xl">Votre Partenaire pour Valoriser Vos Biens</CardTitle>
+                  <CardTitle className="text-2xl">
+                    Votre Partenaire pour Valoriser Vos Biens
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Dans le secteur immobilier, le temps c'est de l'argent. Un bien encombré ou mal présenté se vend moins
-                  vite et moins cher. Un logement qui reste vide entre deux locataires représente une perte de revenus.
+                  Dans le secteur immobilier, le temps c'est de l'argent. Un
+                  bien encombré ou mal présenté se vend moins vite et moins
+                  cher. Un logement qui reste vide entre deux locataires
+                  représente une perte de revenus.
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras comprend ces enjeux et propose aux agences immobilières corses un service de débarras
-                  rapide, efficace et professionnel pour optimiser la mise en vente ou en location de leurs biens.
+                  Ò Debarras comprend ces enjeux et propose aux agences
+                  immobilières corses un service de débarras rapide, efficace et
+                  professionnel pour optimiser la mise en vente ou en location
+                  de leurs biens.
                 </p>
                 <p className="text-muted-foreground">
-                  Nous intervenons sur tous types de biens : appartements, maisons, locaux commerciaux, caves, greniers,
-                  garages, partout en Corse.
+                  Nous intervenons sur tous types de biens : appartements,
+                  maisons, locaux commerciaux, caves, greniers, garages, partout
+                  en Corse.
                 </p>
               </CardContent>
             </Card>
@@ -131,7 +152,9 @@ export default function AgencesImmobilieresPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Nos Services Dédiés</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+              Nos Services Dédiés
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Des solutions complètes pour préparer vos biens immobiliers
             </p>
@@ -144,7 +167,9 @@ export default function AgencesImmobilieresPage() {
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -156,7 +181,9 @@ export default function AgencesImmobilieresPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Pourquoi Nous Choisir ?</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+              Pourquoi Nous Choisir ?
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -169,7 +196,9 @@ export default function AgencesImmobilieresPage() {
                   <CardTitle className="text-lg">{advantage.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {advantage.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -216,7 +245,9 @@ export default function AgencesImmobilieresPage() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {benefit.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -228,5 +259,5 @@ export default function AgencesImmobilieresPage() {
       <CTASection />
       <Footer />
     </main>
-  )
+  );
 }

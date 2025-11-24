@@ -1,9 +1,16 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { CTASection } from "@/components/cta-section"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Heart, FileText, Lock, Users, Clock, CheckCircle2 } from "lucide-react"
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { CTASection } from "@/components/cta-section";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Heart,
+  FileText,
+  Lock,
+  Users,
+  Clock,
+  CheckCircle2,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,30 +60,34 @@ export default function SuccessionsNotairesPage() {
       description:
         "Préparation du bien pour la vente : débarras complet, nettoyage approfondi, petites réparations si nécessaire.",
     },
-  ]
+  ];
 
   const advantages = [
     {
       icon: Heart,
       title: "Empathie et Respect",
-      description: "Nous comprenons la charge émotionnelle de ces moments et agissons avec la plus grande délicatesse.",
+      description:
+        "Nous comprenons la charge émotionnelle de ces moments et agissons avec la plus grande délicatesse.",
     },
     {
       icon: Lock,
       title: "Discrétion Absolue",
-      description: "Confidentialité totale sur la situation familiale et les biens découverts.",
+      description:
+        "Confidentialité totale sur la situation familiale et les biens découverts.",
     },
     {
       icon: FileText,
       title: "Documentation Précise",
-      description: "Inventaires détaillés, photos, certificats pour faciliter les démarches notariales.",
+      description:
+        "Inventaires détaillés, photos, certificats pour faciliter les démarches notariales.",
     },
     {
       icon: Clock,
       title: "Respect des Délais",
-      description: "Intervention rapide pour respecter les contraintes de succession et de vente.",
+      description:
+        "Intervention rapide pour respecter les contraintes de succession et de vente.",
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen">
@@ -91,8 +102,9 @@ export default function SuccessionsNotairesPage() {
               Débarras de Successions & Notaires
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les familles et les notaires dans les débarras de successions avec empathie,
-              professionnalisme et discrétion.
+              Ò Debarras accompagne les familles et les notaires dans les
+              débarras de successions avec empathie, professionnalisme et
+              discrétion.
             </p>
           </div>
         </div>
@@ -106,22 +118,29 @@ export default function SuccessionsNotairesPage() {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <Heart className="w-8 h-8 text-primary" />
-                  <CardTitle className="text-2xl">Un Accompagnement Humain dans les Moments Difficiles</CardTitle>
+                  <CardTitle className="text-2xl">
+                    Un Accompagnement Humain dans les Moments Difficiles
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Le débarras d'un logement après un décès est une étape douloureuse pour les familles. Entre le deuil,
-                  les démarches administratives et les contraintes de temps, cette tâche peut sembler insurmontable.
+                  Le débarras d'un logement après un décès est une étape
+                  douloureuse pour les familles. Entre le deuil, les démarches
+                  administratives et les contraintes de temps, cette tâche peut
+                  sembler insurmontable.
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras vous soulage de cette charge en prenant en main l'intégralité du processus. Notre équipe,
-                  formée à ces situations sensibles, intervient avec respect, empathie et professionnalisme pour vous
-                  permettre de vous concentrer sur l'essentiel : votre famille.
+                  Ò Debarras vous soulage de cette charge en prenant en main
+                  l'intégralité du processus. Notre équipe, formée à ces
+                  situations sensibles, intervient avec respect, empathie et
+                  professionnalisme pour vous permettre de vous concentrer sur
+                  l'essentiel : votre famille.
                 </p>
                 <p className="text-muted-foreground">
-                  Nous travaillons régulièrement avec les études notariales de Corse et connaissons parfaitement les
-                  procédures et délais à respecter dans le cadre d'une succession.
+                  Nous travaillons régulièrement avec les études notariales de
+                  Corse et connaissons parfaitement les procédures et délais à
+                  respecter dans le cadre d'une succession.
                 </p>
               </CardContent>
             </Card>
@@ -133,9 +152,12 @@ export default function SuccessionsNotairesPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Nos Services Dédiés</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+              Nos Services Dédiés
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Un accompagnement complet pour les successions et débarras après décès
+              Un accompagnement complet pour les successions et débarras après
+              décès
             </p>
           </div>
 
@@ -146,7 +168,9 @@ export default function SuccessionsNotairesPage() {
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -173,7 +197,9 @@ export default function SuccessionsNotairesPage() {
                   <CardTitle className="text-lg">{advantage.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {advantage.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -228,8 +254,12 @@ export default function SuccessionsNotairesPage() {
                       {item.step}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-semibold text-lg mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -244,7 +274,9 @@ export default function SuccessionsNotairesPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <Card className="bg-primary/5 border-primary/20">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Une Attention Particulière</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Une Attention Particulière
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-8">
@@ -252,21 +284,24 @@ export default function SuccessionsNotairesPage() {
                   <Users className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">Présence Familiale</h3>
                   <p className="text-sm text-muted-foreground">
-                    Vous pouvez être présent ou non lors du débarras, selon votre souhait.
+                    Vous pouvez être présent ou non lors du débarras, selon
+                    votre souhait.
                   </p>
                 </div>
                 <div className="text-center">
                   <CheckCircle2 className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">Objets de Valeur</h3>
                   <p className="text-sm text-muted-foreground">
-                    Identification et mise de côté systématique des objets précieux et souvenirs.
+                    Identification et mise de côté systématique des objets
+                    précieux et souvenirs.
                   </p>
                 </div>
                 <div className="text-center">
                   <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">Documents Importants</h3>
                   <p className="text-sm text-muted-foreground">
-                    Recherche et conservation de tous les documents administratifs et personnels.
+                    Recherche et conservation de tous les documents
+                    administratifs et personnels.
                   </p>
                 </div>
               </div>
@@ -278,5 +313,5 @@ export default function SuccessionsNotairesPage() {
       <CTASection />
       <Footer />
     </main>
-  )
+  );
 }

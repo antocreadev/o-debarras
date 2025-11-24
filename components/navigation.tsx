@@ -218,6 +218,14 @@ export function Navigation() {
             </div>
 
             <Link
+              href="/realisations"
+              className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative group"
+            >
+              Réalisations
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+            </Link>
+
+            <Link
               href="/valeurs"
               className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative group"
             >
@@ -324,6 +332,14 @@ export function Navigation() {
                   </div>
                 )}
               </div>
+
+              <Link
+                href="/realisations"
+                className="block text-sm font-medium text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Réalisations
+              </Link>
 
               <Link
                 href="/valeurs"

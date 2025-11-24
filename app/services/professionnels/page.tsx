@@ -44,7 +44,8 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title: "Débarras Professionnels en Corse | Locaux Commerciaux, Bureaux, Entrepôts | Ò Débarras",
+  title:
+    "Débarras Professionnels en Corse | Locaux Commerciaux, Bureaux, Entrepôts | Ò Débarras",
   description:
     "Service de débarras pour professionnels en Corse. Intervention pour locaux commerciaux, bureaux, entrepôts. Gestion archives, destruction sécurisée RGPD. Certificats de destruction. Tarifs pros.",
   keywords: [
@@ -85,7 +86,8 @@ export default function ProfessionnelsPage() {
                 </div>
                 <div className="flex items-center justify-center gap-6 mb-6">
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground">
-                    Débarras <span className="text-primary">Professionnels</span>
+                    Débarras{" "}
+                    <span className="text-primary">Professionnels</span>
                   </h1>
                   <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
@@ -140,9 +142,7 @@ export default function ProfessionnelsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <div
-                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2"
-                  >
+                  <div className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-primary" />
                     </div>

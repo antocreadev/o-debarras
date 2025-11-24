@@ -5,7 +5,8 @@ import { AnimatedSection } from "@/components/animated-section";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 
 export const metadata: Metadata = {
-  title: "Réalisations Ò Débarras Corse | Avant/Après Photos | Nos Interventions",
+  title:
+    "Réalisations Ò Débarras Corse | Avant/Après Photos | Nos Interventions",
   description:
     "Découvrez nos réalisations de débarras en Corse. Photos avant/après de débarras de caves, situations Diogène, locaux professionnels, particuliers. Résultats garantis.",
   keywords: [
@@ -66,28 +67,29 @@ const realisations = [
   },
   {
     id: 6,
-    title: "Exemple 1",
+    title: "Débarras de garage complet",
     before: "/images/before-1.png",
     after: "/images/after-1.png",
-    description: "Débarras complet",
+    description:
+      "Transformation complète d'un garage encombré en espace propre et fonctionnel",
   },
   {
     id: 7,
-    title: "Exemple 2",
+    title: "Nettoyage après sinistre",
     before: "/images/before-2.png",
     after: "/images/after-2.png",
-    description: "Transformation d'espace",
+    description: "Remise en état d'un local après dégâts des eaux",
   },
   {
     id: 8,
-    title: "Exemple 3",
+    title: "Débarras d'appartement",
     before: "/images/before-3.png",
     after: "/images/after-3.png",
-    description: "Nettoyage professionnel",
+    description: "Vidage complet et nettoyage d'un appartement",
   },
   {
     id: 9,
-    title: "Exemple 4",
+    title: "Débarras pièce encombrée",
     before: "/images/before-4.png",
     after: "/images/after-4.png",
     description: "Vidage complet",

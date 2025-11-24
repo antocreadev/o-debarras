@@ -43,7 +43,8 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title: "Débarras Particuliers en Corse | Maisons, Appartements, Caves | Ò Débarras",
+  title:
+    "Débarras Particuliers en Corse | Maisons, Appartements, Caves | Ò Débarras",
   description:
     "Service de débarras pour particuliers en Corse. Intervention rapide pour maisons, appartements, caves, greniers, garages. Débarras succession, tri et recyclage. Devis gratuit sous 48h.",
   keywords: [
@@ -141,9 +142,7 @@ export default function ParticuliersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <div
-                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2"
-                  >
+                  <div className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-primary" />
                     </div>

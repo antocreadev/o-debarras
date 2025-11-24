@@ -14,7 +14,8 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Débarras Sinistres & Assurances en Corse | Incendie, Dégât des Eaux | Ò Débarras",
+  title:
+    "Débarras Sinistres & Assurances en Corse | Incendie, Dégât des Eaux | Ò Débarras",
   description:
     "Intervention d'urgence pour sinistres en Corse. Débarras après incendie, dégât des eaux, catastrophes naturelles. Disponible 7j/7. Documentation complète pour assurances.",
   keywords: [
@@ -263,7 +264,6 @@ export default function SinistresAssurancesPage() {
           </div>
         </div>
       </section>
-
 
       <CTASection />
       <Footer />

@@ -67,6 +67,7 @@ export function ServicesSection() {
                 alt="Ò Débarras"
                 fill
                 className="object-contain"
+                priority
               />
             </div>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-foreground text-balance">
