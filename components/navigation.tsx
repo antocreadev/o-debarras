@@ -297,7 +297,11 @@ export function Navigation() {
                         key={service.href}
                         href={service.href}
                         className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsServicesDropdownOpen(false);
+                          setIsOpen(false);
+                        }}
                       >
                         {service.name}
                       </Link>
@@ -328,7 +332,11 @@ export function Navigation() {
                         key={sector.href}
                         href={sector.href}
                         className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsSectorsOpen(false);
+                          setIsOpen(false);
+                        }}
                       >
                         {sector.name}
                       </Link>
