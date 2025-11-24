@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSectorsOpen, setIsSectorsOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isSectorsDropdownOpen, setIsSectorsDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -279,18 +280,18 @@ export function Navigation() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                    setIsMobileServicesOpen(!isMobileServicesOpen);
                   }}
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   Services
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
-                      isServicesDropdownOpen ? "rotate-180" : ""
+                      isMobileServicesOpen ? "rotate-180" : ""
                     }`}
                   />
                 </button>
-                {isServicesDropdownOpen && (
+                {isMobileServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {services.map((service) => (
                       <Link
@@ -299,7 +300,7 @@ export function Navigation() {
                         className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
-                          setIsServicesDropdownOpen(false);
+                          setIsMobileServicesOpen(false);
                           setIsOpen(false);
                         }}
                       >
