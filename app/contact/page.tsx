@@ -12,7 +12,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
-import { AnimatedSection } from "@/components/animated-section";
 
 export const metadata: Metadata = {
   title: "Contact Ò Débarras Corse | Devis Gratuit 07 84 71 73 01",
@@ -62,7 +61,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Contact Information */}
-            <AnimatedSection>
+            <div>
               <Card className="h-full">
                 <CardHeader>
                   <CardTitle>Informations de Contact</CardTitle>
@@ -141,10 +140,10 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
-            </AnimatedSection>
+            </div>
 
             {/* Social Media Section */}
-            <AnimatedSection delay={0.1}>
+            <div>
               <div className="space-y-6">
                 <Card>
                   <CardHeader>
@@ -226,7 +225,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
               </div>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
