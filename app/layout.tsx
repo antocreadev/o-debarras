@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.svg",
+        url: "/logo-2.png",
         width: 1200,
         height: 630,
         alt: "Ò Débarras - Service de débarras en Corse",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Ò Débarras - Service de Débarras Professionnel en Corse",
     description:
       "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète. Devis gratuit.",
-    images: ["/logo.svg"],
+    images: ["/logo-2.png"],
   },
   robots: {
     index: true,
