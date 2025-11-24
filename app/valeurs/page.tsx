@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { CTASection } from "@/components/cta-section";
@@ -19,6 +20,31 @@ import {
   Award,
   Users,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Nos Valeurs | Ò Débarras Corse | Ponctualité, Respect, Écologie",
+  description:
+    "Les valeurs d'Ò Débarras : ponctualité, rapidité, discrétion, respect, écologie. Un service de débarras humain et responsable en Corse. Intervention sous 48h, tri et recyclage systématique.",
+  keywords: [
+    "valeurs débarras Corse",
+    "débarras éthique",
+    "débarras écologique Corse",
+    "respect environnement débarras",
+    "débarras responsable",
+    "tri recyclage Corse",
+    "ponctualité débarras",
+    "discrétion débarras",
+  ],
+  openGraph: {
+    title: "Nos Valeurs | Ò Débarras Corse",
+    description:
+      "Découvrez les valeurs qui guident nos interventions : respect, ponctualité, écologie.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/valeurs",
+  },
+};
 
 export default function ValeursPage() {
   const coreValues = [

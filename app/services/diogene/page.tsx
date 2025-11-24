@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import {
   Phone,
@@ -10,7 +9,6 @@ import {
   Users,
   Award,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
@@ -42,6 +40,33 @@ const features = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Syndrome de Diogène & Syllogomanie en Corse | Intervention Spécialisée | Ò Débarras",
+  description:
+    "Intervention spécialisée pour syndrome de Diogène et syllogomanie en Corse. Équipe formée, discrétion absolue, accompagnement respectueux. Collaboration avec services sociaux et mandataires.",
+  keywords: [
+    "syndrome de Diogène Corse",
+    "syllogomanie Corse",
+    "débarras Diogène",
+    "nettoyage insalubrité Corse",
+    "accumulation compulsive",
+    "intervention Diogène discrète",
+    "débarras situations complexes",
+    "accompagnement psychologique débarras",
+    "services sociaux débarras",
+    "mandataires judiciaires Corse",
+  ],
+  openGraph: {
+    title: "Syndrome de Diogène & Syllogomanie en Corse | Ò Débarras",
+    description:
+      "Intervention spécialisée et discrète pour syndrome de Diogène en Corse. Équipe formée et sensibilisée.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/services/diogene",
+  },
+};
+
 export default function DiogenePage() {
   return (
     <>
@@ -51,11 +76,7 @@ export default function DiogenePage() {
         <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div>
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Intervention Spécialisée
                 </div>
@@ -96,7 +117,7 @@ export default function DiogenePage() {
                     </Link>
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -116,9 +137,8 @@ export default function DiogenePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {features.map((feature, index) => (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <motion.div
-                    whileHover={{ y: -8 }}
-                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full"
+                  <div
+                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2"
                   >
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <feature.icon className="w-8 h-8 text-primary" />
@@ -129,7 +149,7 @@ export default function DiogenePage() {
                     <p className="text-muted-foreground leading-relaxed">
                       {feature.description}
                     </p>
-                  </motion.div>
+                  </div>
                 </AnimatedSection>
               ))}
             </div>

@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import {
@@ -14,6 +13,29 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
+
+export const metadata: Metadata = {
+  title: "Contact Ò Débarras Corse | Devis Gratuit 07 84 71 73 01",
+  description:
+    "Contactez Ò Débarras pour un devis gratuit. Tél: 07 84 71 73 01 - Email: odebarras2b@gmail.com. Intervention rapide dans toute la Corse. Lun-Sam 8h-19h.",
+  keywords: [
+    "contact débarras Corse",
+    "devis gratuit débarras",
+    "téléphone débarras Corse",
+    "07 84 71 73 01",
+    "email débarras Corse",
+    "intervention rapide Corse",
+  ],
+  openGraph: {
+    title: "Contact Ò Débarras Corse | Devis Gratuit",
+    description:
+      "Contactez-nous pour un devis gratuit. Disponible 6j/7. Intervention rapide dans toute la Corse.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (

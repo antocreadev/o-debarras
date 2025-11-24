@@ -1,10 +1,32 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { AnimatedSection } from "@/components/animated-section";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
-import { motion } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: "Réalisations Ò Débarras Corse | Avant/Après Photos | Nos Interventions",
+  description:
+    "Découvrez nos réalisations de débarras en Corse. Photos avant/après de débarras de caves, situations Diogène, locaux professionnels, particuliers. Résultats garantis.",
+  keywords: [
+    "réalisations débarras Corse",
+    "photos avant après débarras",
+    "exemples débarras Corse",
+    "portfolio débarras",
+    "transformations débarras",
+    "résultats débarras Corse",
+    "interventions débarras",
+  ],
+  openGraph: {
+    title: "Nos Réalisations de Débarras en Corse | Ò Débarras",
+    description:
+      "Découvrez en images nos interventions de débarras réussies dans toute la Corse.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/realisations",
+  },
+};
 
 const realisations = [
   {
@@ -78,14 +100,10 @@ export default function RealisationsPage() {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+        <section className="relative pt-32 pb-20 bg-linear-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div>
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Portfolio
                 </div>
@@ -96,7 +114,7 @@ export default function RealisationsPage() {
                   Découvrez nos transformations avant/après et la qualité de
                   notre travail
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>

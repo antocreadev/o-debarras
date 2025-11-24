@@ -11,6 +11,32 @@ import {
   Clock,
   Shield,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras pour Collectivités & Administrations en Corse | Ò Débarras",
+  description:
+    "Service de débarras pour collectivités publiques en Corse. Bâtiments publics, encombrants, destruction archives. Procédures administratives simplifiées. Intervention flexible hors horaires.",
+  keywords: [
+    "débarras collectivités Corse",
+    "débarras administrations publiques",
+    "débarras mairie Corse",
+    "débarras école Corse",
+    "destruction archives administration",
+    "débarras bâtiments publics",
+    "encombrants collectivités",
+    "marchés publics débarras",
+  ],
+  openGraph: {
+    title: "Débarras pour Collectivités & Administrations | Ò Débarras",
+    description:
+      "Partenaire des collectivités publiques corses pour tous besoins de débarras.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/collectivites-administrations",
+  },
+};
 
 export default function CollectivitesAdministrationsPage() {
   const services = [

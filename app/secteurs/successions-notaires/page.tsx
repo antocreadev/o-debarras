@@ -4,6 +4,32 @@ import { CTASection } from "@/components/cta-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Heart, FileText, Lock, Users, Clock, CheckCircle2 } from "lucide-react"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras Succession & Notaires en Corse | Après Décès | Ò Débarras",
+  description:
+    "Service de débarras pour successions en Corse. Débarras après décès avec respect et empathie. Tri, inventaire, coordination notaires. Discrétion absolue. Accompagnement des familles.",
+  keywords: [
+    "débarras succession Corse",
+    "débarras après décès Corse",
+    "notaire débarras Corse",
+    "vide maison succession",
+    "inventaire succession débarras",
+    "débarras héritage",
+    "mise en vente après succession",
+    "accompagnement famille débarras",
+  ],
+  openGraph: {
+    title: "Débarras Succession & Notaires | Ò Débarras",
+    description:
+      "Accompagnement respectueux des familles et notaires pour débarras de successions en Corse.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/successions-notaires",
+  },
+};
 
 export default function SuccessionsNotairesPage() {
   const services = [

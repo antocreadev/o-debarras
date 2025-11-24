@@ -4,6 +4,32 @@ import { CTASection } from "@/components/cta-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Home, Clock, Sparkles, TrendingUp, CheckCircle2, Users } from "lucide-react"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras pour Agences Immobilières en Corse | Avant Vente & Location | Ò Débarras",
+  description:
+    "Service de débarras rapide pour agences immobilières en Corse. Préparation biens avant vente/location. Intervention sous 48h. Valorisation et home staging. Tarifs professionnels.",
+  keywords: [
+    "débarras agence immobilière Corse",
+    "débarras avant vente Corse",
+    "préparation bien immobilier",
+    "débarras avant location",
+    "home staging débarras",
+    "valorisation bien immobilier",
+    "débarras urgence locataire",
+    "partenaire agence immobilière",
+  ],
+  openGraph: {
+    title: "Débarras pour Agences Immobilières | Ò Débarras",
+    description:
+      "Partenaire des agences immobilières corses pour préparer rapidement les biens à la vente ou location.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/agences-immobilieres",
+  },
+};
 
 export default function AgencesImmobilieresPage() {
   const services = [

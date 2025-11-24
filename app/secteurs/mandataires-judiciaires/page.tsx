@@ -4,6 +4,32 @@ import { CTASection } from "@/components/cta-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Scale, FileText, Lock, Clock, Shield, CheckCircle2 } from "lucide-react"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras pour Mandataires Judiciaires en Corse | Saisies & Procédures | Ò Débarras",
+  description:
+    "Service de débarras pour mandataires judiciaires en Corse. Biens saisis, expulsions, inventaires détaillés, destruction sécurisée. Confidentialité et documentation rigoureuse.",
+  keywords: [
+    "débarras mandataires judiciaires Corse",
+    "débarras biens saisis",
+    "expulsion débarras Corse",
+    "inventaire judiciaire",
+    "sécurisation lieux après débarras",
+    "destruction documents confidentiels",
+    "procédures judiciaires débarras",
+    "saisie immobilière débarras",
+  ],
+  openGraph: {
+    title: "Débarras pour Mandataires Judiciaires | Ò Débarras",
+    description:
+      "Partenaire des mandataires judiciaires en Corse pour débarras de biens saisis et procédures légales.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/mandataires-judiciaires",
+  },
+};
 
 export default function MandatairesJudiciairesPage() {
   const services = [

@@ -1,9 +1,11 @@
 import { MetadataRoute } from "next";
+import { corsicaRegions, allCities } from "@/lib/corsica-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://o-debarras-4b2f.vercel.app";
 
-  return [
+  // Pages statiques principales
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -71,16 +73,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/realisations`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/valeurs`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/zones`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
+
+  // Pages des régions
+  const regionPages: MetadataRoute.Sitemap = corsicaRegions.map((region) => ({
+    url: `${baseUrl}/zones/${region.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Pages des villes
+  const cityPages: MetadataRoute.Sitemap = allCities.map((city) => ({
+    url: `${baseUrl}/zones/villes/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...regionPages, ...cityPages];
 }

@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import {
   Phone,
@@ -10,7 +9,6 @@ import {
   Warehouse,
   Landmark,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
@@ -45,6 +43,33 @@ const services = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Débarras Professionnels en Corse | Locaux Commerciaux, Bureaux, Entrepôts | Ò Débarras",
+  description:
+    "Service de débarras pour professionnels en Corse. Intervention pour locaux commerciaux, bureaux, entrepôts. Gestion archives, destruction sécurisée RGPD. Certificats de destruction. Tarifs pros.",
+  keywords: [
+    "débarras professionnels Corse",
+    "débarras locaux commerciaux Corse",
+    "débarras bureaux Corse",
+    "débarras entrepôts",
+    "vidage local commercial",
+    "débarras entreprise Corse",
+    "destruction archives RGPD",
+    "débarras matériel informatique",
+    "certificat destruction Corse",
+    "débarras hors horaires",
+  ],
+  openGraph: {
+    title: "Débarras Professionnels en Corse | Ò Débarras",
+    description:
+      "Solutions de débarras adaptées aux entreprises et collectivités en Corse. Intervention rapide et discrète.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/services/professionnels",
+  },
+};
+
 export default function ProfessionnelsPage() {
   return (
     <>
@@ -54,11 +79,7 @@ export default function ProfessionnelsPage() {
         <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div>
                 <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   Services Professionnels
                 </div>
@@ -99,7 +120,7 @@ export default function ProfessionnelsPage() {
                     </Link>
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -119,9 +140,8 @@ export default function ProfessionnelsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <motion.div
-                    whileHover={{ y: -8 }}
-                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full"
+                  <div
+                    className="bg-card border-2 border-border rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full hover:-translate-y-2"
                   >
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-primary" />
@@ -132,7 +152,7 @@ export default function ProfessionnelsPage() {
                     <p className="text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
-                  </motion.div>
+                  </div>
                 </AnimatedSection>
               ))}
             </div>

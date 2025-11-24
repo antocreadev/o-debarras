@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { DetailedServicesSection } from "@/components/detailed-services-section"
@@ -5,6 +6,29 @@ import { CTASection } from "@/components/cta-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Home, Building2, Users, Recycle, Sofa, Car, Laptop, BookOpen, ShirtIcon, TreePine } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Services de Débarras en Corse | Particuliers, Professionnels, Diogène | Ò Débarras",
+  description:
+    "Tous nos services de débarras en Corse : particuliers, professionnels, syndrome de Diogène. Maisons, appartements, locaux commerciaux, successions. Tri, recyclage, devis gratuit.",
+  keywords: [
+    "services débarras Corse",
+    "débarras complet Corse",
+    "types de débarras",
+    "prestations débarras",
+    "débarras tout en un",
+    "solutions débarras Corse",
+  ],
+  openGraph: {
+    title: "Tous nos Services de Débarras en Corse | Ò Débarras",
+    description:
+      "Découvrez toutes nos prestations de débarras : particuliers, professionnels, syndrome de Diogène.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 export default function ServicesPage() {
   const mainServices = [

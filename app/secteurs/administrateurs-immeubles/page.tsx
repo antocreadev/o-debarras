@@ -11,6 +11,32 @@ import {
   CheckCircle2,
   TrendingUp,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras pour Administrateurs d'Immeubles & Syndics en Corse | Ò Débarras",
+  description:
+    "Service de débarras pour syndics et administrateurs de biens en Corse. Gestion parties communes, caves, greniers. Interventions planifiées et tarifs dégressifs pour copropriétés.",
+  keywords: [
+    "débarras syndics Corse",
+    "débarras copropriété Corse",
+    "administrateur biens débarras",
+    "parties communes débarras",
+    "caves greniers copropriété",
+    "encombrants immeuble Corse",
+    "gestion débarras régulier",
+    "tarifs syndics Corse",
+  ],
+  openGraph: {
+    title: "Débarras pour Syndics & Administrateurs | Ò Débarras",
+    description:
+      "Partenaire des syndics et administrateurs de biens pour la gestion des débarras en copropriété.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/administrateurs-immeubles",
+  },
+};
 
 export default function AdministrateursImmeubles() {
   const services = [

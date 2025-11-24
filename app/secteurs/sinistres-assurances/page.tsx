@@ -11,6 +11,32 @@ import {
   Zap,
   Users,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Débarras Sinistres & Assurances en Corse | Incendie, Dégât des Eaux | Ò Débarras",
+  description:
+    "Intervention d'urgence pour sinistres en Corse. Débarras après incendie, dégât des eaux, catastrophes naturelles. Disponible 7j/7. Documentation complète pour assurances.",
+  keywords: [
+    "débarras sinistre Corse",
+    "débarras après incendie",
+    "dégât des eaux débarras",
+    "catastrophe naturelle débarras",
+    "urgence sinistre Corse",
+    "expertise assurance débarras",
+    "documentation sinistre",
+    "squat dégradation débarras",
+  ],
+  openGraph: {
+    title: "Débarras Sinistres & Assurances | Ò Débarras",
+    description:
+      "Intervention d'urgence 7j/7 pour sinistres en Corse. Documentation complète pour assureurs.",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/secteurs/sinistres-assurances",
+  },
+};
 
 export default function SinistresAssurancesPage() {
   const situations = [
