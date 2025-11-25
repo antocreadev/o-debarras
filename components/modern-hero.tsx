@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function ModernHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-primary/5 via-background to-accent/5">
       {/* Animated background elements - Optimized */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -158,10 +159,14 @@ export function ModernHero() {
               }}
               className="relative z-10"
             >
-              <img
+              <Image
                 src="/image-1.png"
                 alt="O Ò Débarras - débarras en Corse"
                 className="w-full max-w-2xl mx-auto drop-shadow-2xl relative z-20"
+                width={1278}
+                height={1500}
+                priority
+                quality={90}
               />
             </motion.div>
           </motion.div>

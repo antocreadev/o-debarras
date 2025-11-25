@@ -58,6 +58,7 @@ export function InstagramSection() {
               }}
               scrolling="no"
               title="Instagram Feed - Ò Débarras"
+              loading="lazy"
             />
           </div>
         </AnimatedSection>

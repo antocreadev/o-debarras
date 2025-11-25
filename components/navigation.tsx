@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -94,10 +95,16 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center group">
-            <img
+          <Link
+            href="/"
+            className="flex items-center group"
+            aria-label="Retour à l'accueil"
+          >
+            <Image
               src="/logo.svg"
               alt="O Ò Debarras - debarras en Corse"
+              width={112}
+              height={112}
               className="h-28 w-28 object-contain transition-transform group-hover:scale-110"
             />
             <div className="text-2xl font-bold text-foreground tracking-tight relative right-6">
@@ -254,6 +261,8 @@ export function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-foreground"
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -283,6 +292,7 @@ export function Navigation() {
                     setIsMobileServicesOpen(!isMobileServicesOpen);
                   }}
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  aria-expanded={isMobileServicesOpen}
                 >
                   Services
                   <ChevronDown
@@ -318,6 +328,7 @@ export function Navigation() {
                     setIsSectorsOpen(!isSectorsOpen);
                   }}
                   className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  aria-expanded={isSectorsOpen}
                 >
                   Secteurs
                   <ChevronDown

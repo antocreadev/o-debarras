@@ -111,6 +111,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="preconnect" href="https://static.cdninstagram.com" />
+        <link rel="preconnect" href="https://www.instagram.com" />
+        <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+        <link rel="preconnect" href="https://scontent.cdninstagram.com" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#064e3b" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

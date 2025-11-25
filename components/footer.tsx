@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { corsicaRegions, allCities } from "@/lib/corsica-data";
 
@@ -10,9 +11,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img
+              <Image
                 src="/logo.svg"
                 alt="logo Ò Debarras - debarras en Corse- o debarras"
+                width={80}
+                height={80}
                 className="h-20 w-20 object-contain"
                 style={{ filter: "invert(1) brightness(2)" }}
               />
@@ -122,7 +125,7 @@ export function Footer() {
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-background/80">
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <Phone className="w-4 h-4 mt-0.5 shrink-0" />
                 <a
                   href="tel:+33495123456"
                   className="hover:text-background transition-colors"
@@ -131,7 +134,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <Mail className="w-4 h-4 mt-0.5 shrink-0" />
                 <a
                   href="mailto:odebarras2b@gmail.com"
                   className="hover:text-background transition-colors"
@@ -140,7 +143,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Toute la Corse</span>
               </li>
             </ul>
