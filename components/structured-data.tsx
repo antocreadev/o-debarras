@@ -11,7 +11,7 @@ export function StructuredData() {
         image: "https://o-debarras-4b2f.vercel.app/logo.svg",
         logo: "https://o-debarras-4b2f.vercel.app/logo.svg",
         url: "https://o-debarras-4b2f.vercel.app",
-        telephone: "+33495123456",
+        telephone: "+33784717301",
         email: "contact@odebarras.com",
         address: {
           "@type": "PostalAddress",
@@ -19,6 +19,49 @@ export function StructuredData() {
           addressRegion: "Corse",
           addressCountry: "FR",
         },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "127",
+          bestRating: "5",
+          worstRating: "1",
+        },
+        review: [
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Christine Saoli" },
+            datePublished: "2024-11-01",
+            reviewBody: "Très bon contact ! Très professionnel, rapide et prix très raisonnable ! Ce sont occupés de vider mon garage qui était remplit de tout et n’importe quoi.",
+            reviewRating: { "@type": "Rating", ratingValue: "5" }
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Joseph Marchioni" },
+            datePublished: "2024-08-15",
+            reviewBody: "Excellent travail de Kévin et de son équipe. Très humain , très compréhensif, très compétent ! Un véritable et honnête professionnel.",
+            reviewRating: { "@type": "Rating", ratingValue: "5" }
+          },
+          {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Pierre Cuttoli" },
+            datePublished: "2024-11-15",
+            reviewBody: "Entreprise très correct au niveau tarif, personnel a l écoute, tout est propre après leur départ",
+            reviewRating: { "@type": "Rating", ratingValue: "5" }
+          }
+        ],
+        sameAs: [
+          "https://www.facebook.com/people/%C3%B2-d%C3%A9barras/61580426932164/",
+          "https://www.instagram.com/o_debarras/"
+        ],
+        knowsAbout: [
+          "Débarras de maison",
+          "Syndrome de Diogène",
+          "Nettoyage après décès",
+          "Débarras de cave",
+          "Débarras de grenier",
+          "Débarras de locaux professionnels"
+        ],
+        paymentAccepted: ["Cash", "Credit Card", "Check", "Wire Transfer"],
         geo: {
           "@type": "GeoCoordinates",
           latitude: 42.0396,

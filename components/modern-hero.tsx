@@ -105,11 +105,11 @@ export function ModernHero() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all group"
               >
-                <Link href="/contact">
+                <a href="tel:+33784717301">
                   <Phone className="w-5 h-5 mr-2" />
-                  Devis Gratuit
+                  Appelez-nous
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </Button>
               <Button
                 asChild
@@ -147,73 +147,7 @@ export function ModernHero() {
             }}
             className="relative"
           >
-            {/* Éléments décoratifs vert foncé - Sans rotation */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.7,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute -top-12 -right-12 w-48 h-48 border-4 border-emerald-800/30 rounded-full"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.8,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute -bottom-16 -left-16 w-56 h-56 border-4 border-emerald-700/20 rounded-full"
-            />
-
-            {/* Carrés décoratifs - Sans mouvement */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.9,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute top-8 -left-8 w-28 h-28 bg-gradient-to-br from-emerald-900/40 to-emerald-800/20 rounded-2xl"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 1.0,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute bottom-16 -right-10 w-32 h-32 bg-gradient-to-br from-emerald-800/30 to-emerald-700/10 rounded-3xl"
-            />
-
-            {/* Points décoratifs - Sans pulsation */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 0.7, scale: 1 }}
-              transition={{
-                delay: 1.1,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute top-1/4 -right-6 w-8 h-8 bg-emerald-700 rounded-full"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 0.6, scale: 1 }}
-              transition={{
-                delay: 1.2,
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute bottom-1/3 -left-4 w-6 h-6 bg-emerald-800 rounded-full"
-            />
-
-            {/* Image container avec effet de halo vert */}
+            {/* Image container */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -230,30 +164,6 @@ export function ModernHero() {
                 className="w-full max-w-2xl mx-auto drop-shadow-2xl relative z-20"
               />
             </motion.div>
-
-            {/* Halo vert foncé - Statique */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.3 }}
-              transition={{
-                delay: 0.7,
-                duration: 0.8,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-emerald-800/20 to-emerald-700/10 blur-3xl rounded-full"
-            />
-
-            {/* Cercle secondaire - Statique */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              transition={{
-                delay: 0.8,
-                duration: 0.8,
-                ease: [0.25, 0.1, 0.25, 1.0],
-              }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-emerald-800/20 blur-2xl rounded-full"
-            />
           </motion.div>
         </div>
       </div>

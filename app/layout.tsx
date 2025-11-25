@@ -88,6 +88,19 @@ export const metadata: Metadata = {
     ],
   },
   generator: "v0.app",
+  category: "Service de débarras",
+  other: {
+    "geo.region": "FR-2A;FR-2B",
+    "geo.placename": "Corse",
+    "geo.position": "42.0396;9.0129",
+    "ICBM": "42.0396, 9.0129",
+    "google-site-verification": "verification_token", // À remplacer par votre token réel
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Ò Débarras",
+  },
 };
 
 export default function RootLayout({

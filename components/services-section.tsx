@@ -22,7 +22,7 @@ const services = [
       "Garages",
       "Succession",
     ],
-    color: "from-blue-500/10 to-blue-600/10",
+    color: "bg-green-50",
     link: "/services/particuliers",
   },
   {
@@ -37,7 +37,7 @@ const services = [
       "Équipe formée",
       "Mandataires judiciaires",
     ],
-    color: "from-rose-500/10 to-rose-600/10",
+    color: "bg-white border-2 border-green-100",
     link: "/services/diogene",
   },
   {
@@ -47,7 +47,7 @@ const services = [
     description:
       "Débarras de locaux commerciaux, bureaux, entrepôts. Solutions adaptées aux entreprises et collectivités.",
     features: ["Locaux commerciaux", "Bureaux", "Entrepôts", "Collectivités"],
-    color: "from-primary/10 to-primary/20",
+    color: "bg-white",
     link: "/services/professionnels",
   },
 ];
@@ -89,7 +89,7 @@ export function ServicesSection() {
                 className="h-full"
               >
                 <Card
-                  className={`overflow-hidden h-full hover:shadow-2xl transition-all duration-300 border-2 border-border bg-gradient-to-br ${service.color} relative group rounded-2xl p-0`}
+                  className={`overflow-hidden h-full hover:shadow-2xl transition-all duration-300 ${service.color} relative group rounded-2xl p-0`}
                 >
                   {/* Image Section - Full width at top */}
                   <div className="overflow-hidden rounded-t-2xl">
