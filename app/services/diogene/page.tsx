@@ -85,7 +85,7 @@ export default function DiogenePage() {
                   <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
                       src="/logo-2.svg"
-                      alt="Ò Débarras"
+                      alt="Logo Ò Débarras - Spécialiste Syndrome de Diogène Corse"
                       fill
                       className="object-contain"
                     />

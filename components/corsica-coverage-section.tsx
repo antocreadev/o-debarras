@@ -18,7 +18,7 @@ export function CorsicaCoverageSection() {
             <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden">
               <Image
                 src="/corse.png"
-                alt="Carte de la Corse"
+                alt="Carte de la Corse - Zone d'intervention Ò Débarras"
                 fill
                 className="object-contain"
                 priority

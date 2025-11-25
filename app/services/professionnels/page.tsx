@@ -88,7 +88,7 @@ export default function ProfessionnelsPage() {
                   <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
                       src="/logo-2.svg"
-                      alt="Ò Débarras"
+                      alt="Logo Ò Débarras - Service pour professionnels en Corse"
                       fill
                       className="object-contain"
                     />

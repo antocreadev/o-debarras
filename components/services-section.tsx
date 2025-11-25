@@ -68,7 +68,7 @@ export function ServicesSection() {
             <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
               <Image
                 src="/logo-2.svg"
-                alt="Ò Débarras"
+                alt="Logo Ò Débarras - Expert débarras en Corse"
                 fill
                 className="object-contain"
                 priority

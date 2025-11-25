@@ -59,8 +59,7 @@ export default function MentionsLegalesPage() {
                   <strong>RCS :</strong> 892 485 087 R.C.S. Bastia
                 </li>
                 <li>
-                  <strong>Adresse :</strong> 8 Chemin du Fiumicellu, 20200
-                  Santa-Maria-di-Lota
+                  <strong>Adresse :</strong> Les Jadins de Ville, Ville-di-Pietrabugno, 20200 Bastia, France
                 </li>
                 <li>
                   <strong>Email :</strong>{" "}
@@ -289,7 +288,7 @@ export default function MentionsLegalesPage() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  Antoine Créa - Développeur Web
+                  Antò Creative Developer - Anthony Menghi - antocreadev - antocrea.dev
                 </a>
                 .
               </p>
