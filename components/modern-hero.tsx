@@ -106,9 +106,9 @@ export function ModernHero() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all group"
               >
-                <a href="tel:+33784717301">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Appelez-nous
+                <a href="/contact">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Devis Gratuit
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -118,8 +118,8 @@ export function ModernHero() {
                 variant="outline"
                 className="text-lg px-8 py-6 border-2 hover:bg-primary/5 bg-transparent"
               >
-                <Link href="/contact">
-                  <Mail className="w-5 h-5 mr-2" />
+                <Link href="tel:+33784717301">
+                  <Phone className="w-5 h-5 mr-2" />
                   Nous Contacter
                 </Link>
               </Button>
