@@ -11,30 +11,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+      images: [`${baseUrl}/logo-2.png`],
     },
     {
       url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+      images: [
+        `${baseUrl}/particulier-1.png`,
+        `${baseUrl}/pro-1-1.png`,
+        `${baseUrl}/diogene-1-1.png`,
+      ],
     },
     {
       url: `${baseUrl}/services/particuliers`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+      images: [`${baseUrl}/particulier-1.png`],
     },
     {
       url: `${baseUrl}/services/diogene`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+      images: [`${baseUrl}/diogene-1-1.png`],
     },
     {
       url: `${baseUrl}/services/professionnels`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+      images: [`${baseUrl}/pro-1-1.png`],
     },
     {
       url: `${baseUrl}/secteurs/collectivites-administrations`,
@@ -96,6 +105,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cgu`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
   // Pages des régions
@@ -104,6 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+    images: [`${baseUrl}/corse.png`],
   }));
 
   // Pages des villes
@@ -112,6 +134,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
+    images: [`${baseUrl}/corse.png`],
   }));
 
   return [...staticPages, ...regionPages, ...cityPages];
