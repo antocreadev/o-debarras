@@ -6,11 +6,11 @@ export function StructuredData() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://o-debarras-4b2f.vercel.app/#organization",
+        "@id": "https://www.odebarras-corse.fr/#organization",
         name: "Ò Débarras",
-        image: "https://o-debarras-4b2f.vercel.app/logo.svg",
-        logo: "https://o-debarras-4b2f.vercel.app/logo.svg",
-        url: "https://o-debarras-4b2f.vercel.app",
+        image: "https://www.odebarras-corse.fr/logo.svg",
+        logo: "https://www.odebarras-corse.fr/logo.svg",
+        url: "https://www.odebarras-corse.fr",
         telephone: "+33784717301",
         email: "contact@odebarras.com",
         address: {
@@ -103,10 +103,10 @@ export function StructuredData() {
       },
       {
         "@type": "Service",
-        "@id": "https://o-debarras-4b2f.vercel.app/#service",
+        "@id": "https://www.odebarras-corse.fr/#service",
         serviceType: "Débarras",
         provider: {
-          "@id": "https://o-debarras-4b2f.vercel.app/#organization",
+          "@id": "https://www.odebarras-corse.fr/#organization",
         },
         areaServed: {
           "@type": "State",
@@ -148,13 +148,13 @@ export function StructuredData() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://o-debarras-4b2f.vercel.app/#website",
-        url: "https://o-debarras-4b2f.vercel.app",
+        "@id": "https://www.odebarras-corse.fr/#website",
+        url: "https://www.odebarras-corse.fr",
         name: "Ò Débarras - Service de Débarras Professionnel en Corse",
         description:
           "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels.",
         publisher: {
-          "@id": "https://o-debarras-4b2f.vercel.app/#organization",
+          "@id": "https://www.odebarras-corse.fr/#organization",
         },
         inLanguage: "fr-FR",
       },

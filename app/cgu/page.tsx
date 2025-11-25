@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Conditions Générales d'Utilisation | Ò Debarras",
     description:
       "Conditions d'utilisation du site Ò Debarras, entreprise de débarras en Corse.",
-    url: "https://www.odebarras.com/cgu",
+    url: "https://www.odebarras-corse.fr/cgu",
     siteName: "Ò Debarras",
     locale: "fr_FR",
     type: "website",
@@ -33,8 +33,8 @@ export default function CGUPage() {
                 1. Présentation du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> (ci-après "le Site")
-                est édité par la société <strong>Ò Debarras</strong>,
+                Le site <strong>www.odebarras-corse.fr</strong> (ci-après "le
+                Site") est édité par la société <strong>Ò Debarras</strong>,
                 spécialisée dans les services de débarras en Corse.
               </p>
               <p className="text-muted-foreground leading-relaxed">

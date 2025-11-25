@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Mentions Légales | Ò Debarras",
     description:
       "Informations légales du site Ò Debarras, spécialiste du débarras en Corse.",
-    url: "https://www.odebarras.com/mentions-legales",
+    url: "https://www.odebarras-corse.fr/mentions-legales",
     siteName: "Ò Debarras",
     locale: "fr_FR",
     type: "website",
@@ -33,7 +33,7 @@ export default function MentionsLegalesPage() {
                 1. Éditeur du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> est édité par :
+                Le site <strong>www.odebarras-corse.fr</strong> est édité par :
               </p>
               <ul className="list-none text-muted-foreground leading-relaxed ml-0 space-y-2">
                 <li>
@@ -59,7 +59,8 @@ export default function MentionsLegalesPage() {
                   <strong>RCS :</strong> 892 485 087 R.C.S. Bastia
                 </li>
                 <li>
-                  <strong>Adresse :</strong> Les Jadins de Ville, Ville-di-Pietrabugno, 20200 Bastia, France
+                  <strong>Adresse :</strong> Les Jadins de Ville,
+                  Ville-di-Pietrabugno, 20200 Bastia, France
                 </li>
                 <li>
                   <strong>Email :</strong>{" "}
@@ -95,7 +96,8 @@ export default function MentionsLegalesPage() {
                 2. Hébergement du site
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> est hébergé par :
+                Le site <strong>www.odebarras-corse.fr</strong> est hébergé par
+                :
               </p>
               <ul className="list-none text-muted-foreground leading-relaxed ml-0 space-y-2">
                 <li>
@@ -124,9 +126,10 @@ export default function MentionsLegalesPage() {
                 3. Propriété intellectuelle
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                L'ensemble du contenu du site <strong>www.odebarras.com</strong>{" "}
-                (structure, textes, logos, images, vidéos, etc.) est la
-                propriété exclusive de Ò Debarras, sauf mentions particulières.
+                L'ensemble du contenu du site{" "}
+                <strong>www.odebarras-corse.fr</strong> (structure, textes,
+                logos, images, vidéos, etc.) est la propriété exclusive de Ò
+                Debarras, sauf mentions particulières.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Toute reproduction, distribution, modification, adaptation,
@@ -190,9 +193,9 @@ export default function MentionsLegalesPage() {
             <section>
               <h2 className="text-2xl font-bold mb-4 mt-8">5. Cookies</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> peut utiliser des
-                cookies pour améliorer l'expérience utilisateur et réaliser des
-                statistiques de visite. Les cookies sont de petits fichiers
+                Le site <strong>www.odebarras-corse.fr</strong> peut utiliser
+                des cookies pour améliorer l'expérience utilisateur et réaliser
+                des statistiques de visite. Les cookies sont de petits fichiers
                 textes stockés sur votre appareil lors de votre navigation.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -243,14 +246,14 @@ export default function MentionsLegalesPage() {
                 7. Liens hypertextes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> peut contenir des
-                liens vers d'autres sites internet. Ò Debarras n'exerce aucun
-                contrôle sur ces sites et décline toute responsabilité quant à
-                leur contenu ou à leur politique de confidentialité.
+                Le site <strong>www.odebarras-corse.fr</strong> peut contenir
+                des liens vers d'autres sites internet. Ò Debarras n'exerce
+                aucun contrôle sur ces sites et décline toute responsabilité
+                quant à leur contenu ou à leur politique de confidentialité.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 La création de liens hypertextes vers le site{" "}
-                <strong>www.odebarras.com</strong> nécessite l'autorisation
+                <strong>www.odebarras-corse.fr</strong> nécessite l'autorisation
                 préalable de Ò Debarras. Pour toute demande, veuillez nous
                 contacter à l'adresse{" "}
                 <a
@@ -280,7 +283,7 @@ export default function MentionsLegalesPage() {
                 9. Crédits et réalisation
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Le site <strong>www.odebarras.com</strong> a été conçu et
+                Le site <strong>www.odebarras-corse.fr</strong> a été conçu et
                 développé par{" "}
                 <a
                   href="https://antocrea.dev"
@@ -288,7 +291,8 @@ export default function MentionsLegalesPage() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  Antò Creative Developer - Anthony Menghi - antocreadev - antocrea.dev
+                  Antò Creative Developer - Anthony Menghi - antocreadev -
+                  antocrea.dev
                 </a>
                 .
               </p>

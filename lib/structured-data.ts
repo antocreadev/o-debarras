@@ -1,4 +1,4 @@
-const baseUrl = "https://o-debarras-4b2f.vercel.app";
+const baseUrl = "https://www.odebarras-corse.fr";
 
 export function generateOrganizationSchema() {
   return {

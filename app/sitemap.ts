@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { corsicaRegions, allCities } from "@/lib/corsica-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://o-debarras-4b2f.vercel.app";
+  const baseUrl = "https://www.odebarras-corse.fr";
 
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [

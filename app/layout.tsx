@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://o-debarras-4b2f.vercel.app"),
+  metadataBase: new URL("https://www.odebarras-corse.fr"),
   alternates: {
     canonical: "/",
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Ò Débarras - Service de Débarras Professionnel en Corse",
     description:
       "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Devis gratuit.",
-    url: "https://o-debarras-4b2f.vercel.app",
+    url: "https://www.odebarras-corse.fr",
     siteName: "Ò Débarras",
     locale: "fr_FR",
     type: "website",
