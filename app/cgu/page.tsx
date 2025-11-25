@@ -3,15 +3,15 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Conditions Générales d'Utilisation | Ò Debarras",
+  title: "Conditions Générales d'Utilisation | Ò Débarras",
   description:
-    "Consultez les conditions générales d'utilisation du site Ò Debarras, spécialiste du débarras en Corse. Informations sur l'utilisation de notre site web et de nos services.",
+    "Consultez les conditions générales d'utilisation du site Ò Débarras, spécialiste du débarras en Corse. Informations sur l'utilisation de notre site web et de nos services.",
   openGraph: {
-    title: "Conditions Générales d'Utilisation | Ò Debarras",
+    title: "Conditions Générales d'Utilisation | Ò Débarras",
     description:
-      "Conditions d'utilisation du site Ò Debarras, entreprise de débarras en Corse.",
+      "Conditions d'utilisation du site Ò Débarras, entreprise de débarras en Corse.",
     url: "https://www.odebarras-corse.fr/cgu",
-    siteName: "Ò Debarras",
+    siteName: "Ò Débarras",
     locale: "fr_FR",
     type: "website",
   },
@@ -34,7 +34,7 @@ export default function CGUPage() {
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Le site <strong>www.odebarras-corse.fr</strong> (ci-après "le
-                Site") est édité par la société <strong>Ò Debarras</strong>,
+                Site") est édité par la société <strong>Ò Débarras</strong>,
                 spécialisée dans les services de débarras en Corse.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -53,9 +53,9 @@ export default function CGUPage() {
                 logiciels, connexion Internet, etc.) sont à sa charge.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Ò Debarras met en œuvre tous les moyens raisonnables à sa
+                Ò Débarras met en œuvre tous les moyens raisonnables à sa
                 disposition pour assurer un accès de qualité au Site, mais n'est
-                tenu à aucune obligation d'y parvenir. Ò Debarras ne peut être
+                tenu à aucune obligation d'y parvenir. Ò Débarras ne peut être
                 tenu responsable de tout dysfonctionnement du réseau ou des
                 serveurs ou de tout autre événement échappant au contrôle
                 raisonnable qui empêcherait ou dégraderait l'accès au Site.
@@ -69,20 +69,20 @@ export default function CGUPage() {
               <p className="text-muted-foreground leading-relaxed">
                 La structure générale du Site, ainsi que les textes, graphiques,
                 images, sons et vidéos le composant, sont la propriété exclusive
-                de Ò Debarras ou de ses partenaires. Toute représentation et/ou
+                de Ò Débarras ou de ses partenaires. Toute représentation et/ou
                 reproduction et/ou exploitation partielle ou totale des contenus
                 et services proposés par le Site, par quelque procédé que ce
-                soit, sans l'autorisation préalable et par écrit de Ò Debarras
+                soit, sans l'autorisation préalable et par écrit de Ò Débarras
                 est strictement interdite et serait susceptible de constituer
                 une contrefaçon au sens des articles L. 335-2 et suivants du
                 Code de la propriété intellectuelle.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Les marques et logos figurant sur le Site sont des marques
-                déposées de Ò Debarras ou de tiers ayant autorisé Ò Debarras à
+                déposées de Ò Débarras ou de tiers ayant autorisé Ò Débarras à
                 les utiliser. Toute reproduction totale ou partielle de ces
                 marques ou de ces logos effectuée à partir des éléments du Site
-                sans l'autorisation expresse de Ò Debarras est prohibée.
+                sans l'autorisation expresse de Ò Débarras est prohibée.
               </p>
             </section>
 
@@ -141,14 +141,14 @@ export default function CGUPage() {
               <p className="text-muted-foreground leading-relaxed">
                 Les informations diffusées sur le Site sont présentées à titre
                 indicatif et général sans valeur contractuelle. Malgré les mises
-                à jour régulières, Ò Debarras ne peut être tenu responsable de
+                à jour régulières, Ò Débarras ne peut être tenu responsable de
                 la modification des dispositions administratives et juridiques
-                survenant après la publication. De même, Ò Debarras ne peut être
+                survenant après la publication. De même, Ò Débarras ne peut être
                 tenu responsable de l'utilisation et de l'interprétation de
                 l'information contenue dans ce site.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Ò Debarras ne pourra être tenu responsable de dommages matériels
+                Ò Débarras ne pourra être tenu responsable de dommages matériels
                 liés à l'utilisation du Site. De plus, l'utilisateur du Site
                 s'engage à accéder au Site en utilisant un matériel récent, ne
                 contenant pas de virus et avec un navigateur de dernière
@@ -165,14 +165,14 @@ export default function CGUPage() {
                 présents sur le réseau Internet. Les liens vers ces autres
                 ressources vous font quitter le Site. Il est possible de créer
                 un lien vers la page de présentation de ce Site sans
-                autorisation expresse de Ò Debarras. Aucune autorisation ou
+                autorisation expresse de Ò Débarras. Aucune autorisation ou
                 demande d'information préalable ne peut être exigée par Ò
                 Debarras à l'égard d'un site qui souhaite établir un lien vers
                 le Site. Il convient toutefois d'afficher ce Site dans une
                 nouvelle fenêtre du navigateur.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Cependant, Ò Debarras se réserve le droit de demander la
+                Cependant, Ò Débarras se réserve le droit de demander la
                 suppression d'un lien s'il estime que le site source ne respecte
                 pas les règles ainsi définies.
               </p>
@@ -195,7 +195,7 @@ export default function CGUPage() {
                 9. Modification des CGU
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Ò Debarras se réserve le droit de modifier les présentes CGU à
+                Ò Débarras se réserve le droit de modifier les présentes CGU à
                 tout moment. L'utilisateur s'engage donc à les consulter
                 régulièrement. Ces CGU ont été mises à jour le 24 novembre 2025.
               </p>

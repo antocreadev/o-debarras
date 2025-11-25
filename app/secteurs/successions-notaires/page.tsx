@@ -102,7 +102,7 @@ export default function SuccessionsNotairesPage() {
               Débarras de Successions & Notaires
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les familles et les notaires dans les
+              Ò Débarras accompagne les familles et les notaires dans les
               débarras de successions avec empathie, professionnalisme et
               discrétion.
             </p>
@@ -131,7 +131,7 @@ export default function SuccessionsNotairesPage() {
                   sembler insurmontable.
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras vous soulage de cette charge en prenant en main
+                  Ò Débarras vous soulage de cette charge en prenant en main
                   l'intégralité du processus. Notre équipe, formée à ces
                   situations sensibles, intervient avec respect, empathie et
                   professionnalisme pour vous permettre de vous concentrer sur

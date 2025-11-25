@@ -102,7 +102,7 @@ export default function CollectivitesAdministrationsPage() {
               Débarras pour Collectivités & Administrations
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les collectivités locales et administrations
+              Ò Débarras accompagne les collectivités locales et administrations
               corses dans leurs projets de débarras avec une expertise adaptée
               aux contraintes du secteur public.
             </p>

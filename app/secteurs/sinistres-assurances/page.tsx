@@ -103,7 +103,7 @@ export default function SinistresAssurancesPage() {
               Débarras Après Sinistre & Assurances
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Face à un sinistre, chaque minute compte. Ò Debarras intervient
+              Face à un sinistre, chaque minute compte. Ò Débarras intervient
               rapidement pour débarrasser et sécuriser vos biens, en
               coordination avec votre assurance.
             </p>
@@ -132,7 +132,7 @@ export default function SinistresAssurancesPage() {
                   et entamer les démarches avec votre assurance.
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras est votre allié dans ces moments critiques. Nous
+                  Ò Débarras est votre allié dans ces moments critiques. Nous
                   intervenons rapidement pour débarrasser les biens endommagés,
                   documenter l'état des lieux pour votre assurance, et préparer
                   le terrain pour la remise en état.

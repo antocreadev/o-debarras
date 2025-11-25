@@ -133,7 +133,7 @@ export default function ServicesPage() {
               Des Solutions Complètes de Débarras en Corse
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras vous accompagne dans tous vos projets de débarras avec
+              Ò Débarras vous accompagne dans tous vos projets de débarras avec
               professionnalisme, efficacité et discrétion. De la simple
               évacuation de meubles aux situations les plus complexes, nous
               avons la solution adaptée à vos besoins.
@@ -232,7 +232,7 @@ export default function ServicesPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Chez Ò Debarras, nous sommes profondément engagés dans une
+                Chez Ò Débarras, nous sommes profondément engagés dans une
                 démarche éco-responsable. Chaque intervention est l'occasion de
                 trier, recycler et valoriser un maximum d'objets et de
                 matériaux.

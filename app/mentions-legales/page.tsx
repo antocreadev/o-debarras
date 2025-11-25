@@ -3,15 +3,15 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Mentions Légales | Ò Debarras",
+  title: "Mentions Légales | Ò Débarras",
   description:
-    "Mentions légales du site Ò Debarras, entreprise spécialisée dans le débarras en Corse. Informations légales sur l'éditeur, l'hébergeur et les droits de propriété intellectuelle.",
+    "Mentions légales du site Ò Débarras, entreprise spécialisée dans le débarras en Corse. Informations légales sur l'éditeur, l'hébergeur et les droits de propriété intellectuelle.",
   openGraph: {
-    title: "Mentions Légales | Ò Debarras",
+    title: "Mentions Légales | Ò Débarras",
     description:
-      "Informations légales du site Ò Debarras, spécialiste du débarras en Corse.",
+      "Informations légales du site Ò Débarras, spécialiste du débarras en Corse.",
     url: "https://www.odebarras-corse.fr/mentions-legales",
-    siteName: "Ò Debarras",
+    siteName: "Ò Débarras",
     locale: "fr_FR",
     type: "website",
   },
@@ -37,7 +37,7 @@ export default function MentionsLegalesPage() {
               </p>
               <ul className="list-none text-muted-foreground leading-relaxed ml-0 space-y-2">
                 <li>
-                  <strong>Raison sociale :</strong> Ò Debarras (CAPURAN KEVIN)
+                  <strong>Raison sociale :</strong> Ò Débarras (CAPURAN KEVIN)
                 </li>
                 <li>
                   <strong>Forme juridique :</strong> Entrepreneur individuel
@@ -83,7 +83,7 @@ export default function MentionsLegalesPage() {
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 <strong>Directeur de la publication :</strong> CAPURAN Kevin,
-                dirigeant de Ò Debarras
+                dirigeant de Ò Débarras
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 <strong>Activité principale :</strong> Débarras d'encombrants et
@@ -135,7 +135,7 @@ export default function MentionsLegalesPage() {
                 Toute reproduction, distribution, modification, adaptation,
                 retransmission ou publication, même partielle, de ces différents
                 éléments est strictement interdite sans l'accord exprès par
-                écrit de Ò Debarras. Cette représentation ou reproduction, par
+                écrit de Ò Débarras. Cette représentation ou reproduction, par
                 quelque procédé que ce soit, constitue une contrefaçon
                 sanctionnée par les articles L.335-2 et suivants du Code de la
                 propriété intellectuelle.
@@ -160,7 +160,7 @@ export default function MentionsLegalesPage() {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Les informations recueillies via les formulaires du site sont
-                destinées exclusivement à Ò Debarras pour le traitement de vos
+                destinées exclusivement à Ò Débarras pour le traitement de vos
                 demandes de contact, de devis ou d'information. Vos données ne
                 sont en aucun cas transmises à des tiers sans votre
                 consentement.
@@ -222,17 +222,17 @@ export default function MentionsLegalesPage() {
                 6. Responsabilité
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Ò Debarras s'efforce d'assurer l'exactitude et la mise à jour
+                Ò Débarras s'efforce d'assurer l'exactitude et la mise à jour
                 des informations diffusées sur ce site, dont elle se réserve le
                 droit de corriger, à tout moment et sans préavis, le contenu.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Toutefois, Ò Debarras ne peut garantir l'exactitude,
+                Toutefois, Ò Débarras ne peut garantir l'exactitude,
                 l'exhaustivité ou l'actualité des informations mises à
                 disposition sur ce site.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                En conséquence, Ò Debarras décline toute responsabilité pour
+                En conséquence, Ò Débarras décline toute responsabilité pour
                 toute imprécision, inexactitude ou omission portant sur des
                 informations disponibles sur le site, ainsi que pour tout
                 dommage résultant d'une intrusion frauduleuse d'un tiers ayant
@@ -247,14 +247,14 @@ export default function MentionsLegalesPage() {
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Le site <strong>www.odebarras-corse.fr</strong> peut contenir
-                des liens vers d'autres sites internet. Ò Debarras n'exerce
+                des liens vers d'autres sites internet. Ò Débarras n'exerce
                 aucun contrôle sur ces sites et décline toute responsabilité
                 quant à leur contenu ou à leur politique de confidentialité.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 La création de liens hypertextes vers le site{" "}
                 <strong>www.odebarras-corse.fr</strong> nécessite l'autorisation
-                préalable de Ò Debarras. Pour toute demande, veuillez nous
+                préalable de Ò Débarras. Pour toute demande, veuillez nous
                 contacter à l'adresse{" "}
                 <a
                   href="mailto:odebarras2b@gmail.com"

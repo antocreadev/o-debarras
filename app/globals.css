@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Modern theme for Ò Debarras - Dark green, black, white, gold accents */
+  /* Modern theme for Ò Débarras - Dark green, black, white, gold accents */
   --background: oklch(0.98 0.005 85);
   --foreground: oklch(0.12 0.01 155);
   --card: oklch(1 0 0);

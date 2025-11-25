@@ -103,7 +103,7 @@ export default function AgencesImmobilieresPage() {
               Débarras pour Agences Immobilières
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras est le partenaire des agences immobilières corses pour
+              Ò Débarras est le partenaire des agences immobilières corses pour
               préparer rapidement et efficacement les biens à la vente ou à la
               location.
             </p>
@@ -132,7 +132,7 @@ export default function AgencesImmobilieresPage() {
                   représente une perte de revenus.
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras comprend ces enjeux et propose aux agences
+                  Ò Débarras comprend ces enjeux et propose aux agences
                   immobilières corses un service de débarras rapide, efficace et
                   professionnel pour optimiser la mise en vente ou en location
                   de leurs biens.

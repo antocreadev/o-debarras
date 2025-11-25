@@ -103,7 +103,7 @@ export default function MandatairesJudiciairesPage() {
               Débarras pour Mandataires Judiciaires
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les mandataires judiciaires dans leurs
+              Ò Débarras accompagne les mandataires judiciaires dans leurs
               missions avec rigueur, confidentialité et respect des procédures
               légales.
             </p>
@@ -132,7 +132,7 @@ export default function MandatairesJudiciairesPage() {
                   liquidations judiciaires, tutelles, curatelles...
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras comprend les enjeux et contraintes de ces missions.
+                  Ò Débarras comprend les enjeux et contraintes de ces missions.
                   Nous intervenons avec la rigueur et la confidentialité
                   requises, en respectant scrupuleusement les procédures
                   judiciaires et en fournissant toute la documentation

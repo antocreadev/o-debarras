@@ -13,7 +13,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src="/logo.svg"
-                alt="logo Ò Debarras - debarras en Corse- o debarras"
+                alt="logo Ò Débarras - debarras en Corse- o debarras"
                 width={80}
                 height={80}
                 className="h-20 w-20 object-contain"
@@ -76,14 +76,6 @@ export function Footer() {
                   className="hover:text-background transition-colors"
                 >
                   Nos Réalisations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/valeurs"
-                  className="hover:text-background transition-colors"
-                >
-                  Nos Valeurs
                 </Link>
               </li>
               <li>
@@ -250,7 +242,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
-          <p>© {new Date().getFullYear()} Ò Debarras. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Ò Débarras. Tous droits réservés.</p>
           <div className="flex justify-center gap-4 mt-4">
             <Link
               href="/mentions-legales"

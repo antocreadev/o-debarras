@@ -103,7 +103,7 @@ export default function AdministrateursImmeubles() {
               Débarras pour Administrateurs d'Immeubles
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Ò Debarras accompagne les syndics et administrateurs de biens dans
+              Ò Débarras accompagne les syndics et administrateurs de biens dans
               la gestion des débarras en copropriété avec réactivité et
               professionnalisme.
             </p>
@@ -132,7 +132,7 @@ export default function AdministrateursImmeubles() {
                   remettre en état entre deux locataires...
                 </p>
                 <p className="text-muted-foreground">
-                  Ò Debarras propose un service adapté aux contraintes de la
+                  Ò Débarras propose un service adapté aux contraintes de la
                   gestion immobilière : réactivité, flexibilité horaire, respect
                   des résidents, et tarifs compétitifs pour les interventions
                   régulières.

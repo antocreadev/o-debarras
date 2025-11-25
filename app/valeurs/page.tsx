@@ -143,7 +143,7 @@ export default function ValeursPage() {
               Les Valeurs qui Nous Guident
             </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Chez Ò Debarras, nos valeurs ne sont pas de simples mots. Elles
+              Chez Ò Débarras, nos valeurs ne sont pas de simples mots. Elles
               sont le fondement de notre engagement quotidien envers nos clients
               et notre île, la Corse.
             </p>

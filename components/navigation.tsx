@@ -102,7 +102,7 @@ export function Navigation() {
           >
             <Image
               src="/logo.svg"
-              alt="O Ò Debarras - debarras en Corse"
+              alt="O Ò Débarras - debarras en Corse"
               width={112}
               height={112}
               className="h-28 w-28 object-contain transition-transform group-hover:scale-110"
