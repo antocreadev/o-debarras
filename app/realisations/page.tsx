@@ -33,7 +33,7 @@ const realisations = [
   {
     id: 1,
     title: "Cave encombrée",
-    before:  "/cave-1-1.png",
+    before: "/cave-1-1.png",
     after: "/cave-1.png",
     description: "Transformation complète d'une cave encombrée",
   },
@@ -55,7 +55,7 @@ const realisations = [
     id: 4,
     title: "Local professionnel",
     before: "/pro-1-1.png",
-    after: "/pro-1.png ",
+    after: "/pro-1.png",
     description: "Débarras de local commercial",
   },
   {
@@ -87,13 +87,15 @@ const realisations = [
     after: "/images/after-3.png",
     description: "Vidage complet et nettoyage d'un appartement",
   },
-    {
+  {
     id: 9,
     title: "Syndrome de Diogène",
     before: "/dio-avant.jpg",
     after: "/dio-apres.jpg",
-    description: "Intervention discrète et respectueuse pour syndrome de Diogène",
-  },  {
+    description:
+      "Intervention discrète et respectueuse pour syndrome de Diogène",
+  },
+  {
     id: 10,
     title: "Local Associatif",
     before: "/asso-avant.jpg",
