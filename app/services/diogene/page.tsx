@@ -285,6 +285,10 @@ export default function DiogenePage() {
                     beforeImage="/diogene-1-1.png"
                     afterImage="/diogene-1.png"
                   />
+                  <BeforeAfterSlider
+                    beforeImage="/dio-avant.jpg"
+                    afterImage="/dio-apres.jpg"
+                  />
                 </div>
               </AnimatedSection>
             </div>

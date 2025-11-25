@@ -48,7 +48,7 @@ export function generateOrganizationSchema() {
       geoRadius: "100000",
     },
     description:
-      "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels et cas de syndrome de Diogène.",
+      "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels / associatifs et cas de syndrome de Diogène.",
   };
 }
 

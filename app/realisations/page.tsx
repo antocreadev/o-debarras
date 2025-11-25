@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title:
     "Réalisations Ò Débarras Corse | Avant/Après Photos | Nos Interventions",
   description:
-    "Découvrez nos réalisations de débarras en Corse. Photos avant/après de débarras de caves, situations Diogène, locaux professionnels, particuliers. Résultats garantis.",
+    "Découvrez nos réalisations de débarras en Corse. Photos avant/après de débarras de caves, situations Diogène, locaux professionnels et associatifs, particuliers. Résultats garantis.",
   keywords: [
     "réalisations débarras Corse",
     "photos avant après débarras",
@@ -33,15 +33,15 @@ const realisations = [
   {
     id: 1,
     title: "Cave encombrée",
-    before: "/cave-1.png",
-    after: "/cave-1-1.png",
+    before:  "/cave-1-1.png",
+    after: "/cave-1.png",
     description: "Transformation complète d'une cave encombrée",
   },
   {
     id: 2,
     title: "Situation Diogène",
-    before: "/diogene-1.png",
-    after: "/diogene-1-1.png",
+    before: "/diogene-1-1.png",
+    after: "/diogene-1.png",
     description: "Intervention spécialisée avec accompagnement",
   },
   {
@@ -54,8 +54,8 @@ const realisations = [
   {
     id: 4,
     title: "Local professionnel",
-    before: "/pro-1.png",
-    after: "/pro-1-1.png",
+    before: "/pro-1-1.png",
+    after: "/pro-1.png ",
     description: "Débarras de local commercial",
   },
   {
@@ -87,12 +87,18 @@ const realisations = [
     after: "/images/after-3.png",
     description: "Vidage complet et nettoyage d'un appartement",
   },
-  {
+    {
     id: 9,
-    title: "Débarras pièce encombrée",
-    before: "/images/before-4.png",
-    after: "/images/after-4.png",
-    description: "Vidage complet",
+    title: "Syndrome de Diogène",
+    before: "/dio-avant.jpg",
+    after: "/dio-apres.jpg",
+    description: "Intervention discrète et respectueuse pour syndrome de Diogène",
+  },  {
+    id: 10,
+    title: "Local Associatif",
+    before: "/asso-avant.jpg",
+    after: "/asso-apres.jpg",
+    description: "Débarras et réorganisation d'un local associatif",
   },
 ];
 

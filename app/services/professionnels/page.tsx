@@ -85,7 +85,7 @@ export default function ProfessionnelsPage() {
                   Services Professionnels
                 </div>
                 <div className="flex items-center justify-center gap-6 mb-6 flex-col md:flex-row">
-                          <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
+                  <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0">
                     <Image
                       src="/logo-2.svg"
                       alt="Ò Débarras"
@@ -97,7 +97,6 @@ export default function ProfessionnelsPage() {
                     Débarras{" "}
                     <span className="text-primary">Professionnels</span>
                   </h1>
-          
                 </div>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                   Solutions adaptées aux entreprises et collectivités. Débarras
@@ -187,7 +186,7 @@ export default function ProfessionnelsPage() {
                     Nous travaillons régulièrement avec des agences
                     immobilières, des administrateurs de biens, des notaires et
                     des mandataires judiciaires pour des missions de débarras de
-                    locaux professionnels.
+                    locaux professionnels et associatifs.
                   </p>
                 </div>
               </AnimatedSection>
@@ -293,6 +292,13 @@ export default function ProfessionnelsPage() {
                   <BeforeAfterSlider
                     beforeImage="/pro-1-1.png"
                     afterImage="/pro-1.png"
+                  />
+                  <h3 className="text-2xl font-bold text-center text-foreground">
+                    Local associatif
+                  </h3>
+                  <BeforeAfterSlider
+                    beforeImage="/asso-avant.jpg"
+                    afterImage="/asso-apres.jpg"
                   />
                 </div>
               </AnimatedSection>

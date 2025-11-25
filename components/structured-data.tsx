@@ -31,27 +31,30 @@ export function StructuredData() {
             "@type": "Review",
             author: { "@type": "Person", name: "Christine Saoli" },
             datePublished: "2024-11-01",
-            reviewBody: "Très bon contact ! Très professionnel, rapide et prix très raisonnable ! Ce sont occupés de vider mon garage qui était remplit de tout et n’importe quoi.",
-            reviewRating: { "@type": "Rating", ratingValue: "5" }
+            reviewBody:
+              "Très bon contact ! Très professionnel, rapide et prix très raisonnable ! Ce sont occupés de vider mon garage qui était remplit de tout et n’importe quoi.",
+            reviewRating: { "@type": "Rating", ratingValue: "5" },
           },
           {
             "@type": "Review",
             author: { "@type": "Person", name: "Joseph Marchioni" },
             datePublished: "2024-08-15",
-            reviewBody: "Excellent travail de Kévin et de son équipe. Très humain , très compréhensif, très compétent ! Un véritable et honnête professionnel.",
-            reviewRating: { "@type": "Rating", ratingValue: "5" }
+            reviewBody:
+              "Excellent travail de Kévin et de son équipe. Très humain , très compréhensif, très compétent ! Un véritable et honnête professionnel.",
+            reviewRating: { "@type": "Rating", ratingValue: "5" },
           },
           {
             "@type": "Review",
             author: { "@type": "Person", name: "Pierre Cuttoli" },
             datePublished: "2024-11-15",
-            reviewBody: "Entreprise très correct au niveau tarif, personnel a l écoute, tout est propre après leur départ",
-            reviewRating: { "@type": "Rating", ratingValue: "5" }
-          }
+            reviewBody:
+              "Entreprise très correct au niveau tarif, personnel a l écoute, tout est propre après leur départ",
+            reviewRating: { "@type": "Rating", ratingValue: "5" },
+          },
         ],
         sameAs: [
           "https://www.facebook.com/people/%C3%B2-d%C3%A9barras/61580426932164/",
-          "https://www.instagram.com/o_debarras/"
+          "https://www.instagram.com/o_debarras/",
         ],
         knowsAbout: [
           "Débarras de maison",
@@ -59,7 +62,7 @@ export function StructuredData() {
           "Nettoyage après décès",
           "Débarras de cave",
           "Débarras de grenier",
-          "Débarras de locaux professionnels"
+          "Débarras de locaux professionnels et associatifs",
         ],
         paymentAccepted: ["Cash", "Credit Card", "Check", "Wire Transfer"],
         geo: {
@@ -92,7 +95,7 @@ export function StructuredData() {
           geoRadius: "100000",
         },
         description:
-          "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels et cas de syndrome de Diogène.",
+          "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète pour particuliers et professionnels. Service de débarras de maisons, appartements, caves, greniers, locaux professionnels / associatifs et cas de syndrome de Diogène.",
         founder: {
           "@type": "Person",
           name: "Ò Débarras",

@@ -28,7 +28,7 @@ export function BeforeAfterImage({
             src={beforeImage}
             alt={`${alt} - Avant`}
             fill
-            className="object-contain"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
             priority
           />
@@ -45,7 +45,7 @@ export function BeforeAfterImage({
             src={afterImage}
             alt={`${alt} - Après`}
             fill
-            className="object-contain"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
             priority
           />

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Ò Débarras - Service de Débarras Professionnel en Corse | Particuliers & Professionnels",
   description:
-    "Expert en débarras en Corse depuis 2020. Intervention rapide pour maisons, appartements, caves, syndrome de Diogène, locaux professionnels. Devis gratuit. Discrétion garantie.",
+    "Expert en débarras en Corse depuis 2020. Intervention rapide pour maisons, appartements, caves, syndrome de Diogène, locaux professionnels et associatifs. Devis gratuit. Discrétion garantie.",
   keywords: [
     "débarras Corse",
     "débarras maison Corse",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     "geo.region": "FR-2A;FR-2B",
     "geo.placename": "Corse",
     "geo.position": "42.0396;9.0129",
-    "ICBM": "42.0396, 9.0129",
+    ICBM: "42.0396, 9.0129",
     "google-site-verification": "verification_token", // À remplacer par votre token réel
   },
   appleWebApp: {

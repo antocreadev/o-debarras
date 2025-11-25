@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BeforeAfterImage } from "./before-after-image";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -22,8 +23,9 @@ const services = [
       "Garages",
       "Succession",
     ],
-    color: "bg-green-50",
+    color: "bg-green-900 border-2 border-green-900",
     link: "/services/particuliers",
+    isDark: true,
   },
   {
     beforeImage: "/diogene-1-1.png",
@@ -37,8 +39,9 @@ const services = [
       "Équipe formée",
       "Mandataires judiciaires",
     ],
-    color: "bg-white border-2 border-green-100",
+    color: "bg-white border-2 border-green-900",
     link: "/services/diogene",
+    isDark: false,
   },
   {
     beforeImage: "/pro-1-1.png",
@@ -47,8 +50,9 @@ const services = [
     description:
       "Débarras de locaux commerciaux, bureaux, entrepôts. Solutions adaptées aux entreprises et collectivités.",
     features: ["Locaux commerciaux", "Bureaux", "Entrepôts", "Collectivités"],
-    color: "bg-white",
+    color: "bg-green-900 border-2 border-green-900",
     link: "/services/professionnels",
+    isDark: true,
   },
 ];
 
@@ -106,10 +110,22 @@ export function ServicesSection() {
                   <div className="relative z-10">
                     {/* Content Section */}
                     <div className="px-8 py-8 pt-0">
-                      <h3 className="text-2xl font-black text-foreground mb-4">
+                      <h3
+                        className={cn(
+                          "text-2xl font-black mb-4",
+                          service.isDark ? "text-white" : "text-foreground"
+                        )}
+                      >
                         {service.title}
                       </h3>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                      <p
+                        className={cn(
+                          "mb-6 leading-relaxed",
+                          service.isDark
+                            ? "text-white/90"
+                            : "text-muted-foreground"
+                        )}
+                      >
                         {service.description}
                       </p>
 
@@ -117,7 +133,10 @@ export function ServicesSection() {
                         {service.features.map((feature, idx) => (
                           <li
                             key={idx}
-                            className="flex items-center gap-3 text-sm text-foreground font-medium"
+                            className={cn(
+                              "flex items-center gap-3 text-sm font-medium",
+                              service.isDark ? "text-white" : "text-foreground"
+                            )}
                           >
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             {feature}
@@ -128,7 +147,12 @@ export function ServicesSection() {
                       <Button
                         asChild
                         variant="ghost"
-                        className="w-full group/btn hover:bg-primary/20 transition-colors duration-200 bg-primary/10"
+                        className={cn(
+                          "w-full group/btn transition-colors duration-200",
+                          service.isDark
+                            ? "bg-white/10 hover:bg-white/20 text-white"
+                            : "bg-primary/10 hover:bg-primary/20"
+                        )}
                       >
                         <Link href={service.link}>
                           En savoir plus
