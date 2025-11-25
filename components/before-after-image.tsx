@@ -30,7 +30,6 @@ export function BeforeAfterImage({
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
-            priority
           />
         </div>
 
@@ -47,7 +46,6 @@ export function BeforeAfterImage({
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
-            priority
           />
         </div>
       </div>

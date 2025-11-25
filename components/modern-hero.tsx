@@ -167,6 +167,7 @@ export function ModernHero() {
                 height={1500}
                 priority
                 quality={90}
+                sizes="(max-width: 768px) 100vw, 672px"
               />
             </motion.div>
           </motion.div>

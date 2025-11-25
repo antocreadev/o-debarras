@@ -1,34 +1,10 @@
 "use client";
 
 import { Instagram } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 import { AnimatedSection } from "./animated-section";
+import { Button } from "@/components/ui/button";
 
 export function InstagramSection() {
-  useEffect(() => {
-    // Charger le script embed Instagram
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Retraiter les embeds si le script est déjà chargé
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector(
-        'script[src="https://www.instagram.com/embed.js"]'
-      );
-      if (existingScript && existingScript.parentNode) {
-        existingScript.parentNode.removeChild(existingScript);
-      }
-    };
-  }, []);
-
   return (
     <section className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
@@ -83,15 +59,4 @@ export function InstagramSection() {
       </div>
     </section>
   );
-}
-
-// Déclaration TypeScript pour le script Instagram
-declare global {
-  interface Window {
-    instgrm?: {
-      Embeds: {
-        process: () => void;
-      };
-    };
-  }
 }
