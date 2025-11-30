@@ -1,6 +1,51 @@
 # https://www.robotstxt.org/robotstxt.html
+
+# All bots
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /admin/
+Crawl-delay: 0.5
 
-# Sitemap
+# Google bots
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+# Facebook bot
+User-agent: Facebot
+Allow: /
+
+# Twitter bot
+User-agent: Twitterbot
+Allow: /
+
+# Bad bots
+User-agent: AhrefsBot
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Crawl-delay: 2
+
+User-agent: MJ12bot
+Crawl-delay: 5
+
+# Sitemaps
 Sitemap: https://www.odebarras-corse.fr/sitemap.xml
+Sitemap: https://www.odebarras-corse.fr/sitemap-0.xml
+
+# Host directive
+Host: https://www.odebarras-corse.fr

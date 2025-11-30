@@ -12,6 +12,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateContactPageSchema,
+} from "@/lib/seo-utils";
 
 export const metadata: Metadata = {
   title: "Contact Ò Débarras Corse | Devis Gratuit 07 84 71 73 01",
@@ -61,8 +66,16 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Contact", url: "/contact" },
+  ]);
+
+  const contactPageSchema = generateContactPageSchema();
+
   return (
     <main className="min-h-screen">
+      <StructuredDataComponent data={[breadcrumbSchema, contactPageSchema]} />
       <Navigation />
 
       {/* Hero Section */}

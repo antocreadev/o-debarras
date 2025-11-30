@@ -3,6 +3,13 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { DetailedServicesSection } from "@/components/detailed-services-section";
 import { CTASection } from "@/components/cta-section";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateHowToSchema,
+  generateAggregateOfferSchema,
+  generateSpeakableSchema,
+} from "@/lib/seo-utils";
 import {
   Card,
   CardContent,
@@ -72,6 +79,57 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  // Breadcrumbs
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+  ]);
+
+  // HowTo Schema - Comment demander un débarras
+  const howToSchema = generateHowToSchema({
+    name: "Comment demander un débarras avec Ò Débarras",
+    description:
+      "Guide complet pour demander un service de débarras professionnel en Corse",
+    totalTime: "PT30M",
+    steps: [
+      {
+        name: "Contactez-nous",
+        text: "Appelez-nous au 07 84 71 73 01 ou remplissez notre formulaire de contact en ligne. Décrivez brièvement votre situation.",
+      },
+      {
+        name: "Visite d'évaluation",
+        text: "Nous organisons une visite gratuite pour évaluer le volume à débarrasser et les spécificités de l'intervention.",
+      },
+      {
+        name: "Recevez votre devis",
+        text: "Nous vous remettons un devis détaillé et transparent, sans frais cachés. Le devis est gratuit et sans engagement.",
+      },
+      {
+        name: "Planification de l'intervention",
+        text: "Une fois le devis accepté, nous fixons ensemble une date d'intervention qui vous convient.",
+      },
+      {
+        name: "Débarras et nettoyage",
+        text: "Notre équipe effectue le débarras complet, trie les objets pour le recyclage et nettoie les lieux après l'intervention.",
+      },
+    ],
+  });
+
+  // AggregateOffer Schema - Tarifs indicatifs
+  const offerSchema = generateAggregateOfferSchema({
+    name: "Services de débarras professionnel en Corse",
+    lowPrice: 150,
+    highPrice: 3000,
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+  });
+
+  // Speakable Schema - Pour Google Assistant
+  const speakableSchema = generateSpeakableSchema([
+    ".main-title",
+    ".main-description",
+  ]);
+
   const mainServices = [
     {
       icon: Home,
@@ -145,6 +203,9 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen">
+      <StructuredDataComponent
+        data={[breadcrumbSchema, howToSchema, offerSchema, speakableSchema]}
+      />
       <Navigation />
 
       {/* Hero Section */}

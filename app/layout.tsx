@@ -65,6 +65,8 @@ export const metadata: Metadata = {
     description:
       "Expert en débarras en Corse depuis 2020. Intervention rapide et discrète. Devis gratuit.",
     images: ["/logo-2.png"],
+    creator: "@o_debarras",
+    site: "@o_debarras",
   },
   robots: {
     index: true,
@@ -98,7 +100,60 @@ export const metadata: Metadata = {
     "geo.placename": "Corse",
     "geo.position": "42.0396;9.0129",
     ICBM: "42.0396, 9.0129",
-    "google-site-verification": "VOTRE_TOKEN_ICI", // À remplacer par votre token Google Search Console
+    // Dublin Core Metadata
+    "DC.title": "Ò Débarras - Service de Débarras Professionnel en Corse",
+    "DC.creator": "Ò Débarras",
+    "DC.subject": "Débarras, Nettoyage, Corse, Syndrome de Diogène",
+    "DC.description":
+      "Expert en débarras en Corse depuis 2020. Intervention rapide pour particuliers et professionnels.",
+    "DC.publisher": "Ò Débarras",
+    "DC.type": "Service",
+    "DC.format": "text/html",
+    "DC.language": "fr",
+    "DC.coverage": "Corse, France",
+    // Rating & Content Classification
+    rating: "general",
+    distribution: "global",
+    "revisit-after": "7 days",
+    // Mobile Optimization
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    // Microsoft
+    "msapplication-TileColor": "#064e3b",
+    "msapplication-tap-highlight": "no",
+    // Referrer Policy
+    referrer: "strict-origin-when-cross-origin",
+    // Content Type
+    "content-type": "text/html; charset=UTF-8",
+    // Author Contact
+    "reply-to": "odebarras2b@gmail.com",
+    // Business Classification
+    classification: "Business",
+    // Coverage
+    coverage: "Worldwide",
+    // Target Audience
+    audience: "all",
+    // Page Topic
+    "page-topic": "Service de débarras professionnel en Corse",
+    // Abstract
+    abstract:
+      "Service professionnel de débarras en Corse pour particuliers et entreprises. Intervention rapide, discrétion garantie.",
+    // Pinterest
+    "pinterest:title":
+      "Ò Débarras - Service de Débarras Professionnel en Corse",
+    "pinterest:description":
+      "Expert en débarras en Corse depuis 2020. Intervention rapide et professionnelle.",
+    "pinterest:image": "https://www.odebarras-corse.fr/logo-2.png",
+    // LinkedIn
+    "linkedin:owner": "Ò Débarras",
+    // Telegram
+    "telegram:channel": "@odebarras",
+    // WhatsApp Business
+    "whatsapp:account": "+33784717301",
+    // Schema.org Article Metadata
+    articleSection: "Services",
+    articleTag: "débarras, Corse, nettoyage, syndrome de Diogène",
   },
   appleWebApp: {
     capable: true,
@@ -115,6 +170,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* DNS Prefetch & Preconnect pour performances */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link
           rel="preconnect"
           href="https://static.cdninstagram.com"
@@ -135,10 +194,20 @@ export default function RootLayout({
           href="https://scontent.cdninstagram.com"
           crossOrigin="anonymous"
         />
+
+        {/* Manifest & Theme */}
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="theme-color" content="#064e3b" />
+        <meta name="msapplication-TileColor" content="#064e3b" />
+        <meta name="msapplication-navbutton-color" content="#064e3b" />
+
+        {/* iOS Meta Tags */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        {/* Security & Performance */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}

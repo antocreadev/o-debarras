@@ -3,6 +3,11 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { AnimatedSection } from "@/components/animated-section";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateImageGallerySchema,
+} from "@/lib/seo-utils";
 
 export const metadata: Metadata = {
   title: "Réalisations Ò Débarras Corse | Photos Avant/Après",
@@ -127,8 +132,21 @@ const realisations = [
 ];
 
 export default function RealisationsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Réalisations", url: "/realisations" },
+  ]);
+
+  const imageGallerySchema = generateImageGallerySchema(
+    realisations.map((r) => ({
+      url: r.after,
+      caption: `${r.title} - ${r.description}`,
+    }))
+  );
+
   return (
     <>
+      <StructuredDataComponent data={[breadcrumbSchema, imageGallerySchema]} />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
