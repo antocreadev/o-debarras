@@ -15,6 +15,12 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/seo-utils";
 
 const features = [
   {
@@ -41,10 +47,9 @@ const features = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Syndrome de Diogène & Syllogomanie en Corse | Intervention Spécialisée | Ò Débarras",
+  title: "Syndrome de Diogène Corse | Intervention Spécialisée Discrète",
   description:
-    "Intervention spécialisée pour syndrome de Diogène et syllogomanie en Corse. Équipe formée, discrétion absolue, accompagnement respectueux. Collaboration avec services sociaux et mandataires.",
+    "Intervention spécialisée syndrome de Diogène et syllogomanie en Corse. Équipe formée, discrétion absolue, accompagnement respectueux.",
   keywords: [
     "syndrome de Diogène Corse",
     "syllogomanie Corse",
@@ -56,12 +61,35 @@ export const metadata: Metadata = {
     "accompagnement psychologique débarras",
     "services sociaux débarras",
     "mandataires judiciaires Corse",
+    "débarras Diogène Ajaccio",
+    "débarras Diogène Bastia",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
-    title: "Syndrome de Diogène & Syllogomanie en Corse | Ò Débarras",
+    title: "Syndrome de Diogène Corse | Ò Débarras",
     description:
       "Intervention spécialisée et discrète pour syndrome de Diogène en Corse. Équipe formée et sensibilisée.",
+    url: "https://www.odebarras-corse.fr/services/diogene",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Intervention Syndrome de Diogène en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Syndrome de Diogène Corse | Ò Débarras",
+    description:
+      "Intervention spécialisée et discrète pour syndrome de Diogène en Corse.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/services/diogene",
@@ -69,8 +97,42 @@ export const metadata: Metadata = {
 };
 
 export default function DiogenePage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Syndrome de Diogène", url: "/services/diogene" },
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "Intervention Syndrome de Diogène et Syllogomanie",
+    description:
+      "Intervention spécialisée pour syndrome de Diogène et syllogomanie en Corse. Équipe formée, discrétion absolue, accompagnement respectueux.",
+    url: "/services/diogene",
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Qu'est-ce que le syndrome de Diogène ?",
+      answer:
+        "Le syndrome de Diogène est un trouble comportemental caractérisé par une accumulation excessive d'objets et un défaut d'hygiène. Notre équipe est formée pour intervenir avec discrétion et respect dans ces situations complexes.",
+    },
+    {
+      question: "Comment se déroule une intervention Diogène ?",
+      answer:
+        "Notre intervention est progressive et respectueuse. Nous travaillons en collaboration avec les services sociaux et mandataires judiciaires. La discrétion absolue est garantie.",
+    },
+    {
+      question: "Intervenez-vous dans toute la Corse ?",
+      answer:
+        "Oui, nous intervenons dans toute la Corse pour les cas de syndrome de Diogène et syllogomanie. Contactez-nous au 07 84 71 73 01 pour une évaluation confidentielle.",
+    },
+  ]);
+
   return (
     <>
+      <StructuredDataComponent
+        data={[breadcrumbSchema, serviceSchema, faqSchema]}
+      />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}

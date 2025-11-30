@@ -15,6 +15,12 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/seo-utils";
 
 const services = [
   {
@@ -43,10 +49,9 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Débarras Particuliers en Corse | Maisons, Appartements, Caves | Ò Débarras",
+  title: "Débarras Particuliers Corse | Maisons, Appartements, Caves",
   description:
-    "Service de débarras pour particuliers en Corse. Intervention rapide pour maisons, appartements, caves, greniers, garages. Débarras succession, tri et recyclage. Devis gratuit sous 48h.",
+    "Service de débarras particuliers en Corse. Intervention 48h pour maisons, appartements, caves, greniers. Débarras succession, tri recyclage. Devis gratuit.",
   keywords: [
     "débarras particuliers Corse",
     "débarras maison Corse",
@@ -58,12 +63,35 @@ export const metadata: Metadata = {
     "débarras après décès",
     "enlèvement encombrants particuliers",
     "tri recyclage débarras",
+    "débarras maison Ajaccio",
+    "débarras appartement Bastia",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
     title: "Débarras Particuliers en Corse | Ò Débarras",
     description:
       "Service de débarras pour particuliers en Corse. Intervention rapide pour tous vos encombrants. Devis gratuit.",
+    url: "https://www.odebarras-corse.fr/services/particuliers",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Service pour particuliers en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Débarras Particuliers en Corse | Ò Débarras",
+    description:
+      "Service de débarras pour particuliers en Corse. Intervention rapide. Devis gratuit.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/services/particuliers",
@@ -71,8 +99,42 @@ export const metadata: Metadata = {
 };
 
 export default function ParticuliersPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Débarras Particuliers", url: "/services/particuliers" },
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "Débarras pour Particuliers en Corse",
+    description:
+      "Service de débarras pour particuliers en Corse. Intervention rapide pour maisons, appartements, caves, greniers, garages. Débarras succession, tri et recyclage.",
+    url: "/services/particuliers",
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Quels types de débarras proposez-vous pour les particuliers ?",
+      answer:
+        "Nous intervenons pour tous types de débarras : maisons, appartements, caves, greniers, garages. Nous prenons en charge également les débarras de succession et après décès.",
+    },
+    {
+      question: "Quel est le délai d'intervention ?",
+      answer:
+        "Nous intervenons rapidement, généralement sous 48h. Contactez-nous au 07 84 71 73 01 pour un devis gratuit et sans engagement.",
+    },
+    {
+      question: "Le tri et le recyclage sont-ils inclus ?",
+      answer:
+        "Oui, nous effectuons un tri systématique et un recyclage responsable de tous les objets évacués. Le nettoyage après débarras est également inclus.",
+    },
+  ]);
+
   return (
     <>
+      <StructuredDataComponent
+        data={[breadcrumbSchema, serviceSchema, faqSchema]}
+      />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}

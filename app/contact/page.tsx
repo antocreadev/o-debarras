@@ -16,7 +16,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact Ò Débarras Corse | Devis Gratuit 07 84 71 73 01",
   description:
-    "Contactez Ò Débarras pour un devis gratuit. Tél: 07 84 71 73 01 - Email: odebarras2b@gmail.com. Intervention rapide dans toute la Corse. Lun-Sam 8h-19h.",
+    "Contactez Ò Débarras pour un devis gratuit. Tél: 07 84 71 73 01 - Email: odebarras2b@gmail.com. Intervention rapide Corse. Lun-Sam 8h-19h.",
   keywords: [
     "contact débarras Corse",
     "devis gratuit débarras",
@@ -24,12 +24,36 @@ export const metadata: Metadata = {
     "07 84 71 73 01",
     "email débarras Corse",
     "intervention rapide Corse",
+    "contact débarras Ajaccio",
+    "contact débarras Bastia",
+    "urgence débarras Corse",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
     title: "Contact Ò Débarras Corse | Devis Gratuit",
     description:
       "Contactez-nous pour un devis gratuit. Disponible 6j/7. Intervention rapide dans toute la Corse.",
+    url: "https://www.odebarras-corse.fr/contact",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Contact débarras en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Ò Débarras Corse | Devis Gratuit",
+    description:
+      "Contactez-nous pour un devis gratuit. Intervention rapide dans toute la Corse.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/contact",

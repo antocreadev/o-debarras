@@ -5,10 +5,9 @@ import { AnimatedSection } from "@/components/animated-section";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 
 export const metadata: Metadata = {
-  title:
-    "Réalisations Ò Débarras Corse | Avant/Après Photos | Nos Interventions",
+  title: "Réalisations Ò Débarras Corse | Photos Avant/Après",
   description:
-    "Découvrez nos réalisations de débarras en Corse. Photos avant/après de débarras de caves, situations Diogène, locaux professionnels et associatifs, particuliers. Résultats garantis.",
+    "Découvrez nos réalisations de débarras en Corse. Photos avant/après de caves, Diogène, locaux professionnels. Résultats garantis.",
   keywords: [
     "réalisations débarras Corse",
     "photos avant après débarras",
@@ -17,12 +16,35 @@ export const metadata: Metadata = {
     "transformations débarras",
     "résultats débarras Corse",
     "interventions débarras",
+    "photos débarras Ajaccio",
+    "photos débarras Bastia",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
-    title: "Nos Réalisations de Débarras en Corse | Ò Débarras",
+    title: "Réalisations de Débarras en Corse | Ò Débarras",
     description:
       "Découvrez en images nos interventions de débarras réussies dans toute la Corse.",
+    url: "https://www.odebarras-corse.fr/realisations",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Réalisations de débarras en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Réalisations de Débarras en Corse | Ò Débarras",
+    description:
+      "Découvrez en images nos interventions de débarras réussies en Corse.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/realisations",

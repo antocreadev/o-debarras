@@ -15,6 +15,12 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
+import { StructuredDataComponent } from "@/components/structured-data-component";
+import {
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+} from "@/lib/seo-utils";
 
 const services = [
   {
@@ -44,10 +50,9 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Débarras Professionnels en Corse | Locaux Commerciaux, Bureaux, Entrepôts | Ò Débarras",
+  title: "Débarras Professionnels Corse | Locaux, Bureaux, Entrepôts",
   description:
-    "Service de débarras pour professionnels en Corse. Intervention pour locaux commerciaux, bureaux, entrepôts. Gestion archives, destruction sécurisée RGPD. Certificats de destruction. Tarifs pros.",
+    "Service de débarras professionnels en Corse. Locaux commerciaux, bureaux, entrepôts. Destruction archives RGPD, certificats. Tarifs pros.",
   keywords: [
     "débarras professionnels Corse",
     "débarras locaux commerciaux Corse",
@@ -59,12 +64,35 @@ export const metadata: Metadata = {
     "débarras matériel informatique",
     "certificat destruction Corse",
     "débarras hors horaires",
+    "débarras bureaux Ajaccio",
+    "débarras local commercial Bastia",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
     title: "Débarras Professionnels en Corse | Ò Débarras",
     description:
       "Solutions de débarras adaptées aux entreprises et collectivités en Corse. Intervention rapide et discrète.",
+    url: "https://www.odebarras-corse.fr/services/professionnels",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Service pour professionnels en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Débarras Professionnels en Corse | Ò Débarras",
+    description:
+      "Solutions de débarras pour entreprises et collectivités en Corse.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/services/professionnels",
@@ -72,8 +100,42 @@ export const metadata: Metadata = {
 };
 
 export default function ProfessionnelsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Débarras Professionnels", url: "/services/professionnels" },
+  ]);
+
+  const serviceSchema = generateServiceSchema({
+    name: "Débarras pour Professionnels en Corse",
+    description:
+      "Service de débarras pour professionnels en Corse. Intervention pour locaux commerciaux, bureaux, entrepôts. Gestion archives, destruction sécurisée RGPD, certificats de destruction.",
+    url: "/services/professionnels",
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Proposez-vous des interventions hors horaires d'ouverture ?",
+      answer:
+        "Oui, nous pouvons intervenir en dehors des horaires d'ouverture pour minimiser l'impact sur votre activité professionnelle. Contactez-nous pour organiser une intervention adaptée.",
+    },
+    {
+      question: "Délivrez-vous des certificats de destruction ?",
+      answer:
+        "Oui, nous délivrons des certificats de destruction pour tous les documents et matériels sensibles. Nous respectons les normes RGPD pour la destruction d'archives.",
+    },
+    {
+      question: "Quels types de locaux professionnels débarrassez-vous ?",
+      answer:
+        "Nous intervenons pour tous types de locaux : boutiques, restaurants, hôtels, bureaux, entrepôts, administrations et collectivités locales.",
+    },
+  ]);
+
   return (
     <>
+      <StructuredDataComponent
+        data={[breadcrumbSchema, serviceSchema, faqSchema]}
+      />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}

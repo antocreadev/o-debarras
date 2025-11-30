@@ -24,7 +24,7 @@ import {
 export const metadata: Metadata = {
   title: "Nos Valeurs | Ò Débarras Corse | Ponctualité, Respect, Écologie",
   description:
-    "Les valeurs d'Ò Débarras : ponctualité, rapidité, discrétion, respect, écologie. Un service de débarras humain et responsable en Corse. Intervention sous 48h, tri et recyclage systématique.",
+    "Les valeurs d'Ò Débarras : ponctualité, rapidité, discrétion, respect, écologie. Service de débarras humain et responsable en Corse.",
   keywords: [
     "valeurs débarras Corse",
     "débarras éthique",
@@ -35,11 +35,32 @@ export const metadata: Metadata = {
     "ponctualité débarras",
     "discrétion débarras",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
     title: "Nos Valeurs | Ò Débarras Corse",
     description:
       "Découvrez les valeurs qui guident nos interventions : respect, ponctualité, écologie.",
+    url: "https://www.odebarras-corse.fr/valeurs",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Nos valeurs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nos Valeurs | Ò Débarras Corse",
+    description:
+      "Les valeurs qui guident nos interventions : respect, ponctualité, écologie.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/valeurs",

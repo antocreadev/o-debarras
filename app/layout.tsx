@@ -98,6 +98,7 @@ export const metadata: Metadata = {
     "geo.placename": "Corse",
     "geo.position": "42.0396;9.0129",
     ICBM: "42.0396, 9.0129",
+    "google-site-verification": "VOTRE_TOKEN_ICI", // À remplacer par votre token Google Search Console
   },
   appleWebApp: {
     capable: true,

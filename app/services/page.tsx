@@ -25,10 +25,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Services de Débarras en Corse | Particuliers, Professionnels, Diogène | Ò Débarras",
+  title: "Services de Débarras Corse | Particuliers & Professionnels",
   description:
-    "Tous nos services de débarras en Corse : particuliers, professionnels, syndrome de Diogène. Maisons, appartements, locaux commerciaux, successions. Tri, recyclage, devis gratuit.",
+    "Tous nos services de débarras en Corse : particuliers, professionnels, syndrome de Diogène. Tri, recyclage, devis gratuit 48h.",
   keywords: [
     "services débarras Corse",
     "débarras complet Corse",
@@ -36,12 +35,36 @@ export const metadata: Metadata = {
     "prestations débarras",
     "débarras tout en un",
     "solutions débarras Corse",
+    "débarras maison Corse",
+    "débarras entreprise Corse",
+    "débarras Diogène Corse",
   ],
+  authors: [{ name: "Ò Débarras" }],
+  creator: "Ò Débarras",
+  publisher: "Ò Débarras",
   openGraph: {
-    title: "Tous nos Services de Débarras en Corse | Ò Débarras",
+    title: "Services de Débarras Corse | Ò Débarras",
     description:
       "Découvrez toutes nos prestations de débarras : particuliers, professionnels, syndrome de Diogène.",
+    url: "https://www.odebarras-corse.fr/services",
+    siteName: "Ò Débarras",
+    locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/logo-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ò Débarras - Services de débarras en Corse",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services de Débarras Corse | Ò Débarras",
+    description:
+      "Tous nos services de débarras en Corse : particuliers, professionnels, syndrome de Diogène.",
+    images: ["/logo-2.png"],
   },
   alternates: {
     canonical: "/services",
