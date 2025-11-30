@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+
+<https://www.odebarras-corse.fr/#dataset> a void:Dataset ;
+    dcterms:title "Ò Débarras - Données liées"@fr ;
+    dcterms:description "Dataset de données structurées sur les services de débarras en Corse"@fr ;
+    dcterms:creator <https://www.odebarras-corse.fr/#organization> ;
+    dcterms:publisher <https://www.odebarras-corse.fr/#organization> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:created "2020-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:modified "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    void:sparqlEndpoint <https://www.odebarras-corse.fr/sparql> ;
+    void:uriSpace "https://www.odebarras-corse.fr/" ;
+    void:exampleResource <https://www.odebarras-corse.fr/services/particuliers> ;
+    void:vocabulary <http://xmlns.com/foaf/0.1/> ;
+    void:vocabulary <http://www.w3.org/2004/02/skos/core#> ;
+    void:vocabulary <https://schema.org/> ;
+    void:vocabulary <http://purl.org/dc/terms/> ;
+    foaf:homepage <https://www.odebarras-corse.fr> .
+
+<https://www.odebarras-corse.fr/#organization> a schema:Organization, foaf:Organization ;
+    foaf:name "Ò Débarras"@fr ;
+    foaf:homepage <https://www.odebarras-corse.fr> ;
+    foaf:phone <tel:+33784717301> ;
+    foaf:mbox <mailto:odebarras2b@gmail.com> ;
+    schema:foundingDate "2020"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+    schema:areaServed "Corse"@fr ;
+    schema:knowsAbout "Débarras professionnel"@fr, "Syndrome de Diogène"@fr, "Nettoyage"@fr .

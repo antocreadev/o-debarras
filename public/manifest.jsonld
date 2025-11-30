@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/hydra/context.jsonld",
+    "https://www.odebarras-corse.fr/jsonld-context.json"
+  ],
+  "@type": "ApiDocumentation",
+  "title": "Ò Débarras - API Sémantique",
+  "description": "API de données structurées pour les services de débarras en Corse",
+  "entrypoint": "https://www.odebarras-corse.fr/api",
+  "supportedClass": [
+    {
+      "@id": "DebarrasService",
+      "@type": "Class",
+      "title": "Service de débarras",
+      "description": "Un service de débarras proposé par Ò Débarras",
+      "supportedProperty": [
+        {
+          "property": "schema:name",
+          "title": "Nom du service",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "schema:description",
+          "title": "Description",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "schema:serviceType",
+          "title": "Type de service",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "schema:areaServed",
+          "title": "Zone d'intervention",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "schema:provider",
+          "title": "Prestataire",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        }
+      ]
+    },
+    {
+      "@id": "ServiceParticuliers",
+      "@type": "Class",
+      "title": "Service aux particuliers",
+      "description": "Services de débarras pour les particuliers",
+      "subClassOf": "DebarrasService",
+      "supportedProperty": [
+        {
+          "property": "typeLogement",
+          "title": "Type de logement",
+          "required": false,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "surface",
+          "title": "Surface",
+          "required": false,
+          "readable": true,
+          "writeable": false
+        }
+      ]
+    },
+    {
+      "@id": "ServiceProfessionnels",
+      "@type": "Class",
+      "title": "Service aux professionnels",
+      "description": "Services de débarras pour les professionnels",
+      "subClassOf": "DebarrasService",
+      "supportedProperty": [
+        {
+          "property": "secteurActivite",
+          "title": "Secteur d'activité",
+          "required": false,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "certificationRGPD",
+          "title": "Certification RGPD",
+          "required": false,
+          "readable": true,
+          "writeable": false
+        }
+      ]
+    },
+    {
+      "@id": "ServiceDiogene",
+      "@type": "Class",
+      "title": "Service Syndrome de Diogène",
+      "description": "Service spécialisé pour le syndrome de Diogène",
+      "subClassOf": "DebarrasService",
+      "supportedProperty": [
+        {
+          "property": "discret",
+          "title": "Discrétion garantie",
+          "required": true,
+          "readable": true,
+          "writeable": false
+        },
+        {
+          "property": "accompagnement",
+          "title": "Accompagnement social",
+          "required": false,
+          "readable": true,
+          "writeable": false
+        }
+      ]
+    }
+  ],
+  "supportedOperation": [
+    {
+      "@type": "Operation",
+      "method": "GET",
+      "title": "Récupérer la liste des services",
+      "returns": "ServiceParticuliers",
+      "statusCodes": [
+        {
+          "code": 200,
+          "description": "Services récupérés avec succès"
+        }
+      ]
+    }
+  ]
+}

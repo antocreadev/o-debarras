@@ -1,0 +1,66 @@
+/* TEAM */
+Entreprise: Ò Débarras
+Site: https://www.odebarras-corse.fr
+Localisation: Corse, France
+Email: odebarras2b@gmail.com
+Téléphone: 07 84 71 73 01
+
+/* SERVICES */
+Débarras particuliers: Maison, Appartement, Cave, Grenier, Garage
+Débarras professionnels: Bureaux, Locaux commerciaux, Entrepôts, Collectivités
+Services spécialisés: Syndrome de Diogène, Syllogomanie, Après décès, Succession
+Secteurs: Notaires, Mandataires judiciaires, Administrateurs d'immeubles, Agences immobilières, Sinistres & Assurances
+
+/* ZONE D'INTERVENTION */
+Région: Corse (2A & 2B)
+Départements: Corse-du-Sud, Haute-Corse
+Couverture: Île entière
+Délai: Intervention sous 48h
+Devis: Gratuit et sans engagement
+
+/* VALEURS */
+Respect de l'environnement
+Tri sélectif et recyclage
+Valorisation des objets
+Discrétion professionnelle
+Accompagnement humain
+Certification RGPD
+
+/* SITE */
+Langage: TypeScript / React / Next.js 14
+Framework UI: Tailwind CSS + shadcn/ui
+Standards: HTML5, CSS3, ECMAScript 2023
+SEO: Schema.org JSON-LD, Dublin Core, FOAF, SKOS, RDFa
+Web sémantique: Knowledge Graph, Linked Data, Ontologies
+IA: Optimisé pour ChatGPT, Claude, Perplexity, Bing Chat, Google Gemini
+Accessibilité: WCAG 2.1 AA
+Performance: Core Web Vitals optimisés
+Dernière mise à jour: 2025-01-15
+
+/* TECHNOLOGIES */
+Build: Next.js App Router
+Hébergement: Vercel
+Analytics: Vercel Analytics
+Fonts: Google Fonts (Montserrat)
+Icons: Lucide Icons
+Images: Next/Image avec optimisation automatique
+
+/* STANDARDS WEB SEMANTIQUE */
+Vocabulaires: Schema.org, FOAF, SKOS, Dublin Core
+Ontologies: DBpedia, Wikidata
+Formats: JSON-LD, RDFa, Microdata, Turtle
+Knowledge Graph: Propriétaire + Linked Open Data
+APIs sémantiques: Hydra, JSON-LD Context
+
+/* REMERCIEMENTS */
+À nos clients pour leur confiance
+À la communauté open-source
+Aux standards du W3C
+Au mouvement Linked Data
+
+/* CONTACT */
+Pour toute question SEO ou web sémantique:
+Email: odebarras2b@gmail.com
+Réseaux sociaux:
+  - Facebook: https://www.facebook.com/people/ò-débarras/61580426932164/
+  - Instagram: https://www.instagram.com/o_debarras/

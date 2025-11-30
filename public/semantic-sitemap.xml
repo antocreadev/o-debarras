@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Semantic Sitemap enrichi pour les moteurs de recherche sémantiques -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Page d'accueil - Hub principal -->
+  <url>
+    <loc>https://www.odebarras-corse.fr</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.odebarras-corse.fr" />
+    <!-- Metadata sémantique -->
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>Organization</semantic:type>
+      <semantic:about>Débarras professionnel Corse</semantic:about>
+      <semantic:topic>Service de débarras</semantic:topic>
+      <semantic:location>Corse, France</semantic:location>
+      <semantic:services>Débarras maison, Syndrome de Diogène, Nettoyage professionnel</semantic:services>
+    </semantic:entity>
+  </url>
+
+  <!-- Services particuliers -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/services/particuliers</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>Service</semantic:type>
+      <semantic:category>Services aux particuliers</semantic:category>
+      <semantic:subcategories>Maison, Appartement, Cave, Grenier, Garage</semantic:subcategories>
+      <semantic:related>Vide maison, Désencombrement, Tri sélectif</semantic:related>
+    </semantic:entity>
+  </url>
+
+  <!-- Services professionnels -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/services/professionnels</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>Service</semantic:type>
+      <semantic:category>Services aux professionnels</semantic:category>
+      <semantic:subcategories>Bureaux, Locaux commerciaux, Entrepôts, Collectivités</semantic:subcategories>
+      <semantic:related>Destruction archives, Mise en conformité RGPD, Certificats</semantic:related>
+    </semantic:entity>
+  </url>
+
+  <!-- Service Syndrome de Diogène -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/services/diogene</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>SpecializedService</semantic:type>
+      <semantic:specialty>Syndrome de Diogène</semantic:specialty>
+      <semantic:wikidataId>Q1228323</semantic:wikidataId>
+      <semantic:altLabels>Syllogomanie, Accumulation compulsive</semantic:altLabels>
+      <semantic:approach>Discrétion, Empathie, Accompagnement social</semantic:approach>
+    </semantic:entity>
+  </url>
+
+  <!-- Zones d'intervention -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/zones</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>ServiceArea</semantic:type>
+      <semantic:region>Corse</semantic:region>
+      <semantic:departments>Haute-Corse (2B), Corse-du-Sud (2A)</semantic:departments>
+      <semantic:coverage>Île entière</semantic:coverage>
+    </semantic:entity>
+  </url>
+
+  <!-- Réalisations -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/realisations</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>Portfolio</semantic:type>
+      <semantic:contentType>Avant-après, Études de cas, Témoignages</semantic:contentType>
+    </semantic:entity>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>ContactPage</semantic:type>
+      <semantic:phone>+33784717301</semantic:phone>
+      <semantic:email>odebarras2b@gmail.com</semantic:email>
+      <semantic:responseTime>48h</semantic:responseTime>
+    </semantic:entity>
+  </url>
+
+  <!-- Valeurs -->
+  <url>
+    <loc>https://www.odebarras-corse.fr/valeurs</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <semantic:entity xmlns:semantic="https://www.odebarras-corse.fr/semantic">
+      <semantic:type>AboutPage</semantic:type>
+      <semantic:values>Respect, Discrétion, Professionnalisme, Écologie</semantic:values>
+    </semantic:entity>
+  </url>
+
+</urlset>

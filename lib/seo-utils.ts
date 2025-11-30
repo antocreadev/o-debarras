@@ -347,3 +347,239 @@ export function generateImageGallerySchema(
     })),
   };
 }
+
+// === WEB SEMANTIQUE AVANCE ===
+
+export function generateKnowledgeGraph() {
+  return {
+    "@context": {
+      "@vocab": "https://schema.org/",
+      foaf: "http://xmlns.com/foaf/0.1/",
+      skos: "http://www.w3.org/2004/02/skos/core#",
+      dbpedia: "http://dbpedia.org/resource/",
+      wikidata: "https://www.wikidata.org/wiki/",
+    },
+    "@graph": [
+      {
+        "@id": "https://www.odebarras-corse.fr/#organization",
+        "@type": ["Organization", "LocalBusiness"],
+        name: "Ò Débarras",
+        "foaf:name": "Ò Débarras",
+        "skos:prefLabel": "Ò Débarras - Débarras professionnel Corse",
+        "skos:altLabel": [
+          "O Débarras",
+          "Ò Débarras Corse",
+          "Débarras Corse",
+        ],
+        url: "https://www.odebarras-corse.fr",
+        sameAs: [
+          "https://www.facebook.com/people/ò-débarras/61580426932164/",
+          "https://www.instagram.com/o_debarras/",
+        ],
+        "skos:related": [
+          "dbpedia:Waste_management",
+          "dbpedia:Cleaning",
+          "wikidata:Q840614",
+        ],
+        foundingDate: "2020",
+        areaServed: {
+          "@type": "GeoCircle",
+          geoMidpoint: {
+            "@type": "GeoCoordinates",
+            latitude: 42.0396,
+            longitude: 9.0129,
+          },
+          geoRadius: "100000",
+          name: "Corse",
+        },
+        knowsAbout: [
+          {
+            "@type": "Thing",
+            name: "Débarras de maison",
+            "skos:broader": "Services de nettoyage",
+            "skos:narrower": [
+              "Débarras appartement",
+              "Débarras cave",
+              "Débarras grenier",
+            ],
+          },
+          {
+            "@type": "Thing",
+            name: "Syndrome de Diogène",
+            sameAs: "wikidata:Q1228323",
+            "skos:related": ["Syllogomanie", "Accumulation compulsive"],
+          },
+        ],
+      },
+    ],
+  };
+}
+
+export function generateLinkedDataProfile() {
+  return {
+    "@context": [
+      "https://schema.org",
+      {
+        foaf: "http://xmlns.com/foaf/0.1/",
+        dcterms: "http://purl.org/dc/terms/",
+        skos: "http://www.w3.org/2004/02/skos/core#",
+      },
+    ],
+    "@type": ["Organization", "foaf:Organization"],
+    "@id": "https://www.odebarras-corse.fr/#id",
+    name: "Ò Débarras",
+    "foaf:name": "Ò Débarras",
+    "foaf:homepage": "https://www.odebarras-corse.fr",
+    "foaf:phone": "tel:+33784717301",
+    "foaf:mbox": "mailto:odebarras2b@gmail.com",
+    "dcterms:description":
+      "Expert en débarras professionnel en Corse depuis 2020",
+    "dcterms:subject": "Débarras, Nettoyage, Services professionnels",
+    "dcterms:spatial": "Corse, France",
+    "dcterms:created": "2020",
+    "skos:prefLabel": {
+      "@language": "fr",
+      "@value": "Ò Débarras - Service de débarras professionnel",
+    },
+    "skos:definition":
+      "Entreprise spécialisée dans le débarras de maisons, appartements, et locaux professionnels en Corse",
+    memberOf: {
+      "@type": "OrganizationRole",
+      memberOf: {
+        "@type": "Organization",
+        name: "Entreprises corses",
+      },
+    },
+  };
+}
+
+export function generateSemanticRelations() {
+  return {
+    "@context": {
+      "@vocab": "https://schema.org/",
+      skos: "http://www.w3.org/2004/02/skos/core#",
+      dcterms: "http://purl.org/dc/terms/",
+    },
+    "@type": "DefinedTermSet",
+    name: "Vocabulaire Débarras Corse",
+    "skos:ConceptScheme": {
+      "@type": "Thing",
+      name: "Services de débarras",
+      "skos:hasTopConcept": [
+        {
+          "@type": "DefinedTerm",
+          name: "Débarras particuliers",
+          "skos:broader": "Services aux particuliers",
+          "skos:narrower": [
+            "Débarras maison",
+            "Débarras appartement",
+            "Débarras cave",
+            "Débarras grenier",
+            "Débarras garage",
+          ],
+          "skos:related": ["Vide maison", "Désencombrement", "Tri"],
+        },
+        {
+          "@type": "DefinedTerm",
+          name: "Débarras professionnels",
+          "skos:broader": "Services aux entreprises",
+          "skos:narrower": [
+            "Débarras bureaux",
+            "Débarras locaux commerciaux",
+            "Débarras entrepôts",
+          ],
+          "skos:related": [
+            "Destruction archives",
+            "RGPD",
+            "Certificats destruction",
+          ],
+        },
+        {
+          "@type": "DefinedTerm",
+          name: "Syndrome de Diogène",
+          "skos:altLabel": ["Syllogomanie", "Accumulation compulsive"],
+          "skos:related": [
+            "Intervention spécialisée",
+            "Accompagnement social",
+            "Discrétion",
+          ],
+        },
+      ],
+    },
+  };
+}
+
+export function generateEntityAnnotations(entities: {
+  organizations?: string[];
+  locations?: string[];
+  services?: string[];
+  specialties?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: [
+        ...(entities.organizations?.map((org, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Organization",
+            name: org,
+          },
+        })) || []),
+        ...(entities.locations?.map((loc, i) => ({
+          "@type": "ListItem",
+          position: (entities.organizations?.length || 0) + i + 1,
+          item: {
+            "@type": "Place",
+            name: loc,
+          },
+        })) || []),
+        ...(entities.services?.map((svc, i) => ({
+          "@type": "ListItem",
+          position:
+            (entities.organizations?.length || 0) +
+            (entities.locations?.length || 0) +
+            i +
+            1,
+          item: {
+            "@type": "Service",
+            name: svc,
+          },
+        })) || []),
+      ],
+    },
+  };
+}
+
+export function generateAIContextSchema(context: {
+  intent: string;
+  userNeed: string;
+  solution: string;
+  useCases: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    about: {
+      "@type": "Thing",
+      name: context.userNeed,
+      description: context.solution,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      query: context.intent,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          "https://www.odebarras-corse.fr/contact?query={search_term_string}",
+      },
+    },
+    mentions: context.useCases.map((useCase) => ({
+      "@type": "Thing",
+      name: useCase,
+    })),
+  };
+}

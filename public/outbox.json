@@ -1,0 +1,66 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "OrderedCollection",
+  "id": "https://www.odebarras-corse.fr/outbox",
+  "totalItems": 5,
+  "orderedItems": [
+    {
+      "type": "Create",
+      "id": "https://www.odebarras-corse.fr/activities/1",
+      "actor": "https://www.odebarras-corse.fr/actor",
+      "published": "2025-01-15T10:00:00Z",
+      "to": ["https://www.w3.org/ns/activitystreams#Public"],
+      "object": {
+        "type": "Note",
+        "id": "https://www.odebarras-corse.fr/notes/1",
+        "content": "🏠 Nouveau service de débarras en Corse ! Intervention rapide sous 48h pour particuliers et professionnels. Devis gratuit. #débarras #corse",
+        "url": "https://www.odebarras-corse.fr/services",
+        "attributedTo": "https://www.odebarras-corse.fr/actor",
+        "published": "2025-01-15T10:00:00Z",
+        "tag": [
+          {"type": "Hashtag", "name": "#débarras"},
+          {"type": "Hashtag", "name": "#corse"}
+        ]
+      }
+    },
+    {
+      "type": "Create",
+      "id": "https://www.odebarras-corse.fr/activities/2",
+      "actor": "https://www.odebarras-corse.fr/actor",
+      "published": "2025-01-14T15:30:00Z",
+      "to": ["https://www.w3.org/ns/activitystreams#Public"],
+      "object": {
+        "type": "Note",
+        "id": "https://www.odebarras-corse.fr/notes/2",
+        "content": "♻️ Tri sélectif et valorisation : notre engagement écologique. Chaque objet est trié, recyclé ou réutilisé. #écologie #recyclage",
+        "url": "https://www.odebarras-corse.fr/valeurs",
+        "attributedTo": "https://www.odebarras-corse.fr/actor",
+        "published": "2025-01-14T15:30:00Z",
+        "tag": [
+          {"type": "Hashtag", "name": "#écologie"},
+          {"type": "Hashtag", "name": "#recyclage"}
+        ]
+      }
+    },
+    {
+      "type": "Create",
+      "id": "https://www.odebarras-corse.fr/activities/3",
+      "actor": "https://www.odebarras-corse.fr/actor",
+      "published": "2025-01-13T09:00:00Z",
+      "to": ["https://www.w3.org/ns/activitystreams#Public"],
+      "object": {
+        "type": "Article",
+        "id": "https://www.odebarras-corse.fr/notes/3",
+        "name": "Syndrome de Diogène : notre approche bienveillante",
+        "content": "Intervention spécialisée avec discrétion et accompagnement social. Équipe formée et expérimentée. #diogène #accompagnement",
+        "url": "https://www.odebarras-corse.fr/services/diogene",
+        "attributedTo": "https://www.odebarras-corse.fr/actor",
+        "published": "2025-01-13T09:00:00Z",
+        "tag": [
+          {"type": "Hashtag", "name": "#diogène"},
+          {"type": "Hashtag", "name": "#accompagnement"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "@context": {
+    "@vocab": "https://www.odebarras-corse.fr/vocab#",
+    "schema": "https://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dbpedia": "http://dbpedia.org/resource/",
+    "wikidata": "https://www.wikidata.org/wiki/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    
+    "DebarrasService": "schema:Service",
+    "ServiceParticuliers": {
+      "@id": "schema:Service",
+      "@type": "schema:Service",
+      "schema:serviceType": "Débarras particuliers"
+    },
+    "ServiceProfessionnels": {
+      "@id": "schema:Service",
+      "@type": "schema:Service",
+      "schema:serviceType": "Débarras professionnels"
+    },
+    "ServiceDiogene": {
+      "@id": "schema:Service",
+      "@type": "schema:Service",
+      "schema:serviceType": "Syndrome de Diogène",
+      "skos:altLabel": ["Syllogomanie", "Accumulation compulsive"],
+      "wikidata:topic": "Q1228323"
+    },
+    
+    "intervention": {
+      "@id": "schema:performs",
+      "@type": "@id"
+    },
+    "zoneIntervention": {
+      "@id": "schema:areaServed",
+      "@type": "@id"
+    },
+    "delaiIntervention": {
+      "@id": "schema:hoursAvailable",
+      "@type": "xsd:duration"
+    },
+    "devisGratuit": {
+      "@id": "schema:offers",
+      "@type": "xsd:boolean"
+    },
+    "certificationRGPD": {
+      "@id": "schema:hasCredential",
+      "@type": "xsd:boolean"
+    },
+    "recyclage": {
+      "@id": "schema:recyclingProcess",
+      "@type": "@id"
+    },
+    "valorisation": {
+      "@id": "schema:additionalProperty",
+      "@type": "@id"
+    },
+    
+    "typeLogement": {
+      "@id": "schema:accommodationType",
+      "@type": "xsd:string"
+    },
+    "surface": {
+      "@id": "schema:floorSize",
+      "@type": "schema:QuantitativeValue"
+    },
+    "volumeEstime": {
+      "@id": "schema:volumeCapacity",
+      "@type": "schema:QuantitativeValue"
+    },
+    "accesDifficile": {
+      "@id": "schema:accessibilityFeature",
+      "@type": "xsd:boolean"
+    },
+    "presenceAscenseur": {
+      "@id": "schema:hasMap",
+      "@type": "xsd:boolean"
+    },
+    "etage": {
+      "@id": "schema:floorLevel",
+      "@type": "xsd:integer"
+    },
+    
+    "secteurActivite": {
+      "@id": "schema:industry",
+      "@type": "xsd:string"
+    },
+    "typeClient": {
+      "@id": "schema:audience",
+      "@type": "@id",
+      "schema:audienceType": ["Particulier", "Professionnel", "Collectivité", "Notaire", "Administrateur", "Mandataire"]
+    },
+    
+    "competence": {
+      "@id": "schema:knowsAbout",
+      "@type": "xsd:string"
+    },
+    "specialisation": {
+      "@id": "schema:hasOccupation",
+      "@type": "@id"
+    },
+    "experience": {
+      "@id": "schema:yearsInOperation",
+      "@type": "xsd:integer"
+    },
+    
+    "engagement": {
+      "@id": "schema:mission",
+      "@type": "xsd:string"
+    },
+    "valeur": {
+      "@id": "schema:organizationalCredential",
+      "@type": "xsd:string"
+    },
+    "garantie": {
+      "@id": "schema:warranty",
+      "@type": "schema:WarrantyPromise"
+    },
+    
+    "villeIntervention": {
+      "@id": "schema:addressLocality",
+      "@type": "xsd:string"
+    },
+    "codePostal": {
+      "@id": "schema:postalCode",
+      "@type": "xsd:string"
+    },
+    "departement": {
+      "@id": "schema:addressRegion",
+      "@type": "xsd:string"
+    },
+    "coordonnees": {
+      "@id": "schema:geo",
+      "@type": "schema:GeoCoordinates"
+    },
+    
+    "avantApres": {
+      "@id": "schema:image",
+      "@type": "schema:ImageObject"
+    },
+    "temoin": {
+      "@id": "schema:review",
+      "@type": "schema:Review"
+    },
+    "etudeCas": {
+      "@id": "schema:hasPart",
+      "@type": "schema:Article"
+    },
+    
+    "dureeMoyenne": {
+      "@id": "schema:estimatedDuration",
+      "@type": "xsd:duration"
+    },
+    "equipementNecessaire": {
+      "@id": "schema:tool",
+      "@type": "xsd:string"
+    },
+    "nombrePersonnes": {
+      "@id": "schema:numberOfEmployees",
+      "@type": "xsd:integer"
+    },
+    
+    "processus": {
+      "@id": "schema:step",
+      "@type": "schema:HowToStep"
+    },
+    "methodologie": {
+      "@id": "schema:knowsAbout",
+      "@type": "xsd:string"
+    },
+    
+    "triSelectif": "dbpedia:Waste_sorting",
+    "economieCirculaire": "dbpedia:Circular_economy",
+    "developpementDurable": "dbpedia:Sustainable_development",
+    "gestionDechets": "dbpedia:Waste_management",
+    
+    "corseDuSud": {
+      "@id": "wikidata:Q3356",
+      "schema:addressRegion": "2A"
+    },
+    "hauteCorse": {
+      "@id": "wikidata:Q3389",
+      "schema:addressRegion": "2B"
+    },
+    "ajaccio": "wikidata:Q40104",
+    "bastia": "wikidata:Q40104",
+    "corte": "wikidata:Q214611",
+    "porto-vecchio": "wikidata:Q189105",
+    "calvi": "wikidata:Q189218",
+    
+    "debarrasMaison": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de maison",
+      "skos:broader": "ServiceParticuliers",
+      "skos:narrower": ["Débarras intégral", "Débarras partiel"]
+    },
+    "debarrasAppartement": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras d'appartement",
+      "skos:broader": "ServiceParticuliers"
+    },
+    "debarrasCave": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de cave",
+      "skos:broader": "ServiceParticuliers"
+    },
+    "debarrasGrenier": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de grenier",
+      "skos:broader": "ServiceParticuliers"
+    },
+    "debarrasGarage": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de garage",
+      "skos:broader": "ServiceParticuliers"
+    },
+    
+    "debarrasBureaux": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de bureaux",
+      "skos:broader": "ServiceProfessionnels"
+    },
+    "debarrasLocauxCommerciaux": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras de locaux commerciaux",
+      "skos:broader": "ServiceProfessionnels"
+    },
+    "debarrasEntrepots": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras d'entrepôts",
+      "skos:broader": "ServiceProfessionnels"
+    },
+    
+    "succession": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras après succession",
+      "skos:related": ["Notaire", "Inventaire", "Vente"]
+    },
+    "sinistre": {
+      "@id": "schema:Service",
+      "skos:prefLabel": "Débarras après sinistre",
+      "skos:related": ["Assurance", "Incendie", "Dégât des eaux"]
+    },
+    
+    "discret": {
+      "@id": "schema:additionalProperty",
+      "schema:name": "Discrétion",
+      "schema:value": true
+    },
+    "rapide": {
+      "@id": "schema:additionalProperty",
+      "schema:name": "Rapidité",
+      "schema:value": "48h"
+    },
+    "ecologique": {
+      "@id": "schema:additionalProperty",
+      "schema:name": "Démarche écologique",
+      "schema:value": true
+    },
+    "assure": {
+      "@id": "schema:additionalProperty",
+      "schema:name": "Assuré",
+      "schema:value": true
+    }
+  }
+}

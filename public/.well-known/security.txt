@@ -1,0 +1,26 @@
+Contact: mailto:odebarras2b@gmail.com
+Contact: tel:+33784717301
+Expires: 2026-01-15T00:00:00.000Z
+Preferred-Languages: fr
+Canonical: https://www.odebarras-corse.fr/.well-known/security.txt
+Policy: https://www.odebarras-corse.fr/mentions-legales
+Hiring: https://www.odebarras-corse.fr/contact
+
+# Politique de sécurité
+
+Si vous découvrez une vulnérabilité de sécurité sur notre site web, 
+merci de nous la signaler de manière responsable.
+
+Nous nous engageons à répondre dans les 48 heures.
+
+# Scope
+https://www.odebarras-corse.fr/*
+
+# Out of scope
+- Attaques par déni de service (DoS/DDoS)
+- Spam ou phishing
+- Social engineering
+
+# Remerciements
+Les chercheurs en sécurité qui nous aident à améliorer notre sécurité 
+seront remerciés publiquement (sauf demande contraire).

@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1",
+    {
+      "schema": "https://schema.org/",
+      "PropertyValue": "schema:PropertyValue",
+      "value": "schema:value"
+    }
+  ],
+  "type": "Organization",
+  "id": "https://www.odebarras-corse.fr/actor",
+  "following": "https://www.odebarras-corse.fr/following",
+  "followers": "https://www.odebarras-corse.fr/followers",
+  "inbox": "https://www.odebarras-corse.fr/inbox",
+  "outbox": "https://www.odebarras-corse.fr/outbox",
+  "preferredUsername": "odebarras",
+  "name": "Ò Débarras",
+  "summary": "Service professionnel de débarras en Corse. Particuliers, professionnels, Syndrome de Diogène. Intervention rapide (48h) sur toute l'île. Approche écologique et respectueuse.",
+  "url": "https://www.odebarras-corse.fr",
+  "manuallyApprovesFollowers": false,
+  "discoverable": true,
+  "published": "2020-01-01T00:00:00Z",
+  "icon": {
+    "type": "Image",
+    "mediaType": "image/svg+xml",
+    "url": "https://www.odebarras-corse.fr/logo.svg"
+  },
+  "image": {
+    "type": "Image",
+    "mediaType": "image/jpeg",
+    "url": "https://www.odebarras-corse.fr/images/hero-bg.jpg"
+  },
+  "attachment": [
+    {
+      "type": "PropertyValue",
+      "name": "Site web",
+      "value": "<a href=\"https://www.odebarras-corse.fr\" target=\"_blank\" rel=\"noopener noreferrer\">www.odebarras-corse.fr</a>"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Zone d'intervention",
+      "value": "Corse (2A & 2B)"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Téléphone",
+      "value": "07 84 71 73 01"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Email",
+      "value": "odebarras2b@gmail.com"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Délai d'intervention",
+      "value": "48h"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Services",
+      "value": "Particuliers • Professionnels • Syndrome de Diogène"
+    }
+  ],
+  "tag": [
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/debarras",
+      "name": "#débarras"
+    },
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/corse",
+      "name": "#corse"
+    },
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/nettoyage",
+      "name": "#nettoyage"
+    },
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/diogene",
+      "name": "#diogène"
+    },
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/recyclage",
+      "name": "#recyclage"
+    },
+    {
+      "type": "Hashtag",
+      "href": "https://www.odebarras-corse.fr/tags/ecologie",
+      "name": "#écologie"
+    }
+  ],
+  "publicKey": {
+    "id": "https://www.odebarras-corse.fr/actor#main-key",
+    "owner": "https://www.odebarras-corse.fr/actor",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\n[Clé publique à générer]\n-----END PUBLIC KEY-----"
+  },
+  "endpoints": {
+    "sharedInbox": "https://www.odebarras-corse.fr/inbox"
+  }
+}
