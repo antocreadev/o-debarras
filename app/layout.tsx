@@ -11,10 +11,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Ò Débarras - Service de Débarras Professionnel en Corse | Particuliers & Professionnels",
+  title: "Ò Débarras - Service de Débarras Professionnel en Corse",
   description:
-    "Expert en débarras en Corse depuis 2020. Intervention rapide pour maisons, appartements, caves, syndrome de Diogène, locaux professionnels et associatifs. Devis gratuit. Discrétion garantie.",
+    "Expert en débarras en Corse depuis 2020. Intervention rapide pour particuliers et professionnels. Devis gratuit. Discrétion garantie.",
   keywords: [
     "débarras Corse",
     "débarras maison Corse",
@@ -80,21 +79,25 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon.ico", sizes: "any" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
+    shortcut: "/favicon/favicon.ico",
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
   },
-  generator: "v0.app",
   category: "Service de débarras",
   other: {
     "geo.region": "FR-2A;FR-2B",
     "geo.placename": "Corse",
     "geo.position": "42.0396;9.0129",
     ICBM: "42.0396, 9.0129",
-    "google-site-verification": "verification_token", // À remplacer par votre token réel
   },
   appleWebApp: {
     capable: true,
@@ -111,15 +114,30 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="preconnect" href="https://static.cdninstagram.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.instagram.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://scontent.cdninstagram.com" crossOrigin="anonymous" />
-        <link rel="manifest" href="/manifest.json" />
+        <link
+          rel="preconnect"
+          href="https://static.cdninstagram.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://www.instagram.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://lh3.googleusercontent.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://scontent.cdninstagram.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="theme-color" content="#064e3b" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Ò Débarras" />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
