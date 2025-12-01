@@ -12,7 +12,7 @@ export function StructuredData() {
         logo: "https://www.odebarras-corse.fr/logo.svg",
         url: "https://www.odebarras-corse.fr",
         telephone: "+33784717301",
-        email: "contact@odebarras2b@gmail.com",
+        email: "odebarras2b@gmail.com",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Corse",
