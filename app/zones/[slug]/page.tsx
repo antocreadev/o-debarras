@@ -10,6 +10,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { ServicesSection } from "@/components/services-section";
 import { CTASection } from "@/components/cta-section";
+import { SITE_URL } from "@/lib/site-config";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -24,7 +25,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const region = corsicaRegions.find((r) => r.slug === slug);
-  const baseUrl = "https://www.odebarras-corse.fr";
 
   if (!region) {
     return {
@@ -43,12 +43,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "devis débarras gratuit",
     ],
     alternates: {
-      canonical: `${baseUrl}/zones/${slug}`,
+      canonical: `${SITE_URL}/zones/${slug}`,
     },
     openGraph: {
       title: `Débarras ${region.name} | O'Débarras`,
       description: `Débarras maison, appartement, cave et locaux en ${region.name}. Intervention rapide dans toutes les communes.`,
-      url: `${baseUrl}/zones/${slug}`,
+      url: `${SITE_URL}/zones/${slug}`,
       type: "website",
       locale: "fr_FR",
     },

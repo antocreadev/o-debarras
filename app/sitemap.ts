@@ -1,118 +1,117 @@
 import { MetadataRoute } from "next";
 import { corsicaRegions, allCities } from "@/lib/corsica-data";
+import { SITE_URL } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.odebarras-corse.fr";
-
   // Pages statiques principales
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-      images: [`${baseUrl}/logo-2.png`],
+      images: [`${SITE_URL}/logo-2.png`],
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${SITE_URL}/services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
       images: [
-        `${baseUrl}/particulier-1.png`,
-        `${baseUrl}/pro-1-1.png`,
-        `${baseUrl}/diogene-1-1.png`,
+        `${SITE_URL}/particulier-1.png`,
+        `${SITE_URL}/pro-1-1.png`,
+        `${SITE_URL}/diogene-1-1.png`,
       ],
     },
     {
-      url: `${baseUrl}/services/particuliers`,
+      url: `${SITE_URL}/services/particuliers`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [`${baseUrl}/particulier-1.png`],
+      images: [`${SITE_URL}/particulier-1.png`],
     },
     {
-      url: `${baseUrl}/services/diogene`,
+      url: `${SITE_URL}/services/diogene`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [`${baseUrl}/diogene-1-1.png`],
+      images: [`${SITE_URL}/diogene-1-1.png`],
     },
     {
-      url: `${baseUrl}/services/professionnels`,
+      url: `${SITE_URL}/services/professionnels`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [`${baseUrl}/pro-1-1.png`],
+      images: [`${SITE_URL}/pro-1-1.png`],
     },
     {
-      url: `${baseUrl}/secteurs/collectivites-administrations`,
+      url: `${SITE_URL}/secteurs/collectivites-administrations`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/secteurs/sinistres-assurances`,
+      url: `${SITE_URL}/secteurs/sinistres-assurances`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/secteurs/successions-notaires`,
+      url: `${SITE_URL}/secteurs/successions-notaires`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/secteurs/agences-immobilieres`,
+      url: `${SITE_URL}/secteurs/agences-immobilieres`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/secteurs/mandataires-judiciaires`,
+      url: `${SITE_URL}/secteurs/mandataires-judiciaires`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/secteurs/administrateurs-immeubles`,
+      url: `${SITE_URL}/secteurs/administrateurs-immeubles`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/realisations`,
+      url: `${SITE_URL}/realisations`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/valeurs`,
+      url: `${SITE_URL}/valeurs`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/zones`,
+      url: `${SITE_URL}/zones`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${SITE_URL}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/mentions-legales`,
+      url: `${SITE_URL}/mentions-legales`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/cgu`,
+      url: `${SITE_URL}/cgu`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
@@ -121,20 +120,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Pages des régions
   const regionPages: MetadataRoute.Sitemap = corsicaRegions.map((region) => ({
-    url: `${baseUrl}/zones/${region.slug}`,
+    url: `${SITE_URL}/zones/${region.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
-    images: [`${baseUrl}/corse.png`],
+    images: [`${SITE_URL}/corse.png`],
   }));
 
   // Pages des villes
   const cityPages: MetadataRoute.Sitemap = allCities.map((city) => ({
-    url: `${baseUrl}/zones/villes/${city.slug}`,
+    url: `${SITE_URL}/zones/villes/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
-    images: [`${baseUrl}/corse.png`],
+    images: [`${SITE_URL}/corse.png`],
   }));
 
   return [...staticPages, ...regionPages, ...cityPages];
