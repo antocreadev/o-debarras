@@ -22,6 +22,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const city = allCities.find((c) => c.slug === slug);
+  const baseUrl = "https://www.odebarras-corse.fr";
 
   if (!city) {
     return {
@@ -40,12 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "débarras appartement corse",
     ],
     alternates: {
-      canonical: `/zones/villes/${slug}`,
+      canonical: `${baseUrl}/zones/villes/${slug}`,
     },
     openGraph: {
       title: `Débarras à ${city.name} | O'Débarras`,
       description: `Service de débarras à ${city.name} (${city.region}). Devis gratuit et intervention rapide pour particuliers et professionnels.`,
-      url: `/zones/villes/${slug}`,
+      url: `${baseUrl}/zones/villes/${slug}`,
       type: "website",
       locale: "fr_FR",
     },
