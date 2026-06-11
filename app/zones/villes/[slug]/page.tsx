@@ -32,6 +32,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Débarras ${city.name} (${city.corseName}) | O'Débarras`,
     description: `Service de débarras professionnel à ${city.name} en Corse. Intervention rapide, devis gratuit. Particuliers et professionnels.`,
+    keywords: [
+      `débarras ${city.name.toLowerCase()}`,
+      `débarras ${city.region.toLowerCase()}`,
+      "débarras corse",
+      "débarras maison corse",
+      "débarras appartement corse",
+    ],
+    alternates: {
+      canonical: `/zones/villes/${slug}`,
+    },
+    openGraph: {
+      title: `Débarras à ${city.name} | O'Débarras`,
+      description: `Service de débarras à ${city.name} (${city.region}). Devis gratuit et intervention rapide pour particuliers et professionnels.`,
+      url: `/zones/villes/${slug}`,
+      type: "website",
+      locale: "fr_FR",
+    },
   };
 }
 
