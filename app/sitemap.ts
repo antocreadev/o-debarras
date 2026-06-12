@@ -13,8 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1.0,
       images: [
-        { url: `${baseUrl}/logo-2.png`, title: "Ò Débarras - Logo" },
-        { url: `${baseUrl}/og-image-home.jpg`, title: "Débarras professionnel en Corse" },
+        `${baseUrl}/logo-2.png`,
+        `${baseUrl}/og-image-home.jpg`,
       ],
     },
     {
@@ -23,9 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.95,
       images: [
-        { url: `${baseUrl}/particulier-1.png`, title: "Débarras particuliers" },
-        { url: `${baseUrl}/pro-1-1.png`, title: "Débarras professionnels" },
-        { url: `${baseUrl}/diogene-1-1.png`, title: "Syndrome de Diogène" },
+        `${baseUrl}/particulier-1.png`,
+        `${baseUrl}/pro-1-1.png`,
+        `${baseUrl}/diogene-1-1.png`,
       ],
     },
     {
@@ -34,8 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.95,
       images: [
-        { url: `${baseUrl}/corse.png`, title: "Carte de la Corse" },
-        { url: `${baseUrl}/og-image-zones.jpg`, title: "Zones d'intervention en Corse" },
+        `${baseUrl}/corse.png`,
+        `${baseUrl}/og-image-zones.jpg`,
       ],
     },
     {
@@ -43,23 +43,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: "daily",
       priority: 0.9,
-      images: [{ url: `${baseUrl}/logo-2.png`, title: "Contact Ò Débarras" }],
+      images: [`${baseUrl}/logo-2.png`],
     },
     {
       url: `${baseUrl}/realisations`,
       lastModified: today,
       changeFrequency: "weekly",
       priority: 0.9,
-      images: [
-        { url: `${baseUrl}/realisation-1.jpg`, title: "Réalisations Ò Débarras" },
-      ],
+      images: [`${baseUrl}/realisation-1.jpg`],
     },
     {
       url: `${baseUrl}/valeurs`,
       lastModified: today,
       changeFrequency: "monthly",
       priority: 0.8,
-      images: [{ url: `${baseUrl}/logo-2.png`, title: "Valeurs Ò Débarras" }],
+      images: [`${baseUrl}/logo-2.png`],
     },
   ];
 
@@ -70,21 +68,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [{ url: `${baseUrl}/particulier-1.png`, title: "Débarras pour particuliers" }],
+      images: [`${baseUrl}/particulier-1.png`],
     },
     {
       url: `${baseUrl}/services/professionnels`,
       lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [{ url: `${baseUrl}/pro-1-1.png`, title: "Débarras pour professionnels" }],
+      images: [`${baseUrl}/pro-1-1.png`],
     },
     {
       url: `${baseUrl}/services/diogene`,
       lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
-      images: [{ url: `${baseUrl}/diogene-1-1.png`, title: "Débarras Syndrome de Diogène" }],
+      images: [`${baseUrl}/diogene-1-1.png`],
     },
   ];
 
@@ -165,10 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: "monthly" as const,
       priority: priorities[region.slug] || 0.7,
-      images: [
-        { url: `${baseUrl}/corse.png`, title: `Carte ${region.name}` },
-        { url: `${baseUrl}/regions/${region.slug}.jpg`, title: `${region.name} - Ò Débarras` },
-      ],
+      images: [`${baseUrl}/corse.png`],
     };
   });
 
@@ -185,9 +180,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: "monthly" as const,
       priority: mainCities.includes(city.slug) ? 0.75 : 0.65,
-      images: [
-        { url: `${baseUrl}/corse.png`, title: `${city.name} - ${city.region}` },
-      ],
+      images: [`${baseUrl}/corse.png`],
     };
   });
 
