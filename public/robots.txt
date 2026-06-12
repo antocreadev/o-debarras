@@ -1,51 +1,182 @@
 # https://www.robotstxt.org/robotstxt.html
+# Robots.txt optimisé pour Ò Débarras - Service de débarras en Corse
+# Dernière mise à jour: 2025-06-12
 
-# All bots
+# Directives globales pour tous les robots
 User-agent: *
 Allow: /
+
+# Chemins à exclure pour économiser le crawl budget
 Disallow: /api/
 Disallow: /_next/static/
+Disallow: /_next/image*
+Disallow: /_next/data/
 Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.csv$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Fichiers système à exclure
+Disallow: /favicon/
+Disallow: /.well-known/
+Disallow: /.git/
+Disallow: /.DS_Store
+
+# Optimisation du crawl delay par type de bot
 Crawl-delay: 0.5
 
-# Google bots
+# ===========================================
+# Robots des moteurs de recherche principaux
+# ===========================================
+
+# Googlebot - Pas de delay pour une indexation rapide
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
+Disallow: /_next/static/
+Disallow: /_next/image*
 Crawl-delay: 0
 
+# Googlebot Images - Accès libre aux images
 User-agent: Googlebot-Image
 Allow: /
 
+# Googlebot Mobile
 User-agent: Googlebot-Mobile
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+Crawl-delay: 0
 
-# Bing bot
+# Googlebot Video
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/
 Crawl-delay: 0.5
 
-# Facebook bot
-User-agent: Facebot
+# Bing Images
+User-agent: BingPreview
 Allow: /
 
-# Twitter bot
+# Yahoo
+User-agent: Slurp
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
+
+# ===========================================
+# Robots des réseaux sociaux
+# ===========================================
+
+# Facebook
+User-agent: Facebot
+User-agent: Facebookbot
+Allow: /
+
+# Twitter/X
 User-agent: Twitterbot
 Allow: /
 
-# Bad bots
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Instagram
+User-agent: InstagramBot
+Allow: /
+
+# Pinterest
+User-agent: Pinterest
+Allow: /
+
+# TikTok
+User-agent: TikTokBot
+Allow: /
+
+# ===========================================
+# Robots des outils SEO (avec delay)
+# ===========================================
+
+# Ahrefs
 User-agent: AhrefsBot
+Allow: /
 Crawl-delay: 2
 
+# Semrush
 User-agent: SemrushBot
+Allow: /
 Crawl-delay: 2
 
+# Moz
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 2
+
+# Screaming Frog
+User-agent: Screaming Frog SEO Spider
+Allow: /
+Crawl-delay: 2
+
+# Majestic
 User-agent: MJ12bot
+Allow: /
 Crawl-delay: 5
 
+# ===========================================
 # Sitemaps
-Sitemap: https://www.odebarras-corse.fr/sitemap.xml
-Sitemap: https://www.odebarras-corse.fr/sitemap-0.xml
+# ===========================================
 
-# Host directive
+# Sitemap principal (223+ pages)
+Sitemap: https://www.odebarras-corse.fr/sitemap.xml
+
+# Sitemap index (pour les grands sites)
+Sitemap: https://www.odebarras-corse.fr/sitemap-index.xml
+
+# Sitemap sémantique
+Sitemap: https://www.odebarras-corse.fr/semantic-sitemap.xml
+
+# ===========================================
+# Directives spéciales
+# ===========================================
+
+# Host principale (pour éviter le duplicate content)
 Host: https://www.odebarras-corse.fr
+
+# Pas de cache pour les robots
+Cache-Control: no-cache
+
+# Commentaire pour les humains
+# Ce fichier robots.txt est optimisé pour une indexation maximale
+# tout en protégeant le crawl budget du site.
+# Pour toute question: contact@odebarras-corse.fr
