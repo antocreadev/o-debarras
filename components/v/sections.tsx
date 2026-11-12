@@ -16,6 +16,7 @@ import {
   towns,
 } from "@/lib/v/content";
 import { CORSE_H, CORSE_PATH, CORSE_W, projectCorse } from "@/lib/v/corse-map";
+import { ZonesMap } from "./zones-map";
 
 /* ---------- Petits éléments ---------- */
 
@@ -345,41 +346,19 @@ export function CorsicaMap() {
 export function Zones() {
   return (
     <section id="zones" className="scroll-mt-20 py-20 sm:py-28">
-      <div className="v-wrap grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div className="mx-auto w-full max-w-[26rem]">
-          <CorsicaMap />
-          <div className="mt-4 flex flex-wrap justify-center gap-5 text-sm text-[var(--v-muted)]">
-            <span className="flex items-center gap-2"><span className="h-3 w-3 rounded-full bg-[var(--v-accent)]" /> Nos chantiers récents</span>
-            <span className="flex items-center gap-2"><span className="h-3 w-3 rounded-full border border-[var(--v-ink)] bg-white" /> Villes desservies</span>
-          </div>
+      <div className="v-wrap">
+        <SectionTitle
+          kicker="Zone d'intervention"
+          title="Intervention dans toute la Corse"
+          text="De Bastia à Bonifacio, de Calvi à Porto-Vecchio : 10 zones et toutes leurs communes, y compris les villages isolés. Choisissez une zone pour voir ses communes."
+        />
+        <div className="mt-12">
+          <ZonesMap />
         </div>
-        <div>
-          <SectionTitle
-            kicker="Zone d'intervention"
-            title="Intervention dans toute la Corse"
-            text="De Bastia à Bonifacio, de Calvi à Porto-Vecchio, nous intervenons sur l'ensemble du territoire corse, y compris dans les villages isolés."
-          />
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {regions.map((r) => (
-              <li key={r.slug}>
-                <Link
-                  href={`/zones/${r.slug}`}
-                  className="flex items-center justify-between gap-3 rounded-[calc(var(--v-radius)*0.7)] border border-[var(--v-line)] px-4 py-3 transition-colors hover:border-[var(--v-brand)]"
-                >
-                  <span>
-                    <span className="block font-semibold">{r.name}</span>
-                    <span className="block text-sm italic text-[var(--v-muted)]">{r.corse}</span>
-                  </span>
-                  <ArrowRight className="h-4 w-4 shrink-0 text-[var(--v-muted)]" aria-hidden />
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <PrimaryButton href="/zones">
-              Toutes nos zones d'intervention <ArrowRight className="h-4 w-4" aria-hidden />
-            </PrimaryButton>
-          </div>
+        <div className="mt-10">
+          <PrimaryButton href="/zones">
+            Toutes nos zones d'intervention <ArrowRight className="h-4 w-4" aria-hidden />
+          </PrimaryButton>
         </div>
       </div>
     </section>
