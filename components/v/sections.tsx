@@ -133,7 +133,7 @@ export function Process({ dark }: { dark?: boolean }) {
                 (dark ? "bg-white/[0.06] ring-1 ring-white/10" : "bg-[var(--v-bg)] ring-1 ring-[var(--v-line)]")
               }
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--v-accent)] font-bold text-white">{i + 1}</span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--v-accent)] font-bold text-[var(--v-accent-ink)]">{i + 1}</span>
               <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
               <p className={"mt-2 leading-relaxed " + (dark ? "text-white/75" : "text-[var(--v-muted)]")}>{s.text}</p>
             </li>
@@ -245,7 +245,7 @@ export function Engagement() {
   return (
     <section className="py-20 sm:py-28">
       <div className="v-wrap">
-        <div className="grid gap-10 rounded-[var(--v-radius)] bg-[var(--v-brand)] p-8 text-white sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div className="grid gap-10 rounded-[var(--v-radius)] bg-[var(--v-deep)] p-8 text-white ring-1 ring-white/5 sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold text-[var(--v-accent)]">Anti-gaspi</p>
             <h2 className="mt-3 text-[2rem] font-bold leading-[1.1] sm:text-[2.4rem]">Une seconde vie pour vos objets</h2>
@@ -311,7 +311,7 @@ export function CorsicaMap() {
   });
   return (
     <svg viewBox={`-100 -20 ${CORSE_W + 200} ${CORSE_H + 40}`} className="h-auto w-full" role="img" aria-label="Carte de la Corse : villes desservies et lieux de nos chantiers">
-      <path d={CORSE_PATH} fill="var(--v-brand)" />
+      <path d={CORSE_PATH} fill="var(--v-map)" />
       {pins.map((p) => {
         const { x, y } = projectCorse(p.lon, p.lat);
         return <circle key={p.name} cx={x} cy={y} r={7} fill="var(--v-accent)" stroke="var(--v-bg)" strokeWidth={2.5} />;
@@ -511,7 +511,7 @@ export function VFooter() {
 export function MobileCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-[var(--v-line)] bg-[var(--v-bg)]/95 p-3 backdrop-blur md:hidden">
-      <a href={contact.phoneHref} className="flex h-12 items-center justify-center gap-2 rounded-[calc(var(--v-radius)*0.6)] bg-[var(--v-brand)] font-semibold text-white">
+      <a href={contact.phoneHref} className="flex h-12 items-center justify-center gap-2 rounded-[calc(var(--v-radius)*0.6)] bg-[var(--v-brand)] font-semibold text-[var(--v-brand-ink)]">
         <Phone className="h-4 w-4" aria-hidden /> Appeler
       </a>
       <a href="/contact" className="flex h-12 items-center justify-center rounded-[calc(var(--v-radius)*0.6)] border border-[var(--v-line)] font-semibold">

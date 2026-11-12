@@ -196,6 +196,9 @@
   --v-brand-ink: #ffffff;
   --v-accent: #c9a14a;
   --v-radius: 18px;
+  --v-deep: #223325;
+  --v-map: #223325;
+  --v-accent-ink: #ffffff;
   background: var(--v-bg);
   color: var(--v-ink);
   font-family: var(--v-font-body), system-ui, sans-serif;
@@ -207,3 +210,7 @@
 .vsite[data-v="3"] h1, .vsite[data-v="3"] h2 { letter-spacing: -0.01em; font-weight: 400; }
 .vsite .v-wrap { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
 .vsite[data-v="3"] h3 { font-family: var(--v-font-body), system-ui, sans-serif; letter-spacing: -0.01em; }
+.vsite[data-v="4"] { --v-deep: #1c2a1f; --v-map: #2f4a34; --v-accent-ink: #121a14; --v-bg: #121a14; --v-alt: #19231b; --v-ink: #eef2ec; --v-muted: #a7b5a9; --v-line: #2b382e; --v-brand: #e0b04f; --v-brand-ink: #121a14; --v-accent: #e0b04f; --v-radius: 10px; }
+.vsite[data-v="4"] h1, .vsite[data-v="4"] h2 { font-weight: 800; letter-spacing: -0.03em; }
+.vsite[data-v="5"] { --v-bg: #fafaf7; --v-alt: #f1f1ea; --v-accent: #b8913a; --v-radius: 16px; }
+.vsite[data-v="4"] .v-logo { filter: invert(1); }

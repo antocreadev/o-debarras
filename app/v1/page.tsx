@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { VHeader } from "@/components/v/header";
 import { HeroSplit } from "@/components/v/heroes";
 import { Audiences, ContactBand, Engagement, MobileCallBar, Process, Realisations, Reviews, Services, Social, VFooter, Zones } from "@/components/v/sections";
-
-const font = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--v-font" });
 
 export const metadata: Metadata = {
   title: "Ò Débarras · Version 1",
@@ -13,7 +10,9 @@ export const metadata: Metadata = {
 
 export default function Version1() {
   return (
-    <div data-v="1" className={`vsite ${font.variable} pb-20 md:pb-0`} style={{ ["--v-font-head" as string]: "var(--v-font)", ["--v-font-body" as string]: "var(--v-font)" }}>
+    <div data-v="1" className="vsite pb-20 md:pb-0" style={{ ["--v-font-head" as string]: "'Plus Jakarta Sans'", ["--v-font-body" as string]: "'Plus Jakarta Sans'" }}>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" precedence="default" />
       <VHeader />
       <main>
         <HeroSplit />

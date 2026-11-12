@@ -17,16 +17,19 @@ function GoogleBadge({ light }: { light?: boolean }) {
 }
 
 /* V1 : texte à gauche, vidéo réelle de chantiers à droite, bandeau de preuves */
-export function HeroSplit() {
+export function HeroSplit({
+  title = "On vide, on trie, on vous rend des lieux propres.",
+  badge = "Débarras professionnel en Corse",
+}: { title?: string; badge?: string } = {}) {
   return (
     <section id="top" className="pt-[72px]">
       <div className="v-wrap grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:py-20">
         <div>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--v-alt)] px-3.5 py-1.5 text-sm font-medium">
-            <span className="h-2 w-2 rounded-full bg-[var(--v-accent)]" /> Débarras professionnel en Corse
+            <span className="h-2 w-2 rounded-full bg-[var(--v-accent)]" /> {badge}
           </p>
           <h1 className="text-[2.6rem] font-extrabold leading-[1.05] sm:text-[3.6rem] lg:text-[4rem]">
-            On vide, on trie, on vous rend des lieux propres.
+            {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--v-muted)]">
             Maisons, appartements, caves, successions, locaux professionnels. Intervention rapide, discrète et respectueuse dans toute la Corse.
@@ -137,6 +140,54 @@ export function HeroEditorial() {
               <Image src="/v/meria-apres.webp" alt="La même maison de Meria après débarras" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" priority />
               <span className="absolute left-2 top-2 bg-white px-2 py-0.5 text-xs font-semibold text-black">Après</span>
             </div>
+          </div>
+        </div>
+      </div>
+      <ProofBar />
+    </section>
+  );
+}
+
+/* V5 : l'identité de l'ancien site (titre « Ò Débarras » souligné or), modernisée */
+export function HeroBrand() {
+  return (
+    <section id="top" className="pt-[72px]">
+      <div className="v-wrap grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-20">
+        <div>
+          <h1 className="text-[3.2rem] font-black leading-none sm:text-[4.6rem]">
+            <span className="relative isolate inline-block text-[var(--v-brand)]">
+              Ò Débarras
+              <span className="absolute inset-x-0 bottom-1 -z-10 h-4 bg-[var(--v-accent)]/35" aria-hidden />
+            </span>
+          </h1>
+          <p className="mt-6 max-w-xl text-xl leading-relaxed text-[var(--v-muted)]">
+            Intervention rapide, discrète et respectueuse dans toute la <strong className="text-[var(--v-ink)]">Corse</strong>.
+          </p>
+          <p className="mt-4 max-w-xl leading-relaxed text-[var(--v-muted)]">
+            De la simple machine à laver au syndrome de Diogène : maisons, appartements, caves, successions et locaux professionnels.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <PrimaryButton href="/contact">
+              Devis gratuit <ArrowRight className="h-4 w-4" aria-hidden />
+            </PrimaryButton>
+            <GhostButton href={contact.phoneHref}>
+              <Phone className="h-4 w-4" aria-hidden /> {contact.phone}
+            </GhostButton>
+          </div>
+          <div className="mt-8">
+            <GoogleBadge />
+          </div>
+        </div>
+        <div className="grid grid-cols-[1.3fr_1fr] gap-3">
+          <div className="relative row-span-2 aspect-[3/4] overflow-hidden rounded-[var(--v-radius)] bg-[var(--v-alt)]">
+            <video className="h-full w-full object-cover" src="/v/hero-portrait.mp4" poster="/v/hero-portrait.jpg" autoPlay muted loop playsInline preload="metadata" aria-label="Extraits de nos chantiers en Corse" />
+          </div>
+          <div className="relative overflow-hidden rounded-[var(--v-radius)]">
+            <Image src="/v/equipe-toit.webp" alt="L'équipe Ò Débarras en tenue de protection sur un toit de Bastia" fill sizes="(min-width: 1024px) 20vw, 40vw" className="object-cover" priority />
+          </div>
+          <div className="flex flex-col justify-end rounded-[var(--v-radius)] bg-[var(--v-brand)] p-5 text-white">
+            <p className="text-3xl font-black">8 fourgons</p>
+            <p className="mt-1 text-sm text-white/75">et un piano de 280 kg à Ajaccio</p>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ export function VHeader({ overlay = false }: { overlay?: boolean }) {
     >
       <div className="v-wrap flex h-[72px] items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-2.5" aria-label="Ò Débarras, haut de page">
-          <Image src="/logo.svg" alt="" width={30} height={45} className={"h-10 w-auto " + (clear ? "invert" : "")} priority />
+          <Image src="/logo.svg" alt="" width={30} height={45} className={"h-10 w-auto " + (clear ? "invert" : "v-logo")} priority />
           <span className="text-lg font-extrabold tracking-tight">Ò DÉBARRAS</span>
         </a>
 
@@ -45,7 +45,7 @@ export function VHeader({ overlay = false }: { overlay?: boolean }) {
             href={contact.phoneHref}
             className={
               "hidden h-11 items-center gap-2 rounded-[calc(var(--v-radius)*0.6)] px-4 text-[0.95rem] font-semibold sm:inline-flex " +
-              (clear ? "bg-white text-[var(--v-brand)]" : "bg-[var(--v-brand)] text-white")
+              (clear ? "bg-white text-[#223325]" : "bg-[var(--v-brand)] text-[var(--v-brand-ink)]")
             }
           >
             <Phone className="h-4 w-4" aria-hidden /> {contact.phone}
