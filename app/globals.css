@@ -184,3 +184,26 @@
   background-size: 1000px 100%;
   will-change: background-position;
 }
+
+/* ===== Versions /v1 /v2 /v3 de la page d'accueil ===== */
+.vsite {
+  --v-bg: #ffffff;
+  --v-alt: #f3f5f2;
+  --v-ink: #16201a;
+  --v-muted: #56645a;
+  --v-line: #dfe5df;
+  --v-brand: #223325;
+  --v-brand-ink: #ffffff;
+  --v-accent: #c9a14a;
+  --v-radius: 18px;
+  background: var(--v-bg);
+  color: var(--v-ink);
+  font-family: var(--v-font-body), system-ui, sans-serif;
+}
+.vsite h1, .vsite h2, .vsite h3 { font-family: var(--v-font-head), system-ui, sans-serif; letter-spacing: -0.02em; text-wrap: balance; }
+.vsite p { text-wrap: pretty; }
+.vsite[data-v="2"] { --v-alt: #f1f4f0; --v-accent: #d9a441; --v-radius: 14px; }
+.vsite[data-v="3"] { --v-alt: #f2efe9; --v-ink: #1b1d1b; --v-muted: #5d605b; --v-line: #e2ddd4; --v-accent: #1f5b6b; --v-radius: 6px; }
+.vsite[data-v="3"] h1, .vsite[data-v="3"] h2 { letter-spacing: -0.01em; font-weight: 400; }
+.vsite .v-wrap { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+.vsite[data-v="3"] h3 { font-family: var(--v-font-body), system-ui, sans-serif; letter-spacing: -0.01em; }
