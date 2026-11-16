@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Phone, Star } from "lucide-react";
-import { contact, proofs } from "@/lib/v/content";
+import { getSiteData } from "@/lib/v/data";
 import { GhostButton, PrimaryButton } from "./sections";
 
 function GoogleBadge({ light }: { light?: boolean }) {
@@ -17,10 +17,12 @@ function GoogleBadge({ light }: { light?: boolean }) {
 }
 
 /* V1 : texte à gauche, vidéo réelle de chantiers à droite, bandeau de preuves */
-export function HeroSplit({
+export async function HeroSplit({
   title = "On vide, on trie, on vous rend des lieux propres.",
   badge = "Débarras professionnel en Corse",
 }: { title?: string; badge?: string } = {}) {
+  const contact = await getSiteData();
+  const { proofs } = contact;
   return (
     <section id="top" className="pt-[72px]">
       <div className="v-wrap grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:py-20">
@@ -61,7 +63,9 @@ export function HeroSplit({
   );
 }
 
-export function ProofBar({ dark }: { dark?: boolean }) {
+export async function ProofBar({ dark }: { dark?: boolean }) {
+  const contact = await getSiteData();
+  const { proofs } = contact;
   return (
     <div className={dark ? "bg-[var(--v-brand)] text-white" : "border-y border-[var(--v-line)] bg-[var(--v-alt)]"}>
       <ul className="v-wrap grid grid-cols-2 gap-6 py-8 md:grid-cols-4">
@@ -77,7 +81,9 @@ export function ProofBar({ dark }: { dark?: boolean }) {
 }
 
 /* V2 : vidéo plein écran, voile vert, texte blanc */
-export function HeroVideo() {
+export async function HeroVideo() {
+  const contact = await getSiteData();
+  const { proofs } = contact;
   return (
     <section id="top" className="relative flex min-h-[88svh] items-end overflow-hidden bg-[var(--v-brand)] text-white">
       <video className="absolute inset-0 h-full w-full object-cover" src="/v/hero-paysage.mp4" poster="/v/hero-paysage.jpg" autoPlay muted loop playsInline preload="metadata" aria-hidden />
@@ -107,7 +113,9 @@ export function HeroVideo() {
 }
 
 /* V3 : éditorial classique, grande photo et titre serif */
-export function HeroEditorial() {
+export async function HeroEditorial() {
+  const contact = await getSiteData();
+  const { proofs } = contact;
   return (
     <section id="top" className="pt-[72px]">
       <div className="v-wrap py-12 sm:py-16">
@@ -149,7 +157,9 @@ export function HeroEditorial() {
 }
 
 /* V5 : l'identité de l'ancien site (titre « Ò Débarras » souligné or), modernisée */
-export function HeroBrand() {
+export async function HeroBrand() {
+  const contact = await getSiteData();
+  const { proofs } = contact;
   return (
     <section id="top" className="pt-[72px]">
       <div className="v-wrap grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-20">

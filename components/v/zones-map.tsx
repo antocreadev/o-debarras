@@ -3,8 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
-import { corsicaRegions } from "@/lib/corsica-data";
-import { communes } from "@/lib/v/communes";
+import type { ZoneData } from "@/lib/v/data";
 import { interventions, towns } from "@/lib/v/content";
 import { CORSE_H, CORSE_PATH, CORSE_W, projectCorse } from "@/lib/v/corse-map";
 
@@ -21,19 +20,18 @@ const COLORS: Record<string, string> = {
   "sud-corse": "#c4487a",
 };
 
-const regions = corsicaRegions.map((r) => ({
-  slug: r.slug,
-  name: r.name,
-  corse: r.corseName,
-  // liste dédoublonnée
-  cities: Array.from(new Map(r.cities.map((c) => [c.slug, c])).values()),
-}));
+const PALETTE = Object.values(COLORS);
 
-export function ZonesMap() {
+export function ZonesMap({ zones }: { zones: ZoneData[] }) {
+  const regions = zones;
+  const couleur = (slug: string, i = regions.findIndex((r) => r.slug === slug)) => COLORS[slug] ?? PALETTE[(i < 0 ? 0 : i) % PALETTE.length];
+  const communes = regions.flatMap((r) =>
+    r.cities.filter((c) => c.lat != null && c.lon != null).map((c) => ({ slug: c.slug, name: c.name, region: r.slug, lat: c.lat as number, lon: c.lon as number })),
+  );
   const [sel, setSel] = useState<string | null>(null);
   const [hover, setHover] = useState<string | null>(null);
   const region = regions.find((r) => r.slug === sel) ?? null;
-  const total = useMemo(() => new Set(regions.flatMap((r) => r.cities.map((c) => c.slug))).size, []);
+  const total = useMemo(() => new Set(regions.flatMap((r) => r.cities.map((c) => c.slug))).size, [regions]);
   const pins = useMemo(() => {
     const seen = new Set<string>();
     return interventions.filter((p) => {
@@ -66,7 +64,7 @@ export function ZonesMap() {
                     cx={x}
                     cy={y}
                     r={active && sel ? 6 : 4.5}
-                    fill={COLORS[c.region] ?? "var(--v-brand)"}
+                    fill={couleur(c.region)}
                     opacity={active ? 1 : 0.18}
                   />
                   <circle
@@ -149,7 +147,7 @@ export function ZonesMap() {
                   (sel === r.slug ? "border-[var(--v-ink)] bg-[var(--v-alt)]" : "border-[var(--v-line)] hover:border-[var(--v-ink)]")
                 }
               >
-                <span className="h-3.5 w-3.5 shrink-0 rounded-full" style={{ background: COLORS[r.slug] }} />
+                <span className="h-3.5 w-3.5 shrink-0 rounded-full" style={{ background: couleur(r.slug) }} />
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold leading-tight">{r.name}</span>
                   <span className="block text-sm italic text-[var(--v-muted)]">{r.corse}</span>
@@ -165,7 +163,7 @@ export function ZonesMap() {
             <>
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h3 className="flex items-center gap-2 text-lg font-bold">
-                  <span className="h-3.5 w-3.5 rounded-full" style={{ background: COLORS[region.slug] }} />
+                  <span className="h-3.5 w-3.5 rounded-full" style={{ background: couleur(region.slug) }} />
                   {region.name} · {region.cities.length} communes
                 </h3>
                 <Link href={`/zones/${region.slug}`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--v-brand)] hover:underline">

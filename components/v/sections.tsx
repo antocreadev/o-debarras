@@ -1,20 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, Instagram, Facebook, Mail, MapPin, Phone, Star } from "lucide-react";
-import {
-  audiences,
-  chantiers,
-  contact,
-  engagement,
-  instagramPosts,
-  interventions,
-  regions,
-  reviewCount,
-  reviews,
-  services,
-  steps,
-  towns,
-} from "@/lib/v/content";
+import { audiences, engagement, instagramPosts, interventions, steps, towns } from "@/lib/v/content";
+import { getSiteData } from "@/lib/v/data";
 import { CORSE_H, CORSE_PATH, CORSE_W, projectCorse } from "@/lib/v/corse-map";
 import { ZonesMap } from "./zones-map";
 
@@ -70,7 +58,8 @@ function Stars({ className = "" }: { className?: string }) {
 
 /* ---------- Services ---------- */
 
-export function Services() {
+export async function Services() {
+  const { services } = await getSiteData();
   return (
     <section id="services" className="scroll-mt-20 py-20 sm:py-28">
       <div className="v-wrap">
@@ -147,7 +136,8 @@ export function Process({ dark }: { dark?: boolean }) {
 
 /* ---------- Réalisations ---------- */
 
-export function Realisations() {
+export async function Realisations() {
+  const { chantiers } = await getSiteData();
   return (
     <section id="realisations" className="scroll-mt-20 py-20 sm:py-28">
       <div className="v-wrap">
@@ -268,7 +258,9 @@ export function Engagement() {
 
 /* ---------- Avis Google ---------- */
 
-export function Reviews() {
+export async function Reviews() {
+  const { avis: tousAvis, avisTotal: reviewCount, googleReviews } = await getSiteData();
+  const reviews = tousAvis.filter((r) => r.description.length > 40).slice(0, 6);
   return (
     <section id="avis" className="scroll-mt-20 bg-[var(--v-alt)] py-20 sm:py-28">
       <div className="v-wrap">
@@ -293,7 +285,7 @@ export function Reviews() {
           ))}
         </ul>
         <div className="mt-10 text-center">
-          <GhostButton href={contact.googleReviews}>Voir tous les avis sur Google</GhostButton>
+          <GhostButton href={googleReviews}>Voir tous les avis sur Google</GhostButton>
         </div>
       </div>
     </section>
@@ -343,7 +335,8 @@ export function CorsicaMap() {
   );
 }
 
-export function Zones() {
+export async function Zones() {
+  const { zones } = await getSiteData();
   return (
     <section id="zones" className="scroll-mt-20 py-20 sm:py-28">
       <div className="v-wrap">
@@ -353,7 +346,7 @@ export function Zones() {
           text="De Bastia à Bonifacio, de Calvi à Porto-Vecchio : 10 zones et toutes leurs communes, y compris les villages isolés. Choisissez une zone pour voir ses communes."
         />
         <div className="mt-12">
-          <ZonesMap />
+          <ZonesMap zones={zones} />
         </div>
         <div className="mt-10">
           <PrimaryButton href="/zones">
@@ -367,7 +360,8 @@ export function Zones() {
 
 /* ---------- Réseaux sociaux ---------- */
 
-export function Social() {
+export async function Social() {
+  const contact = await getSiteData();
   return (
     <section className="bg-[var(--v-alt)] py-20 sm:py-28">
       <div className="v-wrap">
@@ -399,7 +393,8 @@ export function Social() {
 
 /* ---------- Contact ---------- */
 
-export function ContactBand() {
+export async function ContactBand() {
+  const contact = await getSiteData();
   return (
     <section id="contact" className="scroll-mt-20 py-20 sm:py-28">
       <div className="v-wrap">
@@ -429,7 +424,9 @@ export function ContactBand() {
 
 /* ---------- Pied de page ---------- */
 
-export function VFooter() {
+export async function VFooter() {
+  const contact = await getSiteData();
+  const { services } = contact;
   const cols = [
     { title: "Services", links: services.map((s) => ({ label: s.title, href: s.href })) },
     {
@@ -487,7 +484,8 @@ export function VFooter() {
 
 /* ---------- Barre d'appel mobile ---------- */
 
-export function MobileCallBar() {
+export async function MobileCallBar() {
+  const contact = await getSiteData();
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-[var(--v-line)] bg-[var(--v-bg)]/95 p-3 backdrop-blur md:hidden">
       <a href={contact.phoneHref} className="flex h-12 items-center justify-center gap-2 rounded-[calc(var(--v-radius)*0.6)] bg-[var(--v-brand)] font-semibold text-[var(--v-brand-ink)]">

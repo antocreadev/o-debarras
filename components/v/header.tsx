@@ -6,7 +6,7 @@ import { Menu, Phone, X } from "lucide-react";
 import { contact, nav } from "@/lib/v/content";
 
 /** En-tête classique. `overlay` : transparent sur la vidéo d'ouverture, puis plein au défilement. */
-export function VHeader({ overlay = false }: { overlay?: boolean }) {
+export function VHeader({ overlay = false, phone = contact.phone, phoneHref = contact.phoneHref }: { overlay?: boolean; phone?: string; phoneHref?: string }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,13 +42,13 @@ export function VHeader({ overlay = false }: { overlay?: boolean }) {
 
         <div className="flex items-center gap-2">
           <a
-            href={contact.phoneHref}
+            href={phoneHref}
             className={
               "hidden h-11 items-center gap-2 rounded-[calc(var(--v-radius)*0.6)] px-4 text-[0.95rem] font-semibold sm:inline-flex " +
               (clear ? "bg-white text-[#223325]" : "bg-[var(--v-brand)] text-[var(--v-brand-ink)]")
             }
           >
-            <Phone className="h-4 w-4" aria-hidden /> {contact.phone}
+            <Phone className="h-4 w-4" aria-hidden /> {phone}
           </a>
           <button
             type="button"
