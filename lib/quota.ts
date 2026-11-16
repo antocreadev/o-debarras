@@ -74,9 +74,9 @@ export function formatOctets(n: number) {
 }
 
 export function messageBlocage(quoi: "medias" | "base", utilise: number, limite: number) {
-  const libelle = quoi === "medias" ? "l'espace photos et vidéos" : "la base de données";
+  const libelle = quoi === "medias" ? "l'espace photos et vidéos" : "l'espace des textes et contenus";
   return (
-    `Limite gratuite atteinte : ${libelle} est plein (${formatOctets(utilise)} sur ${formatOctets(limite)}). ` +
+    `Espace plein : ${libelle} est plein (${formatOctets(utilise)} sur ${formatOctets(limite)}). ` +
     `Pour continuer, supprimez des éléments inutiles (anciens chantiers, photos en double, vidéos), ` +
     `ou envoyez des fichiers plus légers. Pour augmenter la capacité, contactez le développeur, ` +
     `${DEVELOPPEUR.nom}, au ${DEVELOPPEUR.telephone}.`

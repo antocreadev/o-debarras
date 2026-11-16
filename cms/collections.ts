@@ -66,7 +66,7 @@ export const Medias: CollectionConfig = {
     group: "Fichiers",
     defaultColumns: ["filename", "alt", "updatedAt"],
     description:
-      "Les photos sont réduites et converties automatiquement (format WebP, 1920 px maximum) pour économiser l'espace gratuit. Vidéos : MP4 de 25 Mo maximum, de préférence courtes.",
+      "Envoyez vos photos telles quelles, depuis votre téléphone ou votre ordinateur : elles sont allégées automatiquement. Vidéos : format MP4, 25 Mo maximum, de préférence courtes.",
   },
   hooks: { beforeChange: [bloquerSiMediasPlein], afterChange: [rafraichirSite] },
   upload: {

@@ -42,8 +42,8 @@ function Jauge({ titre, aide, utilise, limite, detail }: { titre: string; aide: 
       {etat !== "ok" ? (
         <p style={{ margin: "10px 0 0", fontSize: 14, color: couleur, fontWeight: 600 }}>
           {etat === "plein"
-            ? "Limite gratuite atteinte : les nouveaux ajouts sont bloqués."
-            : "Attention : vous approchez de la limite gratuite."}{" "}
+            ? "Espace plein : les nouveaux ajouts sont bloqués."
+            : "Attention : l'espace sera bientôt plein."}{" "}
           Supprimez des éléments inutiles ou envoyez des fichiers plus légers. Pour augmenter la capacité, contactez {DEV.nom} au {DEV.telephone}.
         </p>
       ) : null}
@@ -121,27 +121,26 @@ export function QuotaDashboard() {
           Actualiser l'espace utilisé
         </button>
       </div>
-      <h3 style={{ margin: "8px 0 12px", fontSize: 18 }}>Espace gratuit utilisé (en temps réel)</h3>
+      <h3 style={{ margin: "8px 0 12px", fontSize: 18 }}>Espace utilisé (en temps réel)</h3>
       {erreur ? <p style={{ color: "#c62828" }}>{erreur}</p> : null}
       {usage ? (
         <div style={{ display: "grid", gap: 14, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
           <Jauge
             titre="Photos et vidéos"
-            aide="Vercel Blob, offre gratuite. Les photos sont optimisées automatiquement à l'envoi."
+            aide="Les photos sont allégées automatiquement à l'envoi."
             detail={`${usage.medias.fichiers} fichier${usage.medias.fichiers > 1 ? "s" : ""}.`}
             utilise={usage.medias.utilise}
             limite={usage.medias.limite}
           />
-          <Jauge titre="Base de données" aide="Neon, offre gratuite. Textes, avis, chantiers et zones." utilise={usage.base.utilise} limite={usage.base.limite} />
+          <Jauge titre="Textes et contenus" aide="Textes, avis, réalisations et zones." utilise={usage.base.utilise} limite={usage.base.limite} />
         </div>
       ) : !erreur ? (
         <p style={{ color: "var(--theme-elevation-600)" }}>Chargement…</p>
       ) : null}
 
       <div style={{ marginTop: 14, fontSize: 13, color: "var(--theme-elevation-600)", lineHeight: 1.6 }}>
-        <strong>Bon à savoir.</strong> Mise à jour automatique toutes les 20 secondes. L'envoi est bloqué à 95 % de chaque limite
-        pour ne jamais payer. Le trafic mensuel des images (10 Go gratuits) n'est pas mesurable ici : il reste largement suffisant
-        grâce à l'optimisation automatique. Besoin de plus de place ? Contactez {DEV.nom} au {DEV.telephone}.
+        <strong>Bon à savoir.</strong> Mise à jour automatique toutes les 20 secondes. Les ajouts sont bloqués un peu avant que l'espace
+        soit plein. Besoin de plus de place ? Contactez {DEV.nom} au {DEV.telephone}.
         {usage ? ` Dernière mesure : ${new Date(usage.majLe).toLocaleTimeString("fr-FR")}.` : ""}
       </div>
     </section>
