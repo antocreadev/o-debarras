@@ -56,7 +56,12 @@ const services = [
   },
 ];
 
-export function ServicesSection() {
+type ServiceProp = { title: string; text: string; items: string[]; avant: string; apres: string; href: string };
+
+export function ServicesSection({ titre = "Des solutions pour tous", texte = "Que vous soyez particulier ou professionnel, nous avons la solution adaptée à votre besoin", items }: { titre?: string; texte?: string; items?: ServiceProp[] } = {}) {
+  const liste = items?.length
+    ? items.map((it, i) => ({ ...services[i % services.length], title: it.title, description: it.text, features: it.items, beforeImage: it.avant || services[i % services.length].beforeImage, afterImage: it.apres || services[i % services.length].afterImage, link: it.href }))
+    : services;
   return (
     <section id="services" className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
@@ -75,17 +80,16 @@ export function ServicesSection() {
               />
             </div>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-foreground text-balance">
-              Des solutions pour tous
-            </h2>
+{titre}
+</h2>
           </div>
           <p className="text-xl text-muted-foreground text-pretty">
-            Que vous soyez particulier ou professionnel, nous avons la solution
-            adaptée à votre besoin
-          </p>
+{texte}
+</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-          {services.map((service, index) => (
+          {liste.map((service, index) => (
             <AnimatedSection key={index} delay={index * 0.08}>
               <motion.div
                 whileHover={{ y: -8 }}

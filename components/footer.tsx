@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
-import { corsicaRegions, allCities } from "@/lib/corsica-data";
+import { getSiteData } from "@/lib/v/data";
 
-export function Footer() {
+export async function Footer() {
+  const site = await getSiteData();
+  const corsicaRegions = site.zones.map((z) => ({ slug: z.slug, name: z.name, corseName: z.corse }));
+  const allCities = site.zones.flatMap((z) => z.cities);
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4 lg:px-8">
@@ -24,9 +27,8 @@ export function Footer() {
               </h3>
             </div>
             <p className="text-background/80 text-sm leading-relaxed ">
-              Votre partenaire de confiance pour tous vos besoins de débarras en
-              Corse depuis 2020.
-            </p>
+{site.accueil.piedTexte ?? "Votre partenaire de confiance pour tous vos besoins de débarras en Corse depuis 2020."}
+</p>
           </div>
 
           <div>
@@ -119,20 +121,20 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0" />
                 <a
-                  href="tel:+33784717301"
+                  href={site.phoneHref}
                   className="hover:text-background transition-colors"
                 >
-                  +33 7 84 71 73 01
-                </a>
+{site.phone}
+</a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
                 <a
-                  href="mailto:odebarras2b@gmail.com"
+                  href={`mailto:${site.email}`}
                   className="hover:text-background transition-colors"
                 >
-                  odebarras2b@gmail.com
-                </a>
+{site.email}
+</a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
@@ -229,9 +231,9 @@ export function Footer() {
             Nos Villes d'Intervention
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 text-xs text-background/70 max-w-6xl mx-auto">
-            {allCities.map((city) => (
+            {allCities.map((city, i) => (
               <Link
-                key={city.slug}
+                key={`${city.slug}-${i}`}
                 href={`/zones/villes/${city.slug}`}
                 className="hover:text-background transition-colors text-center p-1.5 rounded hover:bg-background/5"
               >

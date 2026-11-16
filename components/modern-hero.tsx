@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-export function ModernHero() {
+export function ModernHero({ titre = "Ò Débarras", texte = "Intervention rapide, discrète et respectueuse dans toute la Corse.", boutonDevis = "Devis Gratuit", boutonContact = "Nous Contacter", phoneHref = "tel:+33784717301", photo = "/image-1.png" }: { titre?: string; texte?: string; boutonDevis?: string; boutonContact?: string; phoneHref?: string; photo?: string } = {}) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-primary/5 via-background to-accent/5">
       {/* Animated background elements - Optimized */}
@@ -61,7 +61,7 @@ export function ModernHero() {
               className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight text-balance hidden lg:block"
             >
               <span className="text-primary relative">
-                Ò Débarras
+                {titre}
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
@@ -86,9 +86,7 @@ export function ModernHero() {
               }}
               className="text-xl md:text-2xl text-muted-foreground max-w-xl text-pretty leading-relaxed mt-5 text-center lg:text-left"
             >
-              <span className="inline lg:hidden">Ò Débarras </span>Intervention
-              rapide, discrète et respectueuse dans toute la{" "}
-              <span className="font-bold">Corse</span>.
+              <span className="inline lg:hidden">{titre} </span>{texte}
             </motion.p>
 
             <motion.div
@@ -108,8 +106,8 @@ export function ModernHero() {
               >
                 <a href="/contact">
                   <Mail className="w-5 h-5 mr-2" />
-                  Devis Gratuit
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+{boutonDevis}
+<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button
@@ -118,10 +116,10 @@ export function ModernHero() {
                 variant="outline"
                 className="text-lg px-8 py-6 border-2 hover:bg-primary/5 bg-transparent"
               >
-                <Link href="tel:+33784717301">
+                <Link href={phoneHref}>
                   <Phone className="w-5 h-5 mr-2" />
-                  Nous Contacter
-                </Link>
+{boutonContact}
+</Link>
               </Button>
             </motion.div>
 
@@ -160,7 +158,7 @@ export function ModernHero() {
               className="relative z-10"
             >
               <Image
-                src="/image-1.png"
+                src={photo}
                 alt="O Ò Débarras - débarras en Corse"
                 className="w-full max-w-2xl mx-auto drop-shadow-2xl relative z-20"
                 width={1278}

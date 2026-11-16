@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteData } from "@/lib/v/data";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { AnimatedSection } from "@/components/animated-section";
@@ -131,14 +132,20 @@ const realisations = [
   },
 ];
 
-export default function RealisationsPage() {
+export const revalidate = 300;
+
+export default async function RealisationsPage() {
+  const site = await getSiteData();
+  const liste = site.realisations.length
+    ? site.realisations.map((c, i) => ({ id: i + 1, title: c.titre, before: c.avant, after: c.apres, description: c.texte || c.lieu }))
+    : realisations;
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Accueil", url: "/" },
     { name: "Réalisations", url: "/realisations" },
   ]);
 
   const imageGallerySchema = generateImageGallerySchema(
-    realisations.map((r) => ({
+    liste.map((r) => ({
       url: r.after,
       caption: `${r.title} - ${r.description}`,
     }))
@@ -173,7 +180,7 @@ export default function RealisationsPage() {
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid gap-16 max-w-7xl mx-auto">
-              {realisations.map((realisation, index) => (
+              {liste.map((realisation, index) => (
                 <AnimatedSection key={realisation.id} delay={index * 0.1}>
                   <div className="space-y-4">
                     <div className="text-center mb-8">

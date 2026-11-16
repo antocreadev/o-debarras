@@ -12,20 +12,25 @@ import { Navigation } from "@/components/navigation";
 import { StructuredData } from "@/components/structured-data";
 import { CorsicaCoverageSection } from "@/components/corsica-coverage-section";
 import { RealisationsPreviewSection } from "@/components/realisations-preview-section";
+import { getSiteData } from "@/lib/v/data";
 
-export default function Home() {
+export const revalidate = 300;
+
+export default async function Home() {
+  const site = await getSiteData();
+  const a = site.accueil;
   return (
     <main className="min-h-screen">
       <StructuredData />
       <Navigation />
-      <ModernHero />
+      <ModernHero titre={a.heroTitre} texte={a.heroTexte} boutonDevis={a.boutonDevis} boutonContact={a.boutonContact} phoneHref={site.phoneHref} photo={a.heroPhoto} />
       {/* <StatsSection /> */}
-      <ProcessSection />
-      <ServicesSection />
-      <RealisationsPreviewSection />
-      <TargetAudienceSection />
-      <TestimonialsSection />
-      <CorsicaCoverageSection />
+      <ProcessSection titre={a.etapesTitre} texte={a.etapesTexte} etapes={a.etapes} />
+      <ServicesSection titre={a.servicesTitre} texte={a.servicesTexte} items={site.services} />
+      <RealisationsPreviewSection titre={a.realisationsTitre} texte={a.realisationsTexte} encadreTitre={a.realisationsEncadreTitre} encadreTexte={a.realisationsEncadre} />
+      <TargetAudienceSection titre={a.publicsTitre} texte={a.publicsTexte} publics={a.publics} />
+      <TestimonialsSection titre={a.avisTitre} texte={a.avisTexte} avis={site.avis} lien={site.googleReviews} />
+      <CorsicaCoverageSection titre={a.zonesTitre} texte={a.zonesTexte} zones={site.zones} />
       <FacebookSection />
       <InstagramSection />
       <CTASection />

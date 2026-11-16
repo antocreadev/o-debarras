@@ -77,21 +77,51 @@ export function QuotaDashboard() {
     };
   }, [charger]);
 
+  const actions = [
+    { titre: "Modifier la page d'accueil", texte: "Titres, textes, étapes, publics… section par section.", href: "/admin/globals/accueil", icone: "✏️" },
+    { titre: "Ajouter une réalisation", texte: "Un chantier avec sa photo avant et sa photo après.", href: "/admin/collections/chantiers/create", icone: "📸" },
+    { titre: "Ajouter un avis client", texte: "Recopiez un avis Google, PagesJaunes ou Facebook.", href: "/admin/collections/avis/create", icone: "⭐" },
+    { titre: "Téléphone et email", texte: "Les coordonnées affichées partout sur le site.", href: "/admin/globals/infos", icone: "📞" },
+    { titre: "Zones et communes", texte: "Les 10 zones de la Corse et leurs communes.", href: "/admin/collections/zones", icone: "🗺️" },
+    { titre: "Voir le site", texte: "Ouvrir le site dans un nouvel onglet.", href: "/", icone: "↗", externe: true },
+  ];
+
   return (
-    <section style={{ marginBottom: 32 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-        <div>
-          <h2 style={{ margin: 0 }}>Bonjour</h2>
-          <p style={{ margin: "6px 0 0", color: "var(--theme-elevation-600)" }}>
-            Ajoutez vos chantiers, vos avis et vos photos : le site se met à jour tout seul en moins d'une minute.
-          </p>
-        </div>
-        <button type="button" onClick={charger} className="btn btn--style-secondary btn--size-small" style={{ margin: 0 }}>
-          Actualiser
-        </button>
+    <section style={{ marginBottom: 36 }}>
+      <h2 style={{ margin: 0, fontSize: 26 }}>Que voulez-vous faire ?</h2>
+      <p style={{ margin: "6px 0 18px", color: "var(--theme-elevation-600)" }}>
+        Choisissez une action. Après « Enregistrer », le site se met à jour tout seul en moins d'une minute.
+      </p>
+      <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))" }}>
+        {actions.map((a) => (
+          <a
+            key={a.href}
+            href={a.href}
+            target={a.externe ? "_blank" : undefined}
+            rel={a.externe ? "noopener noreferrer" : undefined}
+            style={{
+              display: "block",
+              padding: "18px 18px 16px",
+              borderRadius: 12,
+              border: "1px solid var(--theme-elevation-150)",
+              background: "var(--theme-elevation-0)",
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <span style={{ fontSize: 26, lineHeight: 1 }} aria-hidden>{a.icone}</span>
+            <strong style={{ display: "block", marginTop: 10, fontSize: 16 }}>{a.titre}</strong>
+            <span style={{ display: "block", marginTop: 4, fontSize: 13.5, color: "var(--theme-elevation-600)", lineHeight: 1.45 }}>{a.texte}</span>
+          </a>
+        ))}
       </div>
 
-      <h3 style={{ margin: "26px 0 12px", fontSize: 15, color: "var(--theme-elevation-600)" }}>Espace gratuit utilisé (en temps réel)</h3>
+      <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 26 }}>
+        <button type="button" onClick={charger} className="btn btn--style-secondary btn--size-small" style={{ margin: 0 }}>
+          Actualiser l'espace utilisé
+        </button>
+      </div>
+      <h3 style={{ margin: "8px 0 12px", fontSize: 18 }}>Espace gratuit utilisé (en temps réel)</h3>
       {erreur ? <p style={{ color: "#c62828" }}>{erreur}</p> : null}
       {usage ? (
         <div style={{ display: "grid", gap: 14, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>

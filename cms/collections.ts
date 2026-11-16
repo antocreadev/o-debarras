@@ -1,5 +1,6 @@
 import { APIError, type CollectionConfig, type CollectionBeforeChangeHook, type CollectionAfterChangeHook } from "payload";
 import { LIMITS, SEUIL_BLOCAGE, lireUsage, messageBlocage, poidsBase, poidsMedias } from "@/lib/quota";
+import { aide } from "./accueil";
 
 /* ------------------------------------------------------------------ */
 /* Garde-fous des quotas gratuits                                      */
@@ -49,7 +50,7 @@ export const Utilisateurs: CollectionConfig = {
   slug: "utilisateurs",
   labels: { singular: "Utilisateur", plural: "Utilisateurs" },
   auth: { tokenExpiration: 60 * 60 * 24 * 30 },
-  admin: { useAsTitle: "email", group: "Réglages", description: "Les personnes qui peuvent se connecter à cette administration." },
+  admin: { useAsTitle: "email", group: "Réglages", description: "Les personnes qui peuvent se connecter à cette administration. Pour donner accès à quelqu'un, cliquez sur « Créer »." },
   fields: [{ name: "nom", label: "Nom", type: "text" }],
 };
 
@@ -62,7 +63,8 @@ export const Medias: CollectionConfig = {
   labels: { singular: "Photo ou vidéo", plural: "Photos et vidéos" },
   access: auteurs,
   admin: {
-    group: "Contenu",
+    group: "Fichiers",
+    defaultColumns: ["filename", "alt", "updatedAt"],
     description:
       "Les photos sont réduites et converties automatiquement (format WebP, 1920 px maximum) pour économiser l'espace gratuit. Vidéos : MP4 de 25 Mo maximum, de préférence courtes.",
   },
@@ -73,7 +75,10 @@ export const Medias: CollectionConfig = {
     resizeOptions: { width: 1920, height: 1920, fit: "inside", withoutEnlargement: true },
     formatOptions: { format: "webp", options: { quality: 72, effort: 5 } },
     imageSizes: [{ name: "vignette", width: 640, formatOptions: { format: "webp", options: { quality: 65 } } }],
-    adminThumbnail: "vignette",
+    adminThumbnail: ({ doc }) => {
+      const d = doc as { url?: string; sizes?: { vignette?: { url?: string } } };
+      return d.sizes?.vignette?.url || d.url || null;
+    },
     focalPoint: false,
     crop: false,
   },
@@ -96,16 +101,18 @@ const communs = { access: auteurs, hooks: { beforeChange: [bloquerSiBasePleine],
 
 export const Chantiers: CollectionConfig = {
   slug: "chantiers",
-  labels: { singular: "Chantier", plural: "Chantiers" },
+  labels: { singular: "Réalisation", plural: "Réalisations (avant / après)" },
   ...communs,
   defaultSort: "ordre",
   admin: {
-    group: "Contenu",
+    group: "Mon activité",
     useAsTitle: "titre",
-    defaultColumns: ["titre", "lieu", "afficher", "ordre"],
-    description: "Vos réalisations avant / après. Les chantiers cochés « Afficher sur le site » apparaissent sur la page d'accueil, dans l'ordre choisi.",
+    defaultColumns: ["titre", "lieu", "afficher", "accueil", "ordre"],
+    description: "Vos chantiers avec une photo avant et une photo après. Ils s'affichent sur la page « Réalisations » du site. Cliquez sur « Créer » pour en ajouter un.",
+    preview: () => "/realisations",
   },
   fields: [
+    aide("/admin/aide/realisations-page.webp", "Chaque réalisation devient une carte avant / après sur la page « Réalisations ».", "/realisations"),
     { type: "row", fields: [
       { name: "titre", label: "Titre", type: "text", required: true, admin: { placeholder: "Une maison et ses trois caves" } },
       { name: "lieu", label: "Lieu", type: "text", required: true, admin: { placeholder: "Meria, Cap Corse" } },
@@ -125,8 +132,9 @@ export const Chantiers: CollectionConfig = {
     ] },
     { name: "instagram", label: "Lien de la vidéo Instagram (facultatif)", type: "text" },
     { type: "row", fields: [
-      { name: "afficher", label: "Afficher sur le site", type: "checkbox", defaultValue: true },
-      { name: "ordre", label: "Ordre d'affichage", type: "number", defaultValue: 10, admin: { description: "Le plus petit en premier." } },
+      { name: "afficher", label: "Visible sur le site", type: "checkbox", defaultValue: true },
+      { name: "accueil", label: "Mettre en avant sur la page d'accueil", type: "checkbox", defaultValue: false },
+      { name: "ordre", label: "Ordre d'affichage", type: "number", defaultValue: 10, admin: { description: "1 = en premier." } },
     ] },
   ],
 };
@@ -137,12 +145,14 @@ export const Avis: CollectionConfig = {
   ...communs,
   defaultSort: "ordre",
   admin: {
-    group: "Contenu",
+    group: "Mon activité",
     useAsTitle: "auteur",
     defaultColumns: ["auteur", "note", "source", "afficher"],
-    description: "Recopiez ici les avis reçus (Google, PagesJaunes, Facebook…). Ils s'affichent sur le site.",
+    description: "Quand vous recevez un nouvel avis (Google, PagesJaunes, Facebook…), recopiez-le ici : il apparaît dans le carrousel « Avis » de la page d'accueil.",
+    preview: () => "/#avis",
   },
   fields: [
+    aide("/admin/aide/avis.webp", "Les avis défilent dans le carrousel « Avis Google » de la page d'accueil.", "/"),
     { type: "row", fields: [
       { name: "auteur", label: "Nom du client", type: "text", required: true },
       { name: "note", label: "Note sur 5", type: "number", min: 1, max: 5, defaultValue: 5, required: true },
@@ -175,8 +185,15 @@ export const Services: CollectionConfig = {
   labels: { singular: "Service", plural: "Services" },
   ...communs,
   defaultSort: "ordre",
-  admin: { group: "Contenu", useAsTitle: "titre", defaultColumns: ["titre", "ordre"] },
+  admin: {
+    group: "Mon activité",
+    useAsTitle: "titre",
+    defaultColumns: ["titre", "ordre"],
+    description: "Les 3 cartes « Particuliers », « Syndrome de Diogène » et « Professionnels » de la page d'accueil.",
+    preview: () => "/#services",
+  },
   fields: [
+    aide("/admin/aide/services.webp", "Chaque service est une carte avec sa photo avant / après, sur la page d'accueil.", "/"),
     { name: "titre", label: "Titre", type: "text", required: true },
     { name: "description", label: "Description", type: "textarea", required: true },
     {
@@ -199,16 +216,18 @@ export const Services: CollectionConfig = {
 
 export const Zones: CollectionConfig = {
   slug: "zones",
-  labels: { singular: "Zone d'intervention", plural: "Zones d'intervention" },
+  labels: { singular: "Zone", plural: "Zones et communes" },
   ...communs,
   defaultSort: "nom",
   admin: {
-    group: "Contenu",
+    group: "Mon activité",
     useAsTitle: "nom",
     defaultColumns: ["nom", "nomCorse"],
-    description: "Les zones et leurs communes, affichées sur la carte de la Corse.",
+    description: "Les 10 zones de la Corse où vous intervenez, avec leurs communes. Elles apparaissent sur la page d'accueil, dans le pied de page et sur la page « Zones ».",
+    preview: () => "/zones",
   },
   fields: [
+    aide("/admin/aide/zones.webp", "Les zones apparaissent sur la page d'accueil (carte et liste) et dans le pied de page.", "/zones"),
     { type: "row", fields: [
       { name: "nom", label: "Nom", type: "text", required: true },
       { name: "nomCorse", label: "Nom en corse", type: "text" },

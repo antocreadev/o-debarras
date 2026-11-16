@@ -1,10 +1,11 @@
 import type { GlobalConfig } from "payload";
+import { aide } from "./accueil";
 
 export const Infos: GlobalConfig = {
   slug: "infos",
-  label: "Informations de l'entreprise",
+  label: "Coordonnées",
   access: { read: () => true },
-  admin: { group: "Réglages", description: "Coordonnées et textes affichés sur tout le site." },
+  admin: { group: "Site internet", description: "Téléphone, email et liens affichés partout sur le site (en-tête, boutons d'appel, pied de page).", preview: () => "/" },
   hooks: {
     afterChange: [
       async ({ doc }) => {
@@ -17,6 +18,7 @@ export const Infos: GlobalConfig = {
     ],
   },
   fields: [
+    aide("/admin/aide/pied.webp", "Le téléphone et l'email apparaissent dans les boutons d'appel, le bandeau « Besoin d'un débarras ? » et le pied de page de toutes les pages."),
     { type: "row", fields: [
       { name: "telephone", label: "Téléphone", type: "text", required: true, defaultValue: "07 84 71 73 01" },
       { name: "email", label: "Email", type: "email", required: true, defaultValue: "odebarras2b@gmail.com" },

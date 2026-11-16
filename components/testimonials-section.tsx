@@ -13,7 +13,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { googleReviews } from "@/data/reviews";
 
-export function TestimonialsSection() {
+type AvisProp = { name: string; description: string; date: string; rating: number; photo?: string };
+
+export function TestimonialsSection({ titre = "Avis Google", texte = "Découvrez les retours de nos clients sur Google", avis, lien = "https://share.google/9YV6aX2d34jUUCAcZ" }: { titre?: string; texte?: string; avis?: AvisProp[]; lien?: string } = {}) {
+  const liste = avis?.length ? avis.map((a) => ({ ...a, photo: a.photo ?? "" })) : googleReviews;
   return (
     <section
       id="testimonials"
@@ -51,11 +54,11 @@ export function TestimonialsSection() {
                 fill="#EA4335"
               />
             </svg>
-            Avis Google
-          </h2>
+{titre}
+</h2>
           <p className="text-xl text-muted-foreground text-pretty">
-            Découvrez les retours de nos clients sur Google
-          </p>
+{texte}
+</p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
@@ -68,7 +71,7 @@ export function TestimonialsSection() {
               className="w-full"
             >
               <CarouselContent className="-ml-4">
-                {googleReviews.map((review, index) => (
+                {liste.map((review, index) => (
                   <CarouselItem
                     key={index}
                     className="pl-4 md:basis-1/2 lg:basis-1/3"
@@ -130,7 +133,7 @@ export function TestimonialsSection() {
           {/* Bouton pour voir tous les avis */}
           <div className="text-center mt-12">
             <a
-              href="https://share.google/9YV6aX2d34jUUCAcZ"
+              href={lien}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg"

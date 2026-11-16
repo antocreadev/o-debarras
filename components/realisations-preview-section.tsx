@@ -7,7 +7,7 @@ import { ArrowRight, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-export function RealisationsPreviewSection() {
+export function RealisationsPreviewSection({ titre = "Notre expertise en action", texte = "Découvrez nos interventions de débarras en Corse. Avant/après, chaque projet raconte une histoire.", encadreTitre = "Des projets réussis", encadreTexte = "Particuliers, professionnels, syndrome de Diogène... Nous avons l'expérience pour gérer tous types de débarras avec professionnalisme et discrétion." }: { titre?: string; texte?: string; encadreTitre?: string; encadreTexte?: string } = {}) {
   return (
     <section className="py-24 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
@@ -19,14 +19,13 @@ export function RealisationsPreviewSection() {
                   Nos Réalisations
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground text-balance">
-                  Notre expertise en action
-                </h2>
+{titre}
+</h2>
               </div>
             </div>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Découvrez nos interventions de débarras en Corse. Avant/après,
-              chaque projet raconte une histoire.
-            </p>
+{texte}
+</p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
@@ -34,13 +33,11 @@ export function RealisationsPreviewSection() {
               <div className="flex flex-col-reverse md:flex-row items-center gap-8">
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-black text-foreground mb-4">
-                    Des projets réussis
-                  </h3>
+{encadreTitre}
+</h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Particuliers, professionnels, syndrome de Diogène... Nous
-                    avons l'expérience pour gérer tous types de débarras avec
-                    professionnalisme et discrétion.
-                  </p>
+{encadreTexte}
+</p>
                   <Button size="lg" asChild className="shadow-xl">
                     <Link href="/realisations">
                       Voir toutes nos réalisations

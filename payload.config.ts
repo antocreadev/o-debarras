@@ -8,6 +8,7 @@ import { fr } from "@payloadcms/translations/languages/fr";
 import sharp from "sharp";
 import { Avis, Chantiers, Medias, Services, Utilisateurs, Zones } from "./cms/collections";
 import { Infos } from "./cms/globals";
+import { Accueil } from "./cms/accueil";
 import { migrations } from "./cms/migrations";
 import { lireUsage } from "./lib/quota";
 
@@ -29,10 +30,12 @@ export default buildConfig({
     },
     importMap: { baseDir: dirname },
     dateFormat: "d MMMM yyyy",
+    theme: "light",
   },
   i18n: { supportedLanguages: { fr }, fallbackLanguage: "fr" },
   collections: [Chantiers, Avis, Services, Zones, Medias, Utilisateurs],
-  globals: [Infos],
+  routes: { admin: "/admin" },
+  globals: [Accueil, Infos],
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URL || "" },
     prodMigrations: migrations,

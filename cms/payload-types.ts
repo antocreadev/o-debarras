@@ -96,9 +96,11 @@ export interface Config {
   };
   fallbackLocale: null;
   globals: {
+    accueil: Accueil;
     infos: Info;
   };
   globalsSelect: {
+    accueil: AccueilSelect<false> | AccueilSelect<true>;
     infos: InfosSelect<false> | InfosSelect<true>;
   };
   locale: null;
@@ -130,7 +132,7 @@ export interface UtilisateurAuthOperations {
   };
 }
 /**
- * Vos réalisations avant / après. Les chantiers cochés « Afficher sur le site » apparaissent sur la page d'accueil, dans l'ordre choisi.
+ * Vos chantiers avec une photo avant et une photo après. Ils s'affichent sur la page « Réalisations » du site. Cliquez sur « Créer » pour en ajouter un.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "chantiers".
@@ -153,8 +155,9 @@ export interface Chantier {
   apres: number | Media;
   instagram?: string | null;
   afficher?: boolean | null;
+  accueil?: boolean | null;
   /**
-   * Le plus petit en premier.
+   * 1 = en premier.
    */
   ordre?: number | null;
   updatedAt: string;
@@ -196,7 +199,7 @@ export interface Media {
   };
 }
 /**
- * Recopiez ici les avis reçus (Google, PagesJaunes, Facebook…). Ils s'affichent sur le site.
+ * Quand vous recevez un nouvel avis (Google, PagesJaunes, Facebook…), recopiez-le ici : il apparaît dans le carrousel « Avis » de la page d'accueil.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "avis".
@@ -214,6 +217,8 @@ export interface Avi {
   createdAt: string;
 }
 /**
+ * Les 3 cartes « Particuliers », « Syndrome de Diogène » et « Professionnels » de la page d'accueil.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "services".
  */
@@ -235,7 +240,7 @@ export interface Service {
   createdAt: string;
 }
 /**
- * Les zones et leurs communes, affichées sur la carte de la Corse.
+ * Les 10 zones de la Corse où vous intervenez, avec leurs communes. Elles apparaissent sur la page d'accueil, dans le pied de page et sur la page « Zones ».
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "zones".
@@ -266,7 +271,7 @@ export interface Zone {
   createdAt: string;
 }
 /**
- * Les personnes qui peuvent se connecter à cette administration.
+ * Les personnes qui peuvent se connecter à cette administration. Pour donner accès à quelqu'un, cliquez sur « Créer ».
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "utilisateurs".
@@ -402,6 +407,7 @@ export interface ChantiersSelect<T extends boolean = true> {
   apres?: T;
   instagram?: T;
   afficher?: T;
+  accueil?: T;
   ordre?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -561,7 +567,57 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
- * Coordonnées et textes affichés sur tout le site.
+ * Tous les textes de la page d'accueil, dans l'ordre où ils apparaissent. Modifiez, puis cliquez sur « Enregistrer » : le site est mis à jour en moins d'une minute.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "accueil".
+ */
+export interface Accueil {
+  id: number;
+  heroTitre: string;
+  heroTexte: string;
+  /**
+   * Laissez vide pour garder la photo actuelle (l'équipe en combinaison sur le toit).
+   */
+  heroPhoto?: (number | null) | Media;
+  boutonDevis?: string | null;
+  boutonContact?: string | null;
+  etapesTitre?: string | null;
+  etapesTexte?: string | null;
+  etapes?:
+    | {
+        titre: string;
+        texte: string;
+        id?: string | null;
+      }[]
+    | null;
+  servicesTitre?: string | null;
+  servicesTexte?: string | null;
+  realisationsTitre?: string | null;
+  realisationsTexte?: string | null;
+  realisationsEncadreTitre?: string | null;
+  realisationsEncadre?: string | null;
+  publicsTitre?: string | null;
+  publicsTexte?: string | null;
+  publics?:
+    | {
+        titre: string;
+        texte?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  avisTitre?: string | null;
+  avisTexte?: string | null;
+  zonesTitre?: string | null;
+  zonesTexte?: string | null;
+  ctaTitre?: string | null;
+  ctaTexte?: string | null;
+  piedTexte?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Téléphone, email et liens affichés partout sur le site (en-tête, boutons d'appel, pied de page).
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "infos".
@@ -584,6 +640,51 @@ export interface Info {
   avisGoogle?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "accueil_select".
+ */
+export interface AccueilSelect<T extends boolean = true> {
+  heroTitre?: T;
+  heroTexte?: T;
+  heroPhoto?: T;
+  boutonDevis?: T;
+  boutonContact?: T;
+  etapesTitre?: T;
+  etapesTexte?: T;
+  etapes?:
+    | T
+    | {
+        titre?: T;
+        texte?: T;
+        id?: T;
+      };
+  servicesTitre?: T;
+  servicesTexte?: T;
+  realisationsTitre?: T;
+  realisationsTexte?: T;
+  realisationsEncadreTitre?: T;
+  realisationsEncadre?: T;
+  publicsTitre?: T;
+  publicsTexte?: T;
+  publics?:
+    | T
+    | {
+        titre?: T;
+        texte?: T;
+        id?: T;
+      };
+  avisTitre?: T;
+  avisTexte?: T;
+  zonesTitre?: T;
+  zonesTexte?: T;
+  ctaTitre?: T;
+  ctaTexte?: T;
+  piedTexte?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

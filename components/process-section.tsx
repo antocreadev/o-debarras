@@ -35,7 +35,8 @@ const steps = [
   },
 ];
 
-export function ProcessSection() {
+export function ProcessSection({ titre = "Comment ça marche ?", texte = "Un processus simple et transparent en 3 étapes pour votre tranquillité d'esprit", etapes }: { titre?: string; texte?: string; etapes?: { titre: string; texte: string }[] } = {}) {
+  const liste = etapes?.length ? steps.map((st, i) => ({ ...st, title: etapes[i]?.titre ?? st.title, description: etapes[i]?.texte ?? st.description })) : steps;
   return (
     <section
       id="process"
@@ -50,12 +51,11 @@ export function ProcessSection() {
             Notre Processus
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 text-balance">
-            Comment ça marche ?
-          </h2>
+{titre}
+</h2>
           <p className="text-xl text-muted-foreground text-pretty">
-            Un processus simple et transparent en 3 étapes pour votre
-            tranquillité d'esprit
-          </p>
+{texte}
+</p>
         </AnimatedSection>
 
         <div className="max-w-6xl mx-auto">
@@ -64,7 +64,7 @@ export function ProcessSection() {
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary" />
 
             <div className="grid grid-cols-3 gap-8">
-              {steps.map((step, index) => (
+              {liste.map((step, index) => (
                 <AnimatedSection
                   key={index}
                   delay={index * 0.1}
@@ -97,7 +97,7 @@ export function ProcessSection() {
 
           {/* Cards for mobile/tablet */}
           <div className="lg:hidden grid grid-cols-1 gap-6">
-            {steps.map((step, index) => (
+            {liste.map((step, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ scale: 1.01 }}

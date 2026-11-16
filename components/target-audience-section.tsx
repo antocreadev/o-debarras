@@ -28,23 +28,22 @@ const audiences = [
   },
 ]
 
-export function TargetAudienceSection() {
+export function TargetAudienceSection({ titre = "À qui s'adressent nos services ?", texte = "Nous mettons notre expertise en débarras au service de divers secteurs, allant des particuliers aux entreprises, des collectivités aux administrations, pour offrir des solutions complètes et adaptées à chaque besoin en Corse.", publics }: { titre?: string; texte?: string; publics?: { titre: string; texte?: string | null }[] } = {}) {
+  const liste = publics?.length ? publics.map((pu, i) => ({ icon: audiences[i % audiences.length].icon, title: pu.titre, description: pu.texte ?? "" })) : audiences;
   return (
     <section className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 text-balance">
-            À qui s'adressent nos services ?
-          </h2>
+{titre}
+</h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Nous mettons notre expertise en débarras au service de divers secteurs, allant des particuliers aux
-            entreprises, des collectivités aux administrations, pour offrir des solutions complètes et adaptées à chaque
-            besoin en Corse.
-          </p>
+{texte}
+</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {audiences.map((audience, index) => (
+          {liste.map((audience, index) => (
             <div
               key={index}
               className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"

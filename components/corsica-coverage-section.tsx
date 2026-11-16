@@ -8,7 +8,10 @@ import Link from "next/link";
 import { corsicaRegions } from "@/lib/corsica-data";
 import { Button } from "@/components/ui/button";
 
-export function CorsicaCoverageSection() {
+type ZoneProp = { slug: string; name: string; corse: string };
+
+export function CorsicaCoverageSection({ titre = "Intervention dans toute la Corse", texte = "De Bastia à Bonifacio, de Calvi à Porto-Vecchio, nous intervenons sur l'ensemble du territoire corse pour tous vos besoins de débarras.", zones }: { titre?: string; texte?: string; zones?: ZoneProp[] } = {}) {
+  const liste = zones?.length ? zones.map((z) => ({ slug: z.slug, name: z.name, corseName: z.corse })) : corsicaRegions;
   return (
     <section className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
@@ -34,17 +37,15 @@ export function CorsicaCoverageSection() {
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground text-balance">
-                Intervention dans toute la Corse
-              </h2>
+{titre}
+</h2>
 
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                De Bastia à Bonifacio, de Calvi à Porto-Vecchio, nous
-                intervenons sur l'ensemble du territoire corse pour tous vos
-                besoins de débarras.
-              </p>
+{texte}
+</p>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                {corsicaRegions.map((region, index) => (
+                {liste.map((region, index) => (
                   <Link
                     key={region.slug}
                     href={`/zones/${region.slug}`}
